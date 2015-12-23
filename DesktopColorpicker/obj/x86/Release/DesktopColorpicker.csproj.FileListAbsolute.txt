@@ -1,0 +1,10 @@
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\bin\Release\DesktopColorpicker.exe
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\bin\Release\DesktopColorpicker.pdb
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\obj\x86\Release\DesktopColorpicker.MainForm.resources
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\obj\x86\Release\DesktopColorpicker.Properties.Resources.resources
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\obj\x86\Release\DesktopColorpicker.csproj.GenerateResource.Cache
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\obj\x86\Release\DesktopColorpicker.exe
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\obj\x86\Release\DesktopColorpicker.pdb
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\obj\x86\Release\DesktopColorpicker.csprojResolveAssemblyReference.cache
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\bin\Release\Unity3.Eyedropper.dll
+C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\bin\Release\Unity3.Eyedropper.pdb
