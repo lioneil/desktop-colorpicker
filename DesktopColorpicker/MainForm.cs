@@ -10,6 +10,7 @@ using Unity3.Eyedropper;
 using DesktopColorpicker.Classes;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Reflection;
 
 namespace DesktopColorpicker
 {
@@ -20,6 +21,10 @@ namespace DesktopColorpicker
             InitializeComponent();
             this.Size = Properties.Settings.Default.MainFormSize;
             this.Location = Properties.Settings.Default.MainFormLocation;
+
+            // Load all known color on textBoxColorName's AutoComplete Collection
+            Automaton c = new Automaton();
+            this.textBoxColorName.AutoCompleteCustomSource = c.GetAllKnownColors();
         }
 
         //private bool allowVisible = false;
@@ -35,40 +40,7 @@ namespace DesktopColorpicker
         private void eyeDropperMain_ScreenCaptured(Bitmap capturedPixels, Color capturedColor)
         {
             capturedPixels.SetResolution(3000, 3000);
-            try
-            {
-                // Store color in PictureBox
-                panelPreviewer.BackColor = capturedColor;
-
-                // Store to textboxes
-                textBoxRed.Text = capturedColor.R.ToString();
-                textBoxGreen.Text = capturedColor.G.ToString();
-                textBoxBlue.Text = capturedColor.B.ToString();
-
-                // Convert to HEX
-                textBoxHex.Text = ColorValueConverter.RGBToHex(capturedColor);
-                textBoxRGB.Text = ColorValueConverter.toRGB(capturedColor);
-
-                // HSL
-                textBoxHSL.Text = ColorValueConverter.RGBToHSL(capturedColor);
-
-                string HSLAsArray = ColorValueConverter.RGBToHSL(capturedColor, false, true);
-                string[] hslarray = HSLAsArray.Split(new[]{'|'}, StringSplitOptions.RemoveEmptyEntries);
-                textBoxHue.Text = hslarray[0];
-                textBoxSaturation.Text = hslarray[1];
-                textBoxLuminance.Text = hslarray[2];
-
-
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                // Copy to Clipboard
-                CopyToClipboard();
-            }
+            ExtractTheColors(capturedColor);
         }
 
         private void CopyToClipboard()
@@ -148,7 +120,6 @@ namespace DesktopColorpicker
         {
             // Load the previous settings from last session
             LoadSettingsFromLastSession();
-            numericUpDownZoomFactor.Value = Properties.Settings.Default.ZoomSize;
         }
 
         private void eyeDropperMain_BeginScreenCapture(object sender, EventArgs e)
@@ -315,6 +286,95 @@ namespace DesktopColorpicker
             {
                 this.TopMost = false;
                 Properties.Settings.Default.IsTopMost = false;
+            }
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            toolTipCenter.Show("Always on top", pictureBox3);
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            toolTipCenter.Show("Zoom Level (1-20)", pictureBox2);
+        }
+
+        private void textBoxColorName_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Color colorName = Color.FromName(textBoxColorName.Text);
+                if (colorName.IsKnownColor)
+                {
+                    panelPreviewer.BackColor = colorName;
+                    ExtractTheColors(colorName);
+                }
+            }
+            catch (Exception)
+            {
+                
+                // throw;
+            }
+        }
+
+        void ExtractTheColors(Color colorName)
+        {
+            try
+            {
+                // Store color in PictureBox
+                panelPreviewer.BackColor = colorName;
+
+                // Store to textboxes
+                textBoxRed.Text = colorName.R.ToString();
+                textBoxGreen.Text = colorName.G.ToString();
+                textBoxBlue.Text = colorName.B.ToString();
+
+                // Convert to HEX
+                textBoxHex.Text = ColorValueConverter.RGBToHex(colorName);
+                textBoxRGB.Text = ColorValueConverter.toRGB(colorName);
+
+                // HSL
+                textBoxHSL.Text = ColorValueConverter.RGBToHSL(colorName);
+
+                string HSLAsArray = ColorValueConverter.RGBToHSL(colorName, false, true);
+                string[] hslarray = HSLAsArray.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+                textBoxHue.Text = hslarray[0];
+                textBoxSaturation.Text = hslarray[1];
+                textBoxLuminance.Text = hslarray[2];
+
+                // KnownColor
+                textBoxColorName.Text = ColorValueConverter.ColorToKnownColor(colorName);
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                // Copy to Clipboard
+                CopyToClipboard();
+            }
+        }
+
+        private void textBoxHex_TextChanged(object sender, EventArgs e)
+        {
+            var colorString = textBoxHex.Text;
+            var hexCharCount = 6;
+            try
+            {
+                if (colorString.Length > hexCharCount)
+                {
+                    var hex = ColorTranslator.FromHtml(colorString);
+                    ExtractTheColors(hex);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                
+                // throw ex;
             }
         }
 

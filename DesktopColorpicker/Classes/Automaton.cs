@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Reflection;
 
 namespace DesktopColorpicker.Classes
 {
@@ -57,5 +58,19 @@ namespace DesktopColorpicker.Classes
             }
             return ss;
         }
+
+        public AutoCompleteStringCollection GetAllKnownColors()
+        {
+            AutoCompleteStringCollection acc = new AutoCompleteStringCollection();
+            Type colorType = typeof(System.Drawing.Color);
+            // We take only static property to avoid properties like Name, IsSystemColor ...
+            PropertyInfo[] propInfos = colorType.GetProperties(BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public);
+            foreach (PropertyInfo propInfo in propInfos)
+            {
+                acc.Add(propInfo.Name);
+            }
+            return acc;
+        }
+
     }
 }

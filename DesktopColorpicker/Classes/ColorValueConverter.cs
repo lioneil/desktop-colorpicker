@@ -117,5 +117,10 @@ namespace DesktopColorpicker.Classes
 
         }
 
+        public static string ColorToKnownColor(Color c)
+        {
+            return Color.FromKnownColor(c.ToKnownColor()).ToString();
+        }
+
     }
 }
