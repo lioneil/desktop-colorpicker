@@ -9,3 +9,14 @@ C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColo
 C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\bin\Debug\Unity3.Eyedropper.pdb
 C:\Users\hp\Documents\Visual Studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.csprojResolveAssemblyReference.cache
 C:\Users\hp\documents\visual studio 2010\Projects\DesktopColorpicker\DesktopColorpicker\bin\Debug\DesktopColorpicker.exe.config
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\DesktopColorpicker.exe.config
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.exe
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.pdb
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.csprojResolveAssemblyReference.cache
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.MainForm.resources
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.Properties.Resources.resources
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.csproj.GenerateResource.Cache
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\DesktopColorpicker.exe
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\DesktopColorpicker.pdb
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\Unity3.Eyedropper.dll
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\Unity3.Eyedropper.pdb

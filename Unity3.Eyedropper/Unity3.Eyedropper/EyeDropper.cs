@@ -18,7 +18,7 @@ namespace Unity3.Eyedropper
             if (BeginScreenCapture != null)
                 BeginScreenCapture(this, null);
         }
-        
+
         public delegate void ScreenCapturedArgs(Bitmap capturedPixels, Color capturedColor);
         public event ScreenCapturedArgs ScreenCaptured;
         protected void OnScreenCaptured()
@@ -73,12 +73,12 @@ namespace Unity3.Eyedropper
                     return;
             }
         }
-        
-        private Size _PixelPreviewSize = new Size(100,50);
+
+        private Size _PixelPreviewSize = new Size(100, 50);
         public Size PixelPreviewSize
         {
-            get {return _PixelPreviewSize;}
-            set 
+            get { return _PixelPreviewSize; }
+            set
             {
                 _PixelPreviewSize = value;
                 RecalcSnapshotSize();
@@ -93,8 +93,8 @@ namespace Unity3.Eyedropper
         [DefaultValue(true)]
         public bool ShowPixelPreview
         {
-            get {return _ShowPixelPreview;}
-            set {_ShowPixelPreview = value;}
+            get { return _ShowPixelPreview; }
+            set { _ShowPixelPreview = value; }
         }
 
         private bool _ShowColorPreview = true;
@@ -117,8 +117,8 @@ namespace Unity3.Eyedropper
         /// </summary>
         public Point PreviewLocation
         {
-            get {return _PreviewLocation;}
-            set {_PreviewLocation = value;}
+            get { return _PreviewLocation; }
+            set { _PreviewLocation = value; }
         }
 
         private ePreviewPositionStyle _PreviewPositionStyle;
@@ -177,15 +177,16 @@ namespace Unity3.Eyedropper
             }
         }
 
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             if (!iscapturing)
                 e.Graphics.DrawImage(bmpDropper, (this.Width - bmpDropper.Width) / 2, (this.Height - bmpDropper.Height) / 2);
-            Rectangle r = new Rectangle(0,0, this.Width - 1, this.Height - 1);
-            e.Graphics.DrawRectangle(SystemPens.ControlDark, r);
-            e.Graphics.DrawLine(SystemPens.ControlLightLight, 0, r.Bottom, r.Right, r.Bottom);
-            e.Graphics.DrawLine(SystemPens.ControlLightLight, r.Right, 0, r.Right, r.Bottom);
+            Rectangle r = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+            //e.Graphics.DrawRectangle(SystemPens.ControlDark, r);
+            //e.Graphics.DrawLine(SystemPens.ControlLightLight, 0, r.Bottom, r.Right, r.Bottom);
+            //e.Graphics.DrawLine(SystemPens.ControlLightLight, r.Right, 0, r.Right, r.Bottom);
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
@@ -193,6 +194,7 @@ namespace Unity3.Eyedropper
             base.OnMouseMove(e);
             if (iscapturing)
                 captureScreen();
+
         }
 
 
@@ -225,7 +227,7 @@ namespace Unity3.Eyedropper
                 dc.CopyFromScreen(p, new Point(0, 0), bmpScreenCapture.Size);
 
                 Color c = bmpScreenCapture.GetPixel(
-                    (int)(bmpScreenCapture.Size.Width / 2.0F), 
+                    (int)(bmpScreenCapture.Size.Width / 2.0F),
                     (int)(bmpScreenCapture.Size.Height / 2.0F));
                 if (c != _SelectedColor)
                 {
@@ -245,14 +247,14 @@ namespace Unity3.Eyedropper
         }
 
         void RecalcSnapshotSize()
-		{
-			if (bmpScreenCapture != null)
-				bmpScreenCapture.Dispose();
-			Size r = _PixelPreviewSize;
-			int w = (int)(Math.Floor(r.Width / PixelPreviewZoom));
-			int h = (int)(Math.Floor(r.Height / PixelPreviewZoom));
-			bmpScreenCapture = new Bitmap(w, h);
-		}
+        {
+            if (bmpScreenCapture != null)
+                bmpScreenCapture.Dispose();
+            Size r = _PixelPreviewSize;
+            int w = (int)(Math.Floor(r.Width / PixelPreviewZoom));
+            int h = (int)(Math.Floor(r.Height / PixelPreviewZoom));
+            bmpScreenCapture = new Bitmap(w, h);
+        }
 
         internal class PixelZoom : Form
         {
@@ -277,9 +279,9 @@ namespace Unity3.Eyedropper
                 //Paint the bounds as a rounded rectangle...
                 System.Drawing.Graphics g = this.CreateGraphics();
                 g.SmoothingMode = SmoothingMode.AntiAlias;
-                GraphicsPath gpArea = this.BuildRoundedRectangle(new Rectangle(shadow,shadow,this.Width - shadow, this.Height - shadow), 20);
+                GraphicsPath gpArea = this.BuildRoundedRectangle(new Rectangle(shadow, shadow, this.Width - shadow, this.Height - shadow), 20);
                 using (SolidBrush sb = new SolidBrush(Color.FromArgb(150, Color.Black)))
-                {  g.FillPath(sb, gpArea);  }
+                { g.FillPath(sb, gpArea); }
                 g.TranslateTransform(-shadow, -shadow);
                 g.FillPath(Brushes.WhiteSmoke, gpArea);
                 g.DrawPath(Pens.Black, gpArea);
@@ -292,9 +294,9 @@ namespace Unity3.Eyedropper
                 Size parentHalf = new Size(parent.Width / 2, parent.Height / 2);
                 Point pntScreen = parent.Parent.PointToScreen(parent.Location);
                 Rectangle rBounds;
-                
+
                 if (parent.ShowColorPreview && parent.ShowPixelPreview)
-                    rBounds = new Rectangle(0,0, parent.PixelPreviewSize.Width + 20 + shadow, parent.PixelPreviewSize.Height * 2 + 25 + shadow);
+                    rBounds = new Rectangle(0, 0, parent.PixelPreviewSize.Width + 20 + shadow, parent.PixelPreviewSize.Height * 2 + 25 + shadow);
                 else
                     rBounds = new Rectangle(0, 0, parent.PixelPreviewSize.Width + 20 + shadow, parent.PixelPreviewSize.Height + 20 + shadow);
 
@@ -386,9 +388,9 @@ namespace Unity3.Eyedropper
                     g.InterpolationMode = InterpolationMode.NearestNeighbor;
                     g.DrawImage(screenCapture, rectScreen);
                     Color color = parent.SelectedColor;
-                    bool useBlack = (color.R + color.G + color.B > 128 * 3 ? true : false); 
+                    bool useBlack = (color.R + color.G + color.B > 128 * 3 ? true : false);
                     g.DrawRectangle(useBlack ? Pens.Black : Pens.White, new Rectangle(
-                        rectScreen.X + (rectScreen.Width / 2) - 2, 
+                        rectScreen.X + (rectScreen.Width / 2) - 2,
                         rectScreen.Y + (rectScreen.Height / 2) - 2, 4, 4));
                     g.DrawRectangle(Pens.Black, rectScreen);
                 }
@@ -407,10 +409,10 @@ namespace Unity3.Eyedropper
                 }
                 else
                 {
-                    gp.AddArc(bounds.Right - roundness, bounds.Top, roundness, roundness, 270, 90);
-                    gp.AddArc(bounds.Right - roundness, bounds.Bottom - roundness, roundness, roundness, 0, 90);
-                    gp.AddArc(bounds.Left, bounds.Bottom - roundness, roundness, roundness, 90, 90);
-                    gp.AddArc(bounds.Left, bounds.Top, roundness, roundness, 180, 90);
+                    gp.AddArc(bounds.Right - roundness, bounds.Top, roundness, roundness, 0, 0); // 270, 90
+                    gp.AddArc(bounds.Right - roundness, bounds.Bottom - roundness, roundness, roundness, 0, 0); // 0, 90
+                    gp.AddArc(bounds.Left, bounds.Bottom - roundness, roundness, roundness, 0, 0); // 90, 90
+                    gp.AddArc(bounds.Left, bounds.Top, roundness, roundness, 0, 0); // 180, 90
                     gp.CloseAllFigures();
                 }
 

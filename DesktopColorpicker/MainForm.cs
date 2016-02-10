@@ -101,18 +101,22 @@ namespace DesktopColorpicker
             }
 
             // Top Most
-            //try
-            //{
-                if(Properties.Settings.Default.IsTopMost == true) {
-                    checkBoxTopMost.CheckState = CheckState.Checked;
-                }
-            //}
-            //catch (Exception)
-            //{
-                //throw;
-            //}
+            if (Properties.Settings.Default.IsTopMost == true) 
+            {
+                checkBoxTopMost.CheckState = CheckState.Checked;
+            }
             
+            // Is Menu Hidden
+            panelMenu.Visible = !Properties.Settings.Default.IsMenuHidden;
+            if (Properties.Settings.Default.IsMenuHidden == true)
+            {
+                hideMenuToolStripMenuItem.CheckState = CheckState.Unchecked;
+                this.MinimumSize = Properties.Settings.Default.MainFormDefaultMinSize;
+            }
+            this.Size = Properties.Settings.Default.MainFormSize;
 
+            // Load the Last Color
+            ExtractTheColors(Properties.Settings.Default.LastColor );
             
         }
 
@@ -345,6 +349,9 @@ namespace DesktopColorpicker
                 // KnownColor
                 textBoxColorName.Text = ColorValueConverter.ColorToKnownColor(colorName);
 
+                // Save the Color to Settings
+                Properties.Settings.Default.LastColor = colorName;
+
 
             }
             catch (Exception ex)
@@ -373,8 +380,25 @@ namespace DesktopColorpicker
             }
             catch (Exception ex)
             {
-                
                 // throw ex;
+            }
+        }
+
+        private void hideMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (hideMenuToolStripMenuItem.Checked)
+            {
+                hideMenuToolStripMenuItem.CheckState = CheckState.Unchecked;
+                panelMenu.Visible = false;
+                this.MinimumSize = Properties.Settings.Default.MainFormDefaultMinSize;
+                Properties.Settings.Default.IsMenuHidden = true;
+            }
+            else
+            {
+                hideMenuToolStripMenuItem.CheckState = CheckState.Checked;
+                panelMenu.Visible = true;
+                this.MinimumSize = Properties.Settings.Default.MainFormDefaultSize;
+                Properties.Settings.Default.IsMenuHidden = false;
             }
         }
 

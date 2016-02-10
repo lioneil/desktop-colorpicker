@@ -82,5 +82,53 @@ namespace DesktopColorpicker.Properties {
                 this["IsTopMost"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("308, 439")]
+        public global::System.Drawing.Size MainFormDefaultSize {
+            get {
+                return ((global::System.Drawing.Size)(this["MainFormDefaultSize"]));
+            }
+            set {
+                this["MainFormDefaultSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("250, 150")]
+        public global::System.Drawing.Size MainFormDefaultMinSize {
+            get {
+                return ((global::System.Drawing.Size)(this["MainFormDefaultMinSize"]));
+            }
+            set {
+                this["MainFormDefaultMinSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsMenuHidden {
+            get {
+                return ((bool)(this["IsMenuHidden"]));
+            }
+            set {
+                this["IsMenuHidden"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Control")]
+        public global::System.Drawing.Color LastColor {
+            get {
+                return ((global::System.Drawing.Color)(this["LastColor"]));
+            }
+            set {
+                this["LastColor"] = value;
+            }
+        }
     }
 }

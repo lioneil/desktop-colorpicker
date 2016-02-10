@@ -17,5 +17,17 @@
     <Setting Name="IsTopMost" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="MainFormDefaultSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">308, 439</Value>
+    </Setting>
+    <Setting Name="MainFormDefaultMinSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">250, 150</Value>
+    </Setting>
+    <Setting Name="IsMenuHidden" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LastColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Control</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

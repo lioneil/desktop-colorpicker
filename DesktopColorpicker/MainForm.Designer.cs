@@ -42,13 +42,15 @@
             this.panelBaseLeft = new System.Windows.Forms.Panel();
             this.panelPreviewer = new System.Windows.Forms.Panel();
             this.numericUpDownZoomFactor = new System.Windows.Forms.NumericUpDown();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.checkBoxTopMost = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBoxColors = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxColorName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxHue = new System.Windows.Forms.TextBox();
@@ -75,14 +77,13 @@
             this.mainNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolTipCenter = new System.Windows.Forms.ToolTip(this.components);
-            this.textBoxColorName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
+            this.hideMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainContextMenu.SuspendLayout();
             this.panelBaseLeft.SuspendLayout();
             this.panelPreviewer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomFactor)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -96,12 +97,13 @@
             // mainContextMenu
             // 
             this.mainContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showToolStripMenuItem,
+            this.hideMenuToolStripMenuItem,
             this.copyToClipboardToolStripMenuItem,
             this.toolStripSeparator1,
+            this.showToolStripMenuItem,
             this.closeToolStripMenuItem});
             this.mainContextMenu.Name = "contextMenuStrip1";
-            this.mainContextMenu.Size = new System.Drawing.Size(172, 76);
+            this.mainContextMenu.Size = new System.Drawing.Size(172, 98);
             // 
             // showToolStripMenuItem
             // 
@@ -171,7 +173,7 @@
             this.panelBaseLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBaseLeft.Location = new System.Drawing.Point(0, 0);
             this.panelBaseLeft.Name = "panelBaseLeft";
-            this.panelBaseLeft.Size = new System.Drawing.Size(292, 401);
+            this.panelBaseLeft.Size = new System.Drawing.Size(284, 399);
             this.panelBaseLeft.TabIndex = 2;
             // 
             // panelPreviewer
@@ -180,7 +182,7 @@
             this.panelPreviewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPreviewer.Location = new System.Drawing.Point(0, 0);
             this.panelPreviewer.Name = "panelPreviewer";
-            this.panelPreviewer.Size = new System.Drawing.Size(292, 401);
+            this.panelPreviewer.Size = new System.Drawing.Size(284, 399);
             this.panelPreviewer.TabIndex = 2;
             // 
             // numericUpDownZoomFactor
@@ -208,18 +210,18 @@
             0});
             this.numericUpDownZoomFactor.ValueChanged += new System.EventHandler(this.numericUpDownZoomFactor_ValueChanged);
             // 
-            // panel2
+            // panelMenu
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel2.Controls.Add(this.groupBox4);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.groupBoxColors);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(139, 0);
-            this.panel2.MinimumSize = new System.Drawing.Size(120, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(153, 401);
-            this.panel2.TabIndex = 3;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelMenu.Controls.Add(this.groupBox4);
+            this.panelMenu.Controls.Add(this.groupBox1);
+            this.panelMenu.Controls.Add(this.groupBoxColors);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelMenu.Location = new System.Drawing.Point(131, 0);
+            this.panelMenu.MinimumSize = new System.Drawing.Size(120, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(153, 399);
+            this.panelMenu.TabIndex = 3;
             // 
             // groupBox4
             // 
@@ -300,9 +302,40 @@
             this.groupBoxColors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.groupBoxColors.Location = new System.Drawing.Point(7, 31);
             this.groupBoxColors.Name = "groupBoxColors";
-            this.groupBoxColors.Size = new System.Drawing.Size(139, 362);
+            this.groupBoxColors.Size = new System.Drawing.Size(139, 360);
             this.groupBoxColors.TabIndex = 25;
             this.groupBoxColors.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 316);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Color Name";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxColorName
+            // 
+            this.textBoxColorName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxColorName.AutoCompleteCustomSource.AddRange(new string[] {
+            "red",
+            "blue",
+            "yellow"});
+            this.textBoxColorName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBoxColorName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBoxColorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxColorName.Location = new System.Drawing.Point(26, 332);
+            this.textBoxColorName.Name = "textBoxColorName";
+            this.textBoxColorName.Size = new System.Drawing.Size(107, 20);
+            this.textBoxColorName.TabIndex = 29;
+            this.textBoxColorName.TextChanged += new System.EventHandler(this.textBoxColorName_TextChanged);
             // 
             // pictureBox1
             // 
@@ -616,37 +649,6 @@
             this.mainNotifyIcon.Visible = true;
             this.mainNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.mainNotifyIcon_MouseDoubleClick);
             // 
-            // textBoxColorName
-            // 
-            this.textBoxColorName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxColorName.AutoCompleteCustomSource.AddRange(new string[] {
-            "red",
-            "blue",
-            "yellow"});
-            this.textBoxColorName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBoxColorName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBoxColorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxColorName.Location = new System.Drawing.Point(26, 332);
-            this.textBoxColorName.Name = "textBoxColorName";
-            this.textBoxColorName.Size = new System.Drawing.Size(107, 20);
-            this.textBoxColorName.TabIndex = 29;
-            this.textBoxColorName.TextChanged += new System.EventHandler(this.textBoxColorName_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 316);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Color Name";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // eyeDropperMain
             // 
             this.eyeDropperMain.Location = new System.Drawing.Point(3, 3);
@@ -663,14 +665,23 @@
             this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
             this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
             // 
+            // hideMenuToolStripMenuItem
+            // 
+            this.hideMenuToolStripMenuItem.Checked = true;
+            this.hideMenuToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.hideMenuToolStripMenuItem.Name = "hideMenuToolStripMenuItem";
+            this.hideMenuToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.hideMenuToolStripMenuItem.Text = "Menu";
+            this.hideMenuToolStripMenuItem.Click += new System.EventHandler(this.hideMenuToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(292, 401);
+            this.ClientSize = new System.Drawing.Size(284, 399);
             this.ContextMenuStrip = this.mainContextMenu;
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelBaseLeft);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -691,7 +702,7 @@
             this.panelBaseLeft.ResumeLayout(false);
             this.panelPreviewer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomFactor)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -719,7 +730,7 @@
         private System.Windows.Forms.ToolStripMenuItem hEXwithoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hTMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rGBToolStripMenuItem;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.TextBox textBoxRGB;
         private System.Windows.Forms.TextBox textBoxHSL;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -758,6 +769,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBoxColorName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem hideMenuToolStripMenuItem;
     }
 }
 

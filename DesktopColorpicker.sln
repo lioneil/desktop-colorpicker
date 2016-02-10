@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopColorpicker", "DesktopColorpicker\DesktopColorpicker.csproj", "{61E5D3F5-47B9-438F-8005-2EB17D07937E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity3.Eyedropper", "..\..\Libraries\Unity3_EyeDropper\Unity3.Eyedropper\Unity3.Eyedropper\Unity3.Eyedropper.csproj", "{66E06288-628C-4C14-BA4F-21A777A12F4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity3.Eyedropper", "Unity3.Eyedropper\Unity3.Eyedropper\Unity3.Eyedropper.csproj", "{66E06288-628C-4C14-BA4F-21A777A12F4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

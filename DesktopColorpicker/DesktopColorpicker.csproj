@@ -85,16 +85,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Libraries\Unity3_EyeDropper\Unity3.Eyedropper\Unity3.Eyedropper\Unity3.Eyedropper.csproj">
-      <Project>{66E06288-628C-4C14-BA4F-21A777A12F4D}</Project>
-      <Name>Unity3.Eyedropper</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\copy-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\copy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Unity3.Eyedropper\Unity3.Eyedropper\Unity3.Eyedropper.csproj">
+      <Project>{66e06288-628c-4c14-ba4f-21a777a12f4d}</Project>
+      <Name>Unity3.Eyedropper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
