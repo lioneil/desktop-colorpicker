@@ -85,7 +85,7 @@ namespace DesktopColorpicker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("308, 439")]
+        [global::System.Configuration.DefaultSettingValueAttribute("300, 437")]
         public global::System.Drawing.Size MainFormDefaultSize {
             get {
                 return ((global::System.Drawing.Size)(this["MainFormDefaultSize"]));
@@ -97,13 +97,13 @@ namespace DesktopColorpicker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("250, 150")]
-        public global::System.Drawing.Size MainFormDefaultMinSize {
+        [global::System.Configuration.DefaultSettingValueAttribute("300")]
+        public int MainFormDefaultMinWidth {
             get {
-                return ((global::System.Drawing.Size)(this["MainFormDefaultMinSize"]));
+                return ((int)(this["MainFormDefaultMinWidth"]));
             }
             set {
-                this["MainFormDefaultMinSize"] = value;
+                this["MainFormDefaultMinWidth"] = value;
             }
         }
         
@@ -128,6 +128,18 @@ namespace DesktopColorpicker.Properties {
             }
             set {
                 this["LastColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("250")]
+        public int MainFormDefaultMinHeight {
+            get {
+                return ((int)(this["MainFormDefaultMinHeight"]));
+            }
+            set {
+                this["MainFormDefaultMinHeight"] = value;
             }
         }
     }

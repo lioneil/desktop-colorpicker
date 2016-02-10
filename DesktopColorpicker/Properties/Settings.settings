@@ -18,16 +18,19 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="MainFormDefaultSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">308, 439</Value>
+      <Value Profile="(Default)">300, 437</Value>
     </Setting>
-    <Setting Name="MainFormDefaultMinSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">250, 150</Value>
+    <Setting Name="MainFormDefaultMinWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">300</Value>
     </Setting>
     <Setting Name="IsMenuHidden" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="LastColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Control</Value>
+    </Setting>
+    <Setting Name="MainFormDefaultMinHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">250</Value>
     </Setting>
   </Settings>
 </SettingsFile>

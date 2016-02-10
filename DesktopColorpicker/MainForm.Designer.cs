@@ -31,16 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hideMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hEXwithoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rGBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxHex = new System.Windows.Forms.TextBox();
             this.panelBaseLeft = new System.Windows.Forms.Panel();
             this.panelPreviewer = new System.Windows.Forms.Panel();
+            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
             this.numericUpDownZoomFactor = new System.Windows.Forms.NumericUpDown();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -77,8 +79,6 @@
             this.mainNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolTipCenter = new System.Windows.Forms.ToolTip(this.components);
-            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
-            this.hideMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainContextMenu.SuspendLayout();
             this.panelBaseLeft.SuspendLayout();
             this.panelPreviewer.SuspendLayout();
@@ -105,12 +105,14 @@
             this.mainContextMenu.Name = "contextMenuStrip1";
             this.mainContextMenu.Size = new System.Drawing.Size(172, 98);
             // 
-            // showToolStripMenuItem
+            // hideMenuToolStripMenuItem
             // 
-            this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.showToolStripMenuItem.Text = "Hide";
-            this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
+            this.hideMenuToolStripMenuItem.Checked = true;
+            this.hideMenuToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.hideMenuToolStripMenuItem.Name = "hideMenuToolStripMenuItem";
+            this.hideMenuToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.hideMenuToolStripMenuItem.Text = "Menu";
+            this.hideMenuToolStripMenuItem.Click += new System.EventHandler(this.hideMenuToolStripMenuItem_Click);
             // 
             // copyToClipboardToolStripMenuItem
             // 
@@ -144,6 +146,13 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(168, 6);
+            // 
+            // showToolStripMenuItem
+            // 
+            this.showToolStripMenuItem.Name = "showToolStripMenuItem";
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.showToolStripMenuItem.Text = "Hide";
+            this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
@@ -184,6 +193,22 @@
             this.panelPreviewer.Name = "panelPreviewer";
             this.panelPreviewer.Size = new System.Drawing.Size(284, 399);
             this.panelPreviewer.TabIndex = 2;
+            // 
+            // eyeDropperMain
+            // 
+            this.eyeDropperMain.Location = new System.Drawing.Point(3, 3);
+            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.Name = "eyeDropperMain";
+            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
+            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
+            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
+            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
+            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.TabIndex = 0;
+            this.eyeDropperMain.Text = "Eyedropper";
+            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
+            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
             // 
             // numericUpDownZoomFactor
             // 
@@ -648,31 +673,6 @@
             this.mainNotifyIcon.Text = "Desktop Colorpicker";
             this.mainNotifyIcon.Visible = true;
             this.mainNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.mainNotifyIcon_MouseDoubleClick);
-            // 
-            // eyeDropperMain
-            // 
-            this.eyeDropperMain.Location = new System.Drawing.Point(3, 3);
-            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.Name = "eyeDropperMain";
-            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
-            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
-            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
-            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
-            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.TabIndex = 0;
-            this.eyeDropperMain.Text = "Eyedropper";
-            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
-            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
-            // 
-            // hideMenuToolStripMenuItem
-            // 
-            this.hideMenuToolStripMenuItem.Checked = true;
-            this.hideMenuToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.hideMenuToolStripMenuItem.Name = "hideMenuToolStripMenuItem";
-            this.hideMenuToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.hideMenuToolStripMenuItem.Text = "Menu";
-            this.hideMenuToolStripMenuItem.Click += new System.EventHandler(this.hideMenuToolStripMenuItem_Click);
             // 
             // MainForm
             // 

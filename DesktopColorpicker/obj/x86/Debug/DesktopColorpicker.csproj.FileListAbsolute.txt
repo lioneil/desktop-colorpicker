@@ -20,3 +20,6 @@ C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\De
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\DesktopColorpicker.pdb
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\Unity3.Eyedropper.dll
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\Unity3.Eyedropper.pdb
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\InputSimulator.dll
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\InputSimulator.pdb
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\InputSimulator.xml
