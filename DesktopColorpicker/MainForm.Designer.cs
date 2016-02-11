@@ -32,10 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.hideMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hEXwithoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rGBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,6 +75,10 @@
             this.mainNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolTipCenter = new System.Windows.Forms.ToolTip(this.components);
+            this.copyToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rGBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hSLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainContextMenu.SuspendLayout();
             this.panelBaseLeft.SuspendLayout();
             this.panelPreviewer.SuspendLayout();
@@ -103,54 +103,26 @@
             this.showToolStripMenuItem,
             this.closeToolStripMenuItem});
             this.mainContextMenu.Name = "contextMenuStrip1";
-            this.mainContextMenu.Size = new System.Drawing.Size(172, 98);
+            this.mainContextMenu.Size = new System.Drawing.Size(153, 120);
             // 
             // hideMenuToolStripMenuItem
             // 
             this.hideMenuToolStripMenuItem.Checked = true;
             this.hideMenuToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.hideMenuToolStripMenuItem.Name = "hideMenuToolStripMenuItem";
-            this.hideMenuToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.hideMenuToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.hideMenuToolStripMenuItem.Text = "Menu";
             this.hideMenuToolStripMenuItem.Click += new System.EventHandler(this.hideMenuToolStripMenuItem_Click);
-            // 
-            // copyToClipboardToolStripMenuItem
-            // 
-            this.copyToClipboardToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hEXwithoutToolStripMenuItem,
-            this.hTMLToolStripMenuItem,
-            this.rGBToolStripMenuItem});
-            this.copyToClipboardToolStripMenuItem.Name = "copyToClipboardToolStripMenuItem";
-            this.copyToClipboardToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.copyToClipboardToolStripMenuItem.Text = "Copy to Clipboard";
-            // 
-            // hEXwithoutToolStripMenuItem
-            // 
-            this.hEXwithoutToolStripMenuItem.Name = "hEXwithoutToolStripMenuItem";
-            this.hEXwithoutToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.hEXwithoutToolStripMenuItem.Text = "HEX (without #)";
-            // 
-            // hTMLToolStripMenuItem
-            // 
-            this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
-            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.hTMLToolStripMenuItem.Text = "HTML";
-            // 
-            // rGBToolStripMenuItem
-            // 
-            this.rGBToolStripMenuItem.Name = "rGBToolStripMenuItem";
-            this.rGBToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.rGBToolStripMenuItem.Text = "RGB";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(168, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(209, 6);
             // 
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.showToolStripMenuItem.Text = "Hide";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
@@ -158,7 +130,7 @@
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.ToolTipText = "Close the Application";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
@@ -665,6 +637,7 @@
             this.radioButtonHex.TabStop = true;
             this.radioButtonHex.Tag = "textBoxHex";
             this.radioButtonHex.UseVisualStyleBackColor = true;
+            this.radioButtonHex.CheckedChanged += new System.EventHandler(this.radioButtonHex_CheckedChanged);
             // 
             // mainNotifyIcon
             // 
@@ -673,6 +646,39 @@
             this.mainNotifyIcon.Text = "Desktop Colorpicker";
             this.mainNotifyIcon.Visible = true;
             this.mainNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.mainNotifyIcon_MouseDoubleClick);
+            // 
+            // copyToClipboardToolStripMenuItem
+            // 
+            this.copyToClipboardToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hexToolStripMenuItem,
+            this.rGBToolStripMenuItem,
+            this.hSLToolStripMenuItem});
+            this.copyToClipboardToolStripMenuItem.Name = "copyToClipboardToolStripMenuItem";
+            this.copyToClipboardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.copyToClipboardToolStripMenuItem.Text = "&Copy";
+            // 
+            // hexToolStripMenuItem
+            // 
+            this.hexToolStripMenuItem.Checked = true;
+            this.hexToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.hexToolStripMenuItem.Name = "hexToolStripMenuItem";
+            this.hexToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hexToolStripMenuItem.Text = "Hex";
+            this.hexToolStripMenuItem.Click += new System.EventHandler(this.hexToolStripMenuItem_Click);
+            // 
+            // rGBToolStripMenuItem
+            // 
+            this.rGBToolStripMenuItem.Name = "rGBToolStripMenuItem";
+            this.rGBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rGBToolStripMenuItem.Text = "RGB";
+            this.rGBToolStripMenuItem.Click += new System.EventHandler(this.rGBToolStripMenuItem_Click);
+            // 
+            // hSLToolStripMenuItem
+            // 
+            this.hSLToolStripMenuItem.Name = "hSLToolStripMenuItem";
+            this.hSLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hSLToolStripMenuItem.Text = "HSL";
+            this.hSLToolStripMenuItem.Click += new System.EventHandler(this.hSLToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -726,10 +732,6 @@
         private System.Windows.Forms.TextBox textBoxHex;
         private System.Windows.Forms.Panel panelPreviewer;
         private System.Windows.Forms.ContextMenuStrip mainContextMenu;
-        private System.Windows.Forms.ToolStripMenuItem copyToClipboardToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hEXwithoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hTMLToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rGBToolStripMenuItem;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.TextBox textBoxRGB;
         private System.Windows.Forms.TextBox textBoxHSL;
@@ -770,6 +772,10 @@
         private System.Windows.Forms.TextBox textBoxColorName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem hideMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyToClipboardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rGBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hSLToolStripMenuItem;
     }
 }
 

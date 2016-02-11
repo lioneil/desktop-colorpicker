@@ -123,7 +123,7 @@ namespace DesktopColorpicker
         {
             eyeDropperMain.PixelPreviewZoom = (float)numericUpDownZoomFactor.Value;
             eyeDropperMain.PreviewLocation = new Point(-14,-14);
-            eyeDropperMain.PixelPreviewSize = new Size(this.ClientSize.Width, (this.ClientSize.Height / 2)-2);
+            eyeDropperMain.PixelPreviewSize = new Size(this.ClientSize.Width, (this.ClientSize.Height / 2));
         }
 
         
@@ -143,28 +143,28 @@ namespace DesktopColorpicker
             Application.Exit();
         }
 
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
+        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        //{
             
-            switch (keyData)
-            {
-                case Keys.Up:
-                    Cursor.Position = new Point(Cursor.Position.X, Cursor.Position.Y - 1);
-                    break;
-                case Keys.Right:
-                    Cursor.Position = new Point(Cursor.Position.X + 1, Cursor.Position.Y);
-                    break;
-                case Keys.Down:
-                    Cursor.Position = new Point(Cursor.Position.X, Cursor.Position.Y + 1);
-                    break;
-                case Keys.Left:
-                    Cursor.Position = new Point(Cursor.Position.X - 1, Cursor.Position.Y);
-                    break;
-                default:
-                    break;
-            }
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
+        //    switch (keyData)
+        //    {
+        //        case Keys.Up:
+        //            Cursor.Position = new Point(Cursor.Position.X, Cursor.Position.Y - 1);
+        //            break;
+        //        case Keys.Right:
+        //            Cursor.Position = new Point(Cursor.Position.X + 1, Cursor.Position.Y);
+        //            break;
+        //        case Keys.Down:
+        //            Cursor.Position = new Point(Cursor.Position.X, Cursor.Position.Y + 1);
+        //            break;
+        //        case Keys.Left:
+        //            Cursor.Position = new Point(Cursor.Position.X - 1, Cursor.Position.Y);
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //    return base.ProcessCmdKey(ref msg, keyData);
+        //}
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -396,6 +396,63 @@ namespace DesktopColorpicker
                 Properties.Settings.Default.IsMenuHidden = false;
             }
         }
+
+        private void radioButtonHex_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void copyToClipboardToolStripMenuItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void hexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (hexToolStripMenuItem.Checked)
+            {
+                hexToolStripMenuItem.CheckState = CheckState.Unchecked;
+            }
+            else
+            {
+                hexToolStripMenuItem.CheckState = CheckState.Checked;
+                rGBToolStripMenuItem.CheckState = CheckState.Unchecked;
+                hSLToolStripMenuItem.CheckState = CheckState.Unchecked;
+                radioButtonHex.Checked = true;
+            }
+        }
+
+        private void rGBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (rGBToolStripMenuItem.Checked)
+            {
+                rGBToolStripMenuItem.CheckState = CheckState.Unchecked;
+            }
+            else
+            {
+                rGBToolStripMenuItem.CheckState = CheckState.Checked;
+                hexToolStripMenuItem.CheckState = CheckState.Unchecked;
+                hSLToolStripMenuItem.CheckState = CheckState.Unchecked;
+                radioButtonRGB.Checked = true;
+            }
+        }
+
+        private void hSLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (hSLToolStripMenuItem.Checked)
+            {
+                hSLToolStripMenuItem.CheckState = CheckState.Unchecked;
+            }
+            else
+            {
+                hSLToolStripMenuItem.CheckState = CheckState.Checked;
+                hexToolStripMenuItem.CheckState = CheckState.Unchecked;
+                rGBToolStripMenuItem.CheckState = CheckState.Unchecked;
+                radioButtonHSL.Checked = true;
+            }
+        }
+
+      
 
     }
 }
