@@ -345,7 +345,12 @@ namespace DesktopColorpicker
                 // Save the Color to Settings
                 Properties.Settings.Default.LastColor = colorName;
 
-
+                // Populate Pallette
+                panelPalletteLighterColor.BackColor = ControlPaint.Light(colorName, (Single)1.1);//ColorValueConverter.ColorAdjust(colorName, 1.4);
+                panelPalletteLightestColor.BackColor = ControlPaint.Light(colorName, (Single)1.4);
+                panelPalletteDarkerColor.BackColor = ColorValueConverter.ColorAdjust(colorName, 0.8);
+                panelPalletteDarkestColor.BackColor = ColorValueConverter.ColorAdjust(colorName, 0.4);
+                
             }
             catch (Exception ex)
             {
@@ -450,6 +455,52 @@ namespace DesktopColorpicker
                 rGBToolStripMenuItem.CheckState = CheckState.Unchecked;
                 radioButtonHSL.Checked = true;
             }
+        }
+
+        private void panelPalletteDarkestColor_MouseHover(object sender, EventArgs e)
+        {
+            toolTipCenter.Show("Copy " + GetTheColorViaRadioButton(panelPalletteDarkestColor.BackColor), panelPalletteDarkestColor);
+        }
+
+        private void panelPalletteDarkerColor_MouseHover(object sender, EventArgs e)
+        {
+            toolTipCenter.Show("Copy " + GetTheColorViaRadioButton(panelPalletteDarkerColor.BackColor), panelPalletteDarkerColor);
+        }
+
+        private void panelPalletteLighterColor_MouseHover(object sender, EventArgs e)
+        {
+            toolTipCenter.Show("Copy " + GetTheColorViaRadioButton(panelPalletteLighterColor.BackColor), panelPalletteLighterColor);
+        }
+
+        private void panelPalletteLightestColor_MouseHover(object sender, EventArgs e)
+        {
+            toolTipCenter.Show(ColorValueConverter.RGBToHex(panelPalletteLightestColor.BackColor).ToString(), panelPalletteLightestColor);
+        }
+
+        private void panelPalletteDarkestColor_Click(object sender, EventArgs e)
+        {
+            Color c = panelPalletteDarkestColor.BackColor;
+            Automaton.CopyToClipBoard(GetTheColorViaRadioButton(c));
+        }
+
+        public String GetTheColorViaRadioButton(Color c)
+        {
+            String color = "";
+            var checkedRadioButton = Automaton.GetCheckedRadio(new List<RadioButton>(new RadioButton[] { radioButtonHex, radioButtonRGB, radioButtonHSL }));
+            var tag = checkedRadioButton.Tag.ToString();
+            switch (tag)
+            {
+                case "textBoxHex":
+                    color = ColorValueConverter.RGBToHex(c);
+                    break;
+                case "textBoxRGB":
+                    color = ColorValueConverter.toRGB(c);
+                    break;
+                case "textBoxHSL":
+                    color = ColorValueConverter.RGBToHSL(c);
+                    break;
+            }
+            return color;
         }
 
       

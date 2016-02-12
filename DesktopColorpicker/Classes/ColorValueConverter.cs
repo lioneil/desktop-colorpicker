@@ -122,5 +122,11 @@ namespace DesktopColorpicker.Classes
             return Color.FromKnownColor(c.ToKnownColor()).ToString();
         }
 
+        public static Color ColorAdjust(Color c, double factor = 1.5)
+        {
+            return Color.FromArgb(c.A, (int)(c.R * factor < 255 ? c.R * factor : 255), (int)(c.G * factor < 255 ? c.G * factor : 255), (int)(c.B * factor < 255 ? c.B * factor : 255));
+        }
+
+
     }
 }

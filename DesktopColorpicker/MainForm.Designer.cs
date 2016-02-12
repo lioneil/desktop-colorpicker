@@ -79,6 +79,11 @@
             this.hexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rGBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hSLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelPalletteDarkerColor = new System.Windows.Forms.Panel();
+            this.panelPalletteDarkestColor = new System.Windows.Forms.Panel();
+            this.panelPalletteLighterColor = new System.Windows.Forms.Panel();
+            this.panelPalletteLightestColor = new System.Windows.Forms.Panel();
+            this.panelPalletteContainer = new System.Windows.Forms.Panel();
             this.mainContextMenu.SuspendLayout();
             this.panelBaseLeft.SuspendLayout();
             this.panelPreviewer.SuspendLayout();
@@ -92,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panelPalletteContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainContextMenu
@@ -103,26 +109,26 @@
             this.showToolStripMenuItem,
             this.closeToolStripMenuItem});
             this.mainContextMenu.Name = "contextMenuStrip1";
-            this.mainContextMenu.Size = new System.Drawing.Size(153, 120);
+            this.mainContextMenu.Size = new System.Drawing.Size(146, 98);
             // 
             // hideMenuToolStripMenuItem
             // 
             this.hideMenuToolStripMenuItem.Checked = true;
             this.hideMenuToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.hideMenuToolStripMenuItem.Name = "hideMenuToolStripMenuItem";
-            this.hideMenuToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.hideMenuToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.hideMenuToolStripMenuItem.Text = "Menu";
             this.hideMenuToolStripMenuItem.Click += new System.EventHandler(this.hideMenuToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(209, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
             // 
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.showToolStripMenuItem.Text = "Hide";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
@@ -130,7 +136,7 @@
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.ToolTipText = "Close the Application";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
@@ -159,6 +165,7 @@
             // 
             // panelPreviewer
             // 
+            this.panelPreviewer.Controls.Add(this.panelPalletteContainer);
             this.panelPreviewer.Controls.Add(this.eyeDropperMain);
             this.panelPreviewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPreviewer.Location = new System.Drawing.Point(0, 0);
@@ -168,6 +175,7 @@
             // 
             // eyeDropperMain
             // 
+            this.eyeDropperMain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eyeDropperMain.Location = new System.Drawing.Point(3, 3);
             this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
             this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
@@ -654,7 +662,7 @@
             this.rGBToolStripMenuItem,
             this.hSLToolStripMenuItem});
             this.copyToClipboardToolStripMenuItem.Name = "copyToClipboardToolStripMenuItem";
-            this.copyToClipboardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.copyToClipboardToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.copyToClipboardToolStripMenuItem.Text = "&Copy";
             // 
             // hexToolStripMenuItem
@@ -679,6 +687,61 @@
             this.hSLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hSLToolStripMenuItem.Text = "HSL";
             this.hSLToolStripMenuItem.Click += new System.EventHandler(this.hSLToolStripMenuItem_Click);
+            // 
+            // panelPalletteDarkerColor
+            // 
+            this.panelPalletteDarkerColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteDarkerColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteDarkerColor.Location = new System.Drawing.Point(39, 76);
+            this.panelPalletteDarkerColor.Name = "panelPalletteDarkerColor";
+            this.panelPalletteDarkerColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteDarkerColor.TabIndex = 2;
+            this.panelPalletteDarkerColor.MouseHover += new System.EventHandler(this.panelPalletteDarkerColor_MouseHover);
+            // 
+            // panelPalletteDarkestColor
+            // 
+            this.panelPalletteDarkestColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteDarkestColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteDarkestColor.Location = new System.Drawing.Point(75, 76);
+            this.panelPalletteDarkestColor.Name = "panelPalletteDarkestColor";
+            this.panelPalletteDarkestColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteDarkestColor.TabIndex = 2;
+            this.panelPalletteDarkestColor.Click += new System.EventHandler(this.panelPalletteDarkestColor_Click);
+            this.panelPalletteDarkestColor.MouseHover += new System.EventHandler(this.panelPalletteDarkestColor_MouseHover);
+            // 
+            // panelPalletteLighterColor
+            // 
+            this.panelPalletteLighterColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteLighterColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteLighterColor.Location = new System.Drawing.Point(3, 40);
+            this.panelPalletteLighterColor.Name = "panelPalletteLighterColor";
+            this.panelPalletteLighterColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteLighterColor.TabIndex = 2;
+            this.panelPalletteLighterColor.MouseHover += new System.EventHandler(this.panelPalletteLighterColor_MouseHover);
+            // 
+            // panelPalletteLightestColor
+            // 
+            this.panelPalletteLightestColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteLightestColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteLightestColor.Location = new System.Drawing.Point(3, 4);
+            this.panelPalletteLightestColor.Name = "panelPalletteLightestColor";
+            this.panelPalletteLightestColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteLightestColor.TabIndex = 2;
+            this.panelPalletteLightestColor.MouseHover += new System.EventHandler(this.panelPalletteLightestColor_MouseHover);
+            // 
+            // panelPalletteContainer
+            // 
+            this.panelPalletteContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPalletteContainer.BackColor = System.Drawing.Color.Transparent;
+            this.panelPalletteContainer.Controls.Add(this.panelPalletteLightestColor);
+            this.panelPalletteContainer.Controls.Add(this.panelPalletteLighterColor);
+            this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkerColor);
+            this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkestColor);
+            this.panelPalletteContainer.Location = new System.Drawing.Point(3, 288);
+            this.panelPalletteContainer.Name = "panelPalletteContainer";
+            this.panelPalletteContainer.Size = new System.Drawing.Size(109, 108);
+            this.panelPalletteContainer.TabIndex = 3;
             // 
             // MainForm
             // 
@@ -721,6 +784,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panelPalletteContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -776,6 +840,11 @@
         private System.Windows.Forms.ToolStripMenuItem hexToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rGBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hSLToolStripMenuItem;
+        private System.Windows.Forms.Panel panelPalletteLightestColor;
+        private System.Windows.Forms.Panel panelPalletteLighterColor;
+        private System.Windows.Forms.Panel panelPalletteDarkestColor;
+        private System.Windows.Forms.Panel panelPalletteDarkerColor;
+        private System.Windows.Forms.Panel panelPalletteContainer;
     }
 }
 

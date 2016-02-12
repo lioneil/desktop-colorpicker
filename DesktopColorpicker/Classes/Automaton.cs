@@ -49,14 +49,16 @@ namespace DesktopColorpicker.Classes
             
         }
 
-        public String GetCheckedRadio(List<RadioButton> list)
+        public static RadioButton GetCheckedRadio(List<RadioButton> list)
         {
-            string ss = "";
             foreach (RadioButton r in list)
             {
-                ss = r.Tag.ToString();
+                if (r.Checked)
+                {
+                    return r;
+                }
             }
-            return ss;
+            return null;
         }
 
         public AutoCompleteStringCollection GetAllKnownColors()

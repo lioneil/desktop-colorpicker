@@ -202,7 +202,7 @@ namespace Unity3.Eyedropper
         {
             base.OnMouseUp(e);
             {
-                Cursor = Cursors.Arrow;
+                Cursor = Cursors.Hand;
                 iscapturing = false;
                 if (pixelZoom != null)
                 {
