@@ -820,9 +820,7 @@
             this.panelPalletteDarkestColor.Size = new System.Drawing.Size(30, 30);
             this.panelPalletteDarkestColor.TabIndex = 2;
             this.panelPalletteDarkestColor.Click += new System.EventHandler(this.panelPalletteDarkestColor_Click);
-            this.panelPalletteDarkestColor.MouseLeave += new System.EventHandler(this.panelPalletteDarkestColor_MouseLeave);
             this.panelPalletteDarkestColor.MouseHover += new System.EventHandler(this.panelPalletteDarkestColor_MouseHover);
-            this.panelPalletteDarkestColor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelPalletteDarkestColor_MouseMove);
             // 
             // panelBaseLeft
             // 

@@ -477,7 +477,7 @@ namespace DesktopColorpicker
 
         private void panelPalletteDarkestColor_MouseHover(object sender, EventArgs e)
         {
-            //toolTipCenter.Show("Copy " + GetTheColorViaRadioButton(panelPalletteDarkestColor.BackColor), panelPalletteDarkestColor);
+            toolTipCenter.Show("Copy " + GetTheColorViaRadioButton(panelPalletteDarkestColor.BackColor), panelPalletteDarkestColor);
         }
 
         private void panelPalletteDarkerColor_MouseHover(object sender, EventArgs e)
@@ -580,9 +580,10 @@ namespace DesktopColorpicker
             toolStripStatusLabelMain.Text = "Copied to clipboard: " + s;
             statusStripMain.Refresh();
         }
-
+        
         private void panelPalletteDarkestColor_MouseMove(object sender, MouseEventArgs e)
         {
+            
         }
 
         private void panelPalletteDarkestColor_MouseLeave(object sender, EventArgs e)
