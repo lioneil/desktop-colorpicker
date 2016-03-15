@@ -41,13 +41,20 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxHex = new System.Windows.Forms.TextBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.pictureBoxColorDialogButton = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.checkBoxTopMost = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.numericUpDownZoomFactor = new System.Windows.Forms.NumericUpDown();
             this.groupBoxColors = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxColorName = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxHue = new System.Windows.Forms.TextBox();
             this.textBoxSaturation = new System.Windows.Forms.TextBox();
@@ -77,37 +84,30 @@
             this.toolStripStatusLabelMain = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelPreviewer = new System.Windows.Forms.Panel();
             this.panelPalletteContainer = new System.Windows.Forms.Panel();
-            this.panelPalletteDarkestColor = new System.Windows.Forms.Panel();
-            this.panelPalletteDarkerColor = new System.Windows.Forms.Panel();
-            this.panelPalletteLighterColor = new System.Windows.Forms.Panel();
-            this.panelPalletteLightestColor = new System.Windows.Forms.Panel();
-            this.panelBaseLeft = new System.Windows.Forms.Panel();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.pictureBoxColorDialogButton = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPalletteNormalColor = new System.Windows.Forms.Panel();
-            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
+            this.panelPalletteLightestColor = new System.Windows.Forms.Panel();
+            this.panelPalletteLighterColor = new System.Windows.Forms.Panel();
+            this.panelPalletteDarkerColor = new System.Windows.Forms.Panel();
+            this.panelPalletteDarkestColor = new System.Windows.Forms.Panel();
+            this.panelBaseLeft = new System.Windows.Forms.Panel();
             this.mainContextMenu.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColorDialogButton)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomFactor)).BeginInit();
             this.groupBoxColors.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusStripMain.SuspendLayout();
             this.panelPreviewer.SuspendLayout();
             this.panelPalletteContainer.SuspendLayout();
             this.panelBaseLeft.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColorDialogButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainContextMenu
@@ -206,11 +206,67 @@
             this.panelMenu.Controls.Add(this.groupBox1);
             this.panelMenu.Controls.Add(this.groupBoxColors);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelMenu.Location = new System.Drawing.Point(185, 0);
+            this.panelMenu.Location = new System.Drawing.Point(178, 0);
             this.panelMenu.MinimumSize = new System.Drawing.Size(120, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(190, 402);
             this.panelMenu.TabIndex = 3;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.eyeDropperMain);
+            this.groupBox6.Location = new System.Drawing.Point(7, 1);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(27, 33);
+            this.groupBox6.TabIndex = 29;
+            this.groupBox6.TabStop = false;
+            // 
+            // eyeDropperMain
+            // 
+            this.eyeDropperMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.eyeDropperMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eyeDropperMain.Location = new System.Drawing.Point(2, 8);
+            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.Name = "eyeDropperMain";
+            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
+            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
+            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
+            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
+            this.eyeDropperMain.ShowColorPreview = false;
+            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.TabIndex = 0;
+            this.eyeDropperMain.Text = "Eyedropper";
+            this.toolTipCenter.SetToolTip(this.eyeDropperMain, "Drag to pick colors");
+            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
+            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
+            this.eyeDropperMain.EndScreenCapture += new System.EventHandler(this.eyeDropperMain_EndScreenCapture);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.pictureBoxColorDialogButton);
+            this.groupBox5.Location = new System.Drawing.Point(36, 1);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(30, 33);
+            this.groupBox5.TabIndex = 28;
+            this.groupBox5.TabStop = false;
+            // 
+            // pictureBoxColorDialogButton
+            // 
+            this.pictureBoxColorDialogButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.pictureBoxColorDialogButton.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxColorDialogButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxColorDialogButton.Image = global::DesktopColorpicker.Properties.Resources._1458023981_Color_palette;
+            this.pictureBoxColorDialogButton.Location = new System.Drawing.Point(4, 8);
+            this.pictureBoxColorDialogButton.Name = "pictureBoxColorDialogButton";
+            this.pictureBoxColorDialogButton.Size = new System.Drawing.Size(22, 22);
+            this.pictureBoxColorDialogButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxColorDialogButton.TabIndex = 29;
+            this.pictureBoxColorDialogButton.TabStop = false;
+            this.toolTipCenter.SetToolTip(this.pictureBoxColorDialogButton, "Click to show Color Dialog Box");
+            this.pictureBoxColorDialogButton.Click += new System.EventHandler(this.pictureBoxColorDialogButton_Click);
             // 
             // groupBox4
             // 
@@ -221,6 +277,17 @@
             this.groupBox4.Size = new System.Drawing.Size(47, 33);
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DesktopColorpicker.Properties.Resources._1458027624_Pin;
+            this.pictureBox3.Location = new System.Drawing.Point(19, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(26, 19);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 29;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
             // 
             // checkBoxTopMost
             // 
@@ -245,6 +312,17 @@
             this.groupBox1.Size = new System.Drawing.Size(64, 33);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DesktopColorpicker.Properties.Resources._1458027644_Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(2, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 18);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // numericUpDownZoomFactor
             // 
@@ -328,6 +406,16 @@
             this.textBoxColorName.Size = new System.Drawing.Size(145, 20);
             this.textBoxColorName.TabIndex = 29;
             this.textBoxColorName.TextChanged += new System.EventHandler(this.textBoxColorName_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesktopColorpicker.Properties.Resources._1458029640_Copy;
+            this.pictureBox1.Location = new System.Drawing.Point(153, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox3
             // 
@@ -632,6 +720,10 @@
             this.mainNotifyIcon.Visible = true;
             this.mainNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.mainNotifyIcon_MouseDoubleClick);
             // 
+            // toolTipCenter
+            // 
+            this.toolTipCenter.Draw += new System.Windows.Forms.DrawToolTipEventHandler(this.toolTipCenter_Draw);
+            // 
             // statusStripMain
             // 
             this.statusStripMain.BackColor = System.Drawing.SystemColors.Control;
@@ -640,7 +732,7 @@
             this.statusStripMain.Location = new System.Drawing.Point(0, 402);
             this.statusStripMain.Name = "statusStripMain";
             this.statusStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStripMain.Size = new System.Drawing.Size(375, 22);
+            this.statusStripMain.Size = new System.Drawing.Size(368, 22);
             this.statusStripMain.TabIndex = 4;
             // 
             // toolStripStatusLabelMain
@@ -658,7 +750,7 @@
             this.panelPreviewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPreviewer.Location = new System.Drawing.Point(0, 0);
             this.panelPreviewer.Name = "panelPreviewer";
-            this.panelPreviewer.Size = new System.Drawing.Size(185, 402);
+            this.panelPreviewer.Size = new System.Drawing.Size(178, 402);
             this.panelPreviewer.TabIndex = 2;
             // 
             // panelPalletteContainer
@@ -675,38 +767,16 @@
             this.panelPalletteContainer.Size = new System.Drawing.Size(112, 111);
             this.panelPalletteContainer.TabIndex = 3;
             // 
-            // panelPalletteDarkestColor
+            // panelPalletteNormalColor
             // 
-            this.panelPalletteDarkestColor.BackColor = System.Drawing.Color.White;
-            this.panelPalletteDarkestColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPalletteDarkestColor.Location = new System.Drawing.Point(75, 76);
-            this.panelPalletteDarkestColor.Name = "panelPalletteDarkestColor";
-            this.panelPalletteDarkestColor.Size = new System.Drawing.Size(30, 30);
-            this.panelPalletteDarkestColor.TabIndex = 2;
-            this.panelPalletteDarkestColor.Click += new System.EventHandler(this.panelPalletteDarkestColor_Click);
-            this.panelPalletteDarkestColor.MouseHover += new System.EventHandler(this.panelPalletteDarkestColor_MouseHover);
-            // 
-            // panelPalletteDarkerColor
-            // 
-            this.panelPalletteDarkerColor.BackColor = System.Drawing.Color.White;
-            this.panelPalletteDarkerColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPalletteDarkerColor.Location = new System.Drawing.Point(39, 76);
-            this.panelPalletteDarkerColor.Name = "panelPalletteDarkerColor";
-            this.panelPalletteDarkerColor.Size = new System.Drawing.Size(30, 30);
-            this.panelPalletteDarkerColor.TabIndex = 2;
-            this.panelPalletteDarkerColor.Click += new System.EventHandler(this.panelPalletteDarkerColor_Click);
-            this.panelPalletteDarkerColor.MouseHover += new System.EventHandler(this.panelPalletteDarkerColor_MouseHover);
-            // 
-            // panelPalletteLighterColor
-            // 
-            this.panelPalletteLighterColor.BackColor = System.Drawing.Color.White;
-            this.panelPalletteLighterColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPalletteLighterColor.Location = new System.Drawing.Point(3, 40);
-            this.panelPalletteLighterColor.Name = "panelPalletteLighterColor";
-            this.panelPalletteLighterColor.Size = new System.Drawing.Size(30, 30);
-            this.panelPalletteLighterColor.TabIndex = 2;
-            this.panelPalletteLighterColor.Click += new System.EventHandler(this.panelPalletteLighterColor_Click);
-            this.panelPalletteLighterColor.MouseHover += new System.EventHandler(this.panelPalletteLighterColor_MouseHover);
+            this.panelPalletteNormalColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteNormalColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteNormalColor.Location = new System.Drawing.Point(3, 76);
+            this.panelPalletteNormalColor.Name = "panelPalletteNormalColor";
+            this.panelPalletteNormalColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteNormalColor.TabIndex = 3;
+            this.panelPalletteNormalColor.Click += new System.EventHandler(this.panelPalletteNormalColor_Click);
+            this.panelPalletteNormalColor.MouseHover += new System.EventHandler(this.panelPalletteNormalColor_MouseHover);
             // 
             // panelPalletteLightestColor
             // 
@@ -719,6 +789,41 @@
             this.panelPalletteLightestColor.Click += new System.EventHandler(this.panelPalletteLightestColor_Click);
             this.panelPalletteLightestColor.MouseHover += new System.EventHandler(this.panelPalletteLightestColor_MouseHover);
             // 
+            // panelPalletteLighterColor
+            // 
+            this.panelPalletteLighterColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteLighterColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteLighterColor.Location = new System.Drawing.Point(3, 40);
+            this.panelPalletteLighterColor.Name = "panelPalletteLighterColor";
+            this.panelPalletteLighterColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteLighterColor.TabIndex = 2;
+            this.panelPalletteLighterColor.Click += new System.EventHandler(this.panelPalletteLighterColor_Click);
+            this.panelPalletteLighterColor.MouseHover += new System.EventHandler(this.panelPalletteLighterColor_MouseHover);
+            // 
+            // panelPalletteDarkerColor
+            // 
+            this.panelPalletteDarkerColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteDarkerColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteDarkerColor.Location = new System.Drawing.Point(39, 76);
+            this.panelPalletteDarkerColor.Name = "panelPalletteDarkerColor";
+            this.panelPalletteDarkerColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteDarkerColor.TabIndex = 2;
+            this.panelPalletteDarkerColor.Click += new System.EventHandler(this.panelPalletteDarkerColor_Click);
+            this.panelPalletteDarkerColor.MouseHover += new System.EventHandler(this.panelPalletteDarkerColor_MouseHover);
+            // 
+            // panelPalletteDarkestColor
+            // 
+            this.panelPalletteDarkestColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteDarkestColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteDarkestColor.Location = new System.Drawing.Point(75, 76);
+            this.panelPalletteDarkestColor.Name = "panelPalletteDarkestColor";
+            this.panelPalletteDarkestColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteDarkestColor.TabIndex = 2;
+            this.panelPalletteDarkestColor.Click += new System.EventHandler(this.panelPalletteDarkestColor_Click);
+            this.panelPalletteDarkestColor.MouseLeave += new System.EventHandler(this.panelPalletteDarkestColor_MouseLeave);
+            this.panelPalletteDarkestColor.MouseHover += new System.EventHandler(this.panelPalletteDarkestColor_MouseHover);
+            this.panelPalletteDarkestColor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelPalletteDarkestColor_MouseMove);
+            // 
             // panelBaseLeft
             // 
             this.panelBaseLeft.BackColor = System.Drawing.SystemColors.Control;
@@ -726,107 +831,8 @@
             this.panelBaseLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBaseLeft.Location = new System.Drawing.Point(0, 0);
             this.panelBaseLeft.Name = "panelBaseLeft";
-            this.panelBaseLeft.Size = new System.Drawing.Size(185, 402);
+            this.panelBaseLeft.Size = new System.Drawing.Size(178, 402);
             this.panelBaseLeft.TabIndex = 2;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.pictureBoxColorDialogButton);
-            this.groupBox5.Location = new System.Drawing.Point(36, 1);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(30, 33);
-            this.groupBox5.TabIndex = 28;
-            this.groupBox5.TabStop = false;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.eyeDropperMain);
-            this.groupBox6.Location = new System.Drawing.Point(7, 1);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(27, 33);
-            this.groupBox6.TabIndex = 29;
-            this.groupBox6.TabStop = false;
-            // 
-            // pictureBoxColorDialogButton
-            // 
-            this.pictureBoxColorDialogButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.pictureBoxColorDialogButton.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxColorDialogButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxColorDialogButton.Image = global::DesktopColorpicker.Properties.Resources._1458023981_Color_palette;
-            this.pictureBoxColorDialogButton.Location = new System.Drawing.Point(4, 8);
-            this.pictureBoxColorDialogButton.Name = "pictureBoxColorDialogButton";
-            this.pictureBoxColorDialogButton.Size = new System.Drawing.Size(22, 22);
-            this.pictureBoxColorDialogButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxColorDialogButton.TabIndex = 29;
-            this.pictureBoxColorDialogButton.TabStop = false;
-            this.toolTipCenter.SetToolTip(this.pictureBoxColorDialogButton, "Click to show Color Dialog Box");
-            this.pictureBoxColorDialogButton.Click += new System.EventHandler(this.pictureBoxColorDialogButton_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DesktopColorpicker.Properties.Resources._1458027624_Pin;
-            this.pictureBox3.Location = new System.Drawing.Point(19, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 19);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 29;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DesktopColorpicker.Properties.Resources._1458027644_Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(2, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 18);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesktopColorpicker.Properties.Resources._1458029640_Copy;
-            this.pictureBox1.Location = new System.Drawing.Point(153, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panelPalletteNormalColor
-            // 
-            this.panelPalletteNormalColor.BackColor = System.Drawing.Color.White;
-            this.panelPalletteNormalColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPalletteNormalColor.Location = new System.Drawing.Point(3, 76);
-            this.panelPalletteNormalColor.Name = "panelPalletteNormalColor";
-            this.panelPalletteNormalColor.Size = new System.Drawing.Size(30, 30);
-            this.panelPalletteNormalColor.TabIndex = 3;
-            this.panelPalletteNormalColor.Click += new System.EventHandler(this.panelPalletteNormalColor_Click);
-            this.panelPalletteNormalColor.MouseHover += new System.EventHandler(this.panelPalletteNormalColor_MouseHover);
-            // 
-            // eyeDropperMain
-            // 
-            this.eyeDropperMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.eyeDropperMain.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.eyeDropperMain.Location = new System.Drawing.Point(2, 8);
-            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.Name = "eyeDropperMain";
-            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
-            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
-            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
-            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
-            this.eyeDropperMain.ShowColorPreview = false;
-            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.TabIndex = 0;
-            this.eyeDropperMain.Text = "Eyedropper";
-            this.toolTipCenter.SetToolTip(this.eyeDropperMain, "Drag to pick colors");
-            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
-            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
-            this.eyeDropperMain.EndScreenCapture += new System.EventHandler(this.eyeDropperMain_EndScreenCapture);
             // 
             // MainForm
             // 
@@ -834,14 +840,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(375, 424);
+            this.ClientSize = new System.Drawing.Size(368, 424);
             this.ContextMenuStrip = this.mainContextMenu;
             this.Controls.Add(this.panelBaseLeft);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.statusStripMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(300, 462);
+            this.MinimumSize = new System.Drawing.Size(325, 462);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Desktop Colorpicker";
@@ -856,12 +862,18 @@
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.mainContextMenu.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColorDialogButton)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomFactor)).EndInit();
             this.groupBoxColors.ResumeLayout(false);
             this.groupBoxColors.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -871,12 +883,6 @@
             this.panelPreviewer.ResumeLayout(false);
             this.panelPalletteContainer.ResumeLayout(false);
             this.panelBaseLeft.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColorDialogButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

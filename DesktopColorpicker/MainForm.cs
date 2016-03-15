@@ -126,14 +126,12 @@ namespace DesktopColorpicker
         private void eyeDropperMain_BeginScreenCapture(object sender, EventArgs e)
         {
             // height
-            var eH = eyeDropperMain.Height/2;
-            var eW = eyeDropperMain.Width/2;
-
+            int eH = eyeDropperMain.Height/2;
+            int eW = eyeDropperMain.Width/2;
             Point locationOnForm = eyeDropperMain.FindForm().PointToClient(eyeDropperMain.Parent.PointToScreen(eyeDropperMain.Location));
-
             eyeDropperMain.PixelPreviewZoom = (float)numericUpDownZoomFactor.Value;
             eyeDropperMain.PreviewLocation = new Point(-locationOnForm.X - eW, -locationOnForm.Y - eH);
-            eyeDropperMain.PixelPreviewSize = new Size(panelBaseLeft.ClientSize.Width, (panelBaseLeft.ClientSize.Height / 2));
+            eyeDropperMain.PixelPreviewSize = new Size(panelPreviewer.ClientSize.Width, (panelPreviewer.ClientSize.Height / 2));
             toolStripStatusLabelMain.Text = "Capturing colors...";
             statusStripMain.Refresh();
         }
@@ -479,7 +477,7 @@ namespace DesktopColorpicker
 
         private void panelPalletteDarkestColor_MouseHover(object sender, EventArgs e)
         {
-            toolTipCenter.Show("Copy " + GetTheColorViaRadioButton(panelPalletteDarkestColor.BackColor), panelPalletteDarkestColor);
+            //toolTipCenter.Show("Copy " + GetTheColorViaRadioButton(panelPalletteDarkestColor.BackColor), panelPalletteDarkestColor);
         }
 
         private void panelPalletteDarkerColor_MouseHover(object sender, EventArgs e)
@@ -583,7 +581,19 @@ namespace DesktopColorpicker
             statusStripMain.Refresh();
         }
 
-      
+        private void panelPalletteDarkestColor_MouseMove(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void panelPalletteDarkestColor_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolTipCenter_Draw(object sender, DrawToolTipEventArgs e)
+        {
+            
+        }    
 
     }
 }
