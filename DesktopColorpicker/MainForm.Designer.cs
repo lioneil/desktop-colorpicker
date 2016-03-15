@@ -81,7 +81,6 @@
             this.panelPalletteDarkerColor = new System.Windows.Forms.Panel();
             this.panelPalletteLighterColor = new System.Windows.Forms.Panel();
             this.panelPalletteLightestColor = new System.Windows.Forms.Panel();
-            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
             this.panelBaseLeft = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -89,6 +88,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelPalletteNormalColor = new System.Windows.Forms.Panel();
+            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
             this.mainContextMenu.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -664,6 +665,7 @@
             // 
             this.panelPalletteContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panelPalletteContainer.BackColor = System.Drawing.Color.Transparent;
+            this.panelPalletteContainer.Controls.Add(this.panelPalletteNormalColor);
             this.panelPalletteContainer.Controls.Add(this.panelPalletteLightestColor);
             this.panelPalletteContainer.Controls.Add(this.panelPalletteLighterColor);
             this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkerColor);
@@ -716,29 +718,6 @@
             this.panelPalletteLightestColor.TabIndex = 2;
             this.panelPalletteLightestColor.Click += new System.EventHandler(this.panelPalletteLightestColor_Click);
             this.panelPalletteLightestColor.MouseHover += new System.EventHandler(this.panelPalletteLightestColor_MouseHover);
-            // 
-            // eyeDropperMain
-            // 
-            this.eyeDropperMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.eyeDropperMain.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.eyeDropperMain.Location = new System.Drawing.Point(2, 8);
-            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.Name = "eyeDropperMain";
-            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
-            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
-            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
-            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
-            this.eyeDropperMain.ShowColorPreview = false;
-            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.TabIndex = 0;
-            this.eyeDropperMain.Text = "Eyedropper";
-            this.toolTipCenter.SetToolTip(this.eyeDropperMain, "Drag to pick colors");
-            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
-            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
-            this.eyeDropperMain.EndScreenCapture += new System.EventHandler(this.eyeDropperMain_EndScreenCapture);
             // 
             // panelBaseLeft
             // 
@@ -807,13 +786,47 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox1.Image = global::DesktopColorpicker.Properties.Resources._1458029640_Copy;
+            this.pictureBox1.Location = new System.Drawing.Point(153, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelPalletteNormalColor
+            // 
+            this.panelPalletteNormalColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteNormalColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteNormalColor.Location = new System.Drawing.Point(3, 76);
+            this.panelPalletteNormalColor.Name = "panelPalletteNormalColor";
+            this.panelPalletteNormalColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteNormalColor.TabIndex = 3;
+            this.panelPalletteNormalColor.Click += new System.EventHandler(this.panelPalletteNormalColor_Click);
+            this.panelPalletteNormalColor.MouseHover += new System.EventHandler(this.panelPalletteNormalColor_MouseHover);
+            // 
+            // eyeDropperMain
+            // 
+            this.eyeDropperMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.eyeDropperMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eyeDropperMain.Location = new System.Drawing.Point(2, 8);
+            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.Name = "eyeDropperMain";
+            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
+            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
+            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
+            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
+            this.eyeDropperMain.ShowColorPreview = false;
+            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.TabIndex = 0;
+            this.eyeDropperMain.Text = "Eyedropper";
+            this.toolTipCenter.SetToolTip(this.eyeDropperMain, "Drag to pick colors");
+            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
+            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
+            this.eyeDropperMain.EndScreenCapture += new System.EventHandler(this.eyeDropperMain_EndScreenCapture);
             // 
             // MainForm
             // 
@@ -930,6 +943,7 @@
         private System.Windows.Forms.Panel panelBaseLeft;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Panel panelPalletteNormalColor;
     }
 }
 

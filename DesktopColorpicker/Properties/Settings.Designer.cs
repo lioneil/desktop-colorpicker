@@ -85,7 +85,7 @@ namespace DesktopColorpicker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("300, 462")]
+        [global::System.Configuration.DefaultSettingValueAttribute("320, 462")]
         public global::System.Drawing.Size MainFormDefaultSize {
             get {
                 return ((global::System.Drawing.Size)(this["MainFormDefaultSize"]));
@@ -97,7 +97,7 @@ namespace DesktopColorpicker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("300")]
+        [global::System.Configuration.DefaultSettingValueAttribute("320")]
         public int MainFormDefaultMinWidth {
             get {
                 return ((int)(this["MainFormDefaultMinWidth"]));

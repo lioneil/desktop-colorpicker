@@ -93,6 +93,16 @@ namespace DesktopColorpicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1458029640_Copy {
+            get {
+                object obj = ResourceManager.GetObject("1458029640_Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap glassedWindowView {
             get {
                 object obj = ResourceManager.GetObject("glassedWindowView", resourceCulture);

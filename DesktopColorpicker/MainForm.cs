@@ -125,8 +125,14 @@ namespace DesktopColorpicker
 
         private void eyeDropperMain_BeginScreenCapture(object sender, EventArgs e)
         {
+            // height
+            var eH = eyeDropperMain.Height/2;
+            var eW = eyeDropperMain.Width/2;
+
+            Point locationOnForm = eyeDropperMain.FindForm().PointToClient(eyeDropperMain.Parent.PointToScreen(eyeDropperMain.Location));
+
             eyeDropperMain.PixelPreviewZoom = (float)numericUpDownZoomFactor.Value;
-            eyeDropperMain.PreviewLocation = new Point(-panelPreviewer.ClientSize.Width+11, -panelPreviewer.Location.Y);
+            eyeDropperMain.PreviewLocation = new Point(-locationOnForm.X - eW, -locationOnForm.Y - eH);
             eyeDropperMain.PixelPreviewSize = new Size(panelBaseLeft.ClientSize.Width, (panelBaseLeft.ClientSize.Height / 2));
             toolStripStatusLabelMain.Text = "Capturing colors...";
             statusStripMain.Refresh();
@@ -356,6 +362,7 @@ namespace DesktopColorpicker
                 panelPalletteLightestColor.BackColor = ControlPaint.Light(colorName, (Single)1.05);
                 panelPalletteDarkerColor.BackColor = ControlPaint.Dark(colorName, 0.01F);
                 panelPalletteDarkestColor.BackColor = ControlPaint.Dark(colorName, 0.05F);
+                panelPalletteNormalColor.BackColor = colorName;
                 
             }
             catch (Exception ex)
@@ -395,9 +402,12 @@ namespace DesktopColorpicker
             {
                 // Menu is Hidden
                 hideMenuToolStripMenuItem.CheckState = CheckState.Unchecked;
-                panelMenu.Visible = false;
                 this.MinimumSize = new Size(Properties.Settings.Default.MainFormDefaultMinWidth, Properties.Settings.Default.MainFormDefaultMinHeight);
                 Properties.Settings.Default.IsMenuHidden = true;
+
+                groupBoxColors.Visible = false;
+                panelMenu.Height = 40;
+                panelMenu.Dock = DockStyle.Top;
             }
             else
             {
@@ -406,6 +416,9 @@ namespace DesktopColorpicker
                 panelMenu.Visible = true;
                 this.MinimumSize = Properties.Settings.Default.MainFormDefaultSize;
                 Properties.Settings.Default.IsMenuHidden = false;
+
+                groupBoxColors.Visible = true;
+                panelMenu.Dock = DockStyle.Right;
             }
         }
 
@@ -550,6 +563,20 @@ namespace DesktopColorpicker
         private void panelPalletteLightestColor_Click(object sender, EventArgs e)
         {
             Color c = panelPalletteLightestColor.BackColor;
+            String s = GetTheColorViaRadioButton(c);
+            Automaton.CopyToClipBoard(s);
+            toolStripStatusLabelMain.Text = "Copied to clipboard: " + s;
+            statusStripMain.Refresh();
+        }
+
+        private void panelPalletteNormalColor_MouseHover(object sender, EventArgs e)
+        {
+            toolTipCenter.Show("Copy " + GetTheColorViaRadioButton(panelPalletteNormalColor.BackColor), panelPalletteNormalColor);
+        }
+
+        private void panelPalletteNormalColor_Click(object sender, EventArgs e)
+        {
+            Color c = panelPalletteNormalColor.BackColor;
             String s = GetTheColorViaRadioButton(c);
             Automaton.CopyToClipBoard(s);
             toolStripStatusLabelMain.Text = "Copied to clipboard: " + s;

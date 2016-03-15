@@ -18,10 +18,10 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="MainFormDefaultSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">300, 462</Value>
+      <Value Profile="(Default)">320, 462</Value>
     </Setting>
     <Setting Name="MainFormDefaultMinWidth" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">300</Value>
+      <Value Profile="(Default)">320</Value>
     </Setting>
     <Setting Name="IsMenuHidden" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
