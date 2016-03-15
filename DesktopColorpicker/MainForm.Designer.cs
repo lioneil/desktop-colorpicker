@@ -190,7 +190,7 @@
             this.textBoxHex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxHex.Location = new System.Drawing.Point(23, 34);
             this.textBoxHex.Name = "textBoxHex";
-            this.textBoxHex.Size = new System.Drawing.Size(155, 20);
+            this.textBoxHex.Size = new System.Drawing.Size(150, 20);
             this.textBoxHex.TabIndex = 1;
             this.textBoxHex.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxHex_MouseClick);
             this.textBoxHex.TextChanged += new System.EventHandler(this.textBoxHex_TextChanged);
@@ -205,17 +205,17 @@
             this.panelMenu.Controls.Add(this.groupBox1);
             this.panelMenu.Controls.Add(this.groupBoxColors);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelMenu.Location = new System.Drawing.Point(167, 0);
+            this.panelMenu.Location = new System.Drawing.Point(185, 0);
             this.panelMenu.MinimumSize = new System.Drawing.Size(120, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(208, 402);
+            this.panelMenu.Size = new System.Drawing.Size(190, 402);
             this.panelMenu.TabIndex = 3;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.pictureBox3);
             this.groupBox4.Controls.Add(this.checkBoxTopMost);
-            this.groupBox4.Location = new System.Drawing.Point(83, 1);
+            this.groupBox4.Location = new System.Drawing.Point(69, 1);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(47, 33);
             this.groupBox4.TabIndex = 27;
@@ -239,9 +239,9 @@
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.numericUpDownZoomFactor);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(133, 1);
+            this.groupBox1.Location = new System.Drawing.Point(119, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(69, 33);
+            this.groupBox1.Size = new System.Drawing.Size(64, 33);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
@@ -261,7 +261,7 @@
             0,
             0});
             this.numericUpDownZoomFactor.Name = "numericUpDownZoomFactor";
-            this.numericUpDownZoomFactor.Size = new System.Drawing.Size(39, 20);
+            this.numericUpDownZoomFactor.Size = new System.Drawing.Size(34, 20);
             this.numericUpDownZoomFactor.TabIndex = 8;
             this.numericUpDownZoomFactor.Value = new decimal(new int[] {
             4,
@@ -291,9 +291,9 @@
             this.groupBoxColors.Controls.Add(this.radioButtonHSL);
             this.groupBoxColors.Controls.Add(this.radioButtonHex);
             this.groupBoxColors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.groupBoxColors.Location = new System.Drawing.Point(20, 31);
+            this.groupBoxColors.Location = new System.Drawing.Point(6, 31);
             this.groupBoxColors.Name = "groupBoxColors";
-            this.groupBoxColors.Size = new System.Drawing.Size(182, 363);
+            this.groupBoxColors.Size = new System.Drawing.Size(177, 363);
             this.groupBoxColors.TabIndex = 25;
             this.groupBoxColors.TabStop = false;
             // 
@@ -324,7 +324,7 @@
             this.textBoxColorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxColorName.Location = new System.Drawing.Point(26, 332);
             this.textBoxColorName.Name = "textBoxColorName";
-            this.textBoxColorName.Size = new System.Drawing.Size(150, 20);
+            this.textBoxColorName.Size = new System.Drawing.Size(145, 20);
             this.textBoxColorName.TabIndex = 29;
             this.textBoxColorName.TextChanged += new System.EventHandler(this.textBoxColorName_TextChanged);
             // 
@@ -340,7 +340,7 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Location = new System.Drawing.Point(26, 213);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(150, 100);
+            this.groupBox3.Size = new System.Drawing.Size(145, 100);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             // 
@@ -352,7 +352,7 @@
             this.textBoxHue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxHue.Location = new System.Drawing.Point(71, 18);
             this.textBoxHue.Name = "textBoxHue";
-            this.textBoxHue.Size = new System.Drawing.Size(73, 20);
+            this.textBoxHue.Size = new System.Drawing.Size(68, 20);
             this.textBoxHue.TabIndex = 11;
             // 
             // textBoxSaturation
@@ -363,7 +363,7 @@
             this.textBoxSaturation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxSaturation.Location = new System.Drawing.Point(71, 44);
             this.textBoxSaturation.Name = "textBoxSaturation";
-            this.textBoxSaturation.Size = new System.Drawing.Size(73, 20);
+            this.textBoxSaturation.Size = new System.Drawing.Size(68, 20);
             this.textBoxSaturation.TabIndex = 16;
             // 
             // label8
@@ -402,7 +402,7 @@
             this.textBoxLuminance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxLuminance.Location = new System.Drawing.Point(71, 70);
             this.textBoxLuminance.Name = "textBoxLuminance";
-            this.textBoxLuminance.Size = new System.Drawing.Size(73, 20);
+            this.textBoxLuminance.Size = new System.Drawing.Size(68, 20);
             this.textBoxLuminance.TabIndex = 19;
             // 
             // label9
@@ -442,9 +442,9 @@
             this.label3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 26;
-            this.label3.Text = "RGB";
+            this.label3.Text = "RGBA";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -473,7 +473,7 @@
             this.groupBox2.Controls.Add(this.textBoxRed);
             this.groupBox2.Location = new System.Drawing.Point(26, 93);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(150, 82);
+            this.groupBox2.Size = new System.Drawing.Size(145, 82);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             // 
@@ -499,7 +499,7 @@
             this.textBoxBlue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxBlue.Location = new System.Drawing.Point(71, 58);
             this.textBoxBlue.Name = "textBoxBlue";
-            this.textBoxBlue.Size = new System.Drawing.Size(73, 20);
+            this.textBoxBlue.Size = new System.Drawing.Size(68, 20);
             this.textBoxBlue.TabIndex = 19;
             // 
             // label4
@@ -538,7 +538,7 @@
             this.textBoxGreen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxGreen.Location = new System.Drawing.Point(71, 33);
             this.textBoxGreen.Name = "textBoxGreen";
-            this.textBoxGreen.Size = new System.Drawing.Size(73, 20);
+            this.textBoxGreen.Size = new System.Drawing.Size(68, 20);
             this.textBoxGreen.TabIndex = 16;
             // 
             // textBoxRed
@@ -549,7 +549,7 @@
             this.textBoxRed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxRed.Location = new System.Drawing.Point(71, 10);
             this.textBoxRed.Name = "textBoxRed";
-            this.textBoxRed.Size = new System.Drawing.Size(73, 20);
+            this.textBoxRed.Size = new System.Drawing.Size(68, 20);
             this.textBoxRed.TabIndex = 11;
             // 
             // textBoxHSL
@@ -559,7 +559,7 @@
             this.textBoxHSL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxHSL.Location = new System.Drawing.Point(25, 193);
             this.textBoxHSL.Name = "textBoxHSL";
-            this.textBoxHSL.Size = new System.Drawing.Size(151, 20);
+            this.textBoxHSL.Size = new System.Drawing.Size(146, 20);
             this.textBoxHSL.TabIndex = 4;
             this.textBoxHSL.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxHSL_MouseClick);
             this.textBoxHSL.Enter += new System.EventHandler(this.textBoxHSL_Enter);
@@ -572,7 +572,7 @@
             this.textBoxRGB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxRGB.Location = new System.Drawing.Point(25, 72);
             this.textBoxRGB.Name = "textBoxRGB";
-            this.textBoxRGB.Size = new System.Drawing.Size(151, 20);
+            this.textBoxRGB.Size = new System.Drawing.Size(146, 20);
             this.textBoxRGB.TabIndex = 3;
             this.textBoxRGB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRGB_MouseClick);
             this.textBoxRGB.TextChanged += new System.EventHandler(this.textBoxRGB_TextChanged);
@@ -657,7 +657,7 @@
             this.panelPreviewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPreviewer.Location = new System.Drawing.Point(0, 0);
             this.panelPreviewer.Name = "panelPreviewer";
-            this.panelPreviewer.Size = new System.Drawing.Size(167, 402);
+            this.panelPreviewer.Size = new System.Drawing.Size(185, 402);
             this.panelPreviewer.TabIndex = 2;
             // 
             // panelPalletteContainer
@@ -692,6 +692,7 @@
             this.panelPalletteDarkerColor.Name = "panelPalletteDarkerColor";
             this.panelPalletteDarkerColor.Size = new System.Drawing.Size(30, 30);
             this.panelPalletteDarkerColor.TabIndex = 2;
+            this.panelPalletteDarkerColor.Click += new System.EventHandler(this.panelPalletteDarkerColor_Click);
             this.panelPalletteDarkerColor.MouseHover += new System.EventHandler(this.panelPalletteDarkerColor_MouseHover);
             // 
             // panelPalletteLighterColor
@@ -702,6 +703,7 @@
             this.panelPalletteLighterColor.Name = "panelPalletteLighterColor";
             this.panelPalletteLighterColor.Size = new System.Drawing.Size(30, 30);
             this.panelPalletteLighterColor.TabIndex = 2;
+            this.panelPalletteLighterColor.Click += new System.EventHandler(this.panelPalletteLighterColor_Click);
             this.panelPalletteLighterColor.MouseHover += new System.EventHandler(this.panelPalletteLighterColor_MouseHover);
             // 
             // panelPalletteLightestColor
@@ -712,6 +714,7 @@
             this.panelPalletteLightestColor.Name = "panelPalletteLightestColor";
             this.panelPalletteLightestColor.Size = new System.Drawing.Size(30, 30);
             this.panelPalletteLightestColor.TabIndex = 2;
+            this.panelPalletteLightestColor.Click += new System.EventHandler(this.panelPalletteLightestColor_Click);
             this.panelPalletteLightestColor.MouseHover += new System.EventHandler(this.panelPalletteLightestColor_MouseHover);
             // 
             // eyeDropperMain
@@ -744,13 +747,13 @@
             this.panelBaseLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBaseLeft.Location = new System.Drawing.Point(0, 0);
             this.panelBaseLeft.Name = "panelBaseLeft";
-            this.panelBaseLeft.Size = new System.Drawing.Size(167, 402);
+            this.panelBaseLeft.Size = new System.Drawing.Size(185, 402);
             this.panelBaseLeft.TabIndex = 2;
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.pictureBoxColorDialogButton);
-            this.groupBox5.Location = new System.Drawing.Point(50, 1);
+            this.groupBox5.Location = new System.Drawing.Point(36, 1);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(30, 33);
             this.groupBox5.TabIndex = 28;
@@ -759,7 +762,7 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.eyeDropperMain);
-            this.groupBox6.Location = new System.Drawing.Point(20, 1);
+            this.groupBox6.Location = new System.Drawing.Point(7, 1);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(27, 33);
             this.groupBox6.TabIndex = 29;

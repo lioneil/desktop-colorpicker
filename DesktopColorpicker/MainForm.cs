@@ -48,6 +48,8 @@ namespace DesktopColorpicker
 
                 // Automaton.CopyToClipBoard(textBoxHex.Text);
                 Automaton.CopyToClipBoard(selectedTextBox[0].Text);
+                toolStripStatusLabelMain.Text = "Copied to clipboard: " + selectedTextBox[0].Text;
+                statusStripMain.Refresh();
             }
             catch (Exception)
             {
@@ -332,7 +334,7 @@ namespace DesktopColorpicker
 
                 // Convert to HEX
                 textBoxHex.Text = ColorValueConverter.RGBToHex(colorName);
-                textBoxRGB.Text = ColorValueConverter.toRGB(colorName);
+                textBoxRGB.Text = ColorValueConverter.toRGBA(colorName);
 
                 // HSL
                 textBoxHSL.Text = ColorValueConverter.RGBToHSL(colorName);
@@ -364,7 +366,7 @@ namespace DesktopColorpicker
             {
                 // Copy to Clipboard
                 CopyToClipboard();
-                this.Text = "Desktop Colorpicker - "+ColorValueConverter.RGBToHex(colorName).ToUpper();
+                this.Text = Properties.Settings.Default.AppTitle + " - " + ColorValueConverter.RGBToHex(colorName).ToUpper();
             }
         }
 
@@ -485,8 +487,9 @@ namespace DesktopColorpicker
         private void panelPalletteDarkestColor_Click(object sender, EventArgs e)
         {
             Color c = panelPalletteDarkestColor.BackColor;
-            Automaton.CopyToClipBoard(GetTheColorViaRadioButton(c));
-            toolStripStatusLabelMain.Text = "Color copied to clipboard";
+            String s = GetTheColorViaRadioButton(c);
+            Automaton.CopyToClipBoard(s);
+            toolStripStatusLabelMain.Text = "Copied to clipboard: " + s;
             statusStripMain.Refresh();
         }
 
@@ -501,7 +504,7 @@ namespace DesktopColorpicker
                     color = ColorValueConverter.RGBToHex(c);
                     break;
                 case "textBoxRGB":
-                    color = ColorValueConverter.toRGB(c);
+                    color = ColorValueConverter.toRGBA(c);
                     break;
                 case "textBoxHSL":
                     color = ColorValueConverter.RGBToHSL(c);
@@ -523,6 +526,33 @@ namespace DesktopColorpicker
         private void eyeDropperMain_EndScreenCapture(object sender, EventArgs e)
         {
             toolStripStatusLabelMain.Text = "Ready";
+            statusStripMain.Refresh();
+        }
+
+        private void panelPalletteDarkerColor_Click(object sender, EventArgs e)
+        {
+            Color c = panelPalletteDarkerColor.BackColor;
+            String s = GetTheColorViaRadioButton(c);
+            Automaton.CopyToClipBoard(s);
+            toolStripStatusLabelMain.Text = "Copied to clipboard: " + s;
+            statusStripMain.Refresh();
+        }
+
+        private void panelPalletteLighterColor_Click(object sender, EventArgs e)
+        {
+            Color c = panelPalletteLighterColor.BackColor;
+            String s = GetTheColorViaRadioButton(c);
+            Automaton.CopyToClipBoard(s);
+            toolStripStatusLabelMain.Text = "Copied to clipboard: " + s;
+            statusStripMain.Refresh();
+        }
+
+        private void panelPalletteLightestColor_Click(object sender, EventArgs e)
+        {
+            Color c = panelPalletteLightestColor.BackColor;
+            String s = GetTheColorViaRadioButton(c);
+            Automaton.CopyToClipBoard(s);
+            toolStripStatusLabelMain.Text = "Copied to clipboard: " + s;
             statusStripMain.Refresh();
         }
 
