@@ -24,3 +24,7 @@ C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\In
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\InputSimulator.pdb
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\InputSimulator.xml
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.HoverForm.resources
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\DesktopColorpicker.exe.manifest
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\DesktopColorpicker.application
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.exe.manifest
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.application
