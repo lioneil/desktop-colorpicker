@@ -117,9 +117,14 @@ namespace DesktopColorpicker.Classes
 
         }
 
-        public static string ColorToKnownColor(Color c)
+        public static string ColorToKnownColor(Color color)
         {
-            return Color.FromKnownColor(c.ToKnownColor()).ToString();
+            //return Color.FromKnownColor(c.ToKnownColor()).ToString();
+            var predefined = typeof(Color).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            var match = (from p in predefined where ((Color)p.GetValue(null, null)).ToArgb() == color.ToArgb() select (Color)p.GetValue(null, null));
+            if (match.Any())
+                return match.First().Name;
+            return String.Empty;
         }
 
         public static Color ColorAdjust(Color c, double factor = 1.5)

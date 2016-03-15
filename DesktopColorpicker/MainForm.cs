@@ -124,6 +124,8 @@ namespace DesktopColorpicker
             eyeDropperMain.PixelPreviewZoom = (float)numericUpDownZoomFactor.Value;
             eyeDropperMain.PreviewLocation = new Point(-14,-14);
             eyeDropperMain.PixelPreviewSize = new Size(this.ClientSize.Width, (this.ClientSize.Height / 2));
+            toolStripStatusLabelMain.Text = "Capturing colors...";
+            statusStripMain.Refresh();
         }
 
         
@@ -346,10 +348,10 @@ namespace DesktopColorpicker
                 Properties.Settings.Default.LastColor = colorName;
 
                 // Populate Pallette
-                panelPalletteLighterColor.BackColor = ControlPaint.Light(colorName, (Single)1.1);//ColorValueConverter.ColorAdjust(colorName, 1.4);
-                panelPalletteLightestColor.BackColor = ControlPaint.Light(colorName, (Single)1.4);
-                panelPalletteDarkerColor.BackColor = ColorValueConverter.ColorAdjust(colorName, 0.8);
-                panelPalletteDarkestColor.BackColor = ColorValueConverter.ColorAdjust(colorName, 0.4);
+                panelPalletteLighterColor.BackColor = ControlPaint.Light(colorName, (Single)1.01);//ColorValueConverter.ColorAdjust(colorName, 1.4);
+                panelPalletteLightestColor.BackColor = ControlPaint.Light(colorName, (Single)1.05);
+                panelPalletteDarkerColor.BackColor = ControlPaint.Dark(colorName, 0.01F);
+                panelPalletteDarkestColor.BackColor = ControlPaint.Dark(colorName, 0.05F);
                 
             }
             catch (Exception ex)
@@ -481,6 +483,8 @@ namespace DesktopColorpicker
         {
             Color c = panelPalletteDarkestColor.BackColor;
             Automaton.CopyToClipBoard(GetTheColorViaRadioButton(c));
+            toolStripStatusLabelMain.Text = "Color copied to clipboard";
+            statusStripMain.Refresh();
         }
 
         public String GetTheColorViaRadioButton(Color c)
@@ -501,6 +505,22 @@ namespace DesktopColorpicker
                     break;
             }
             return color;
+        }
+
+        private void pictureBoxColorDialogButton_Click(object sender, EventArgs e)
+        {
+            ColorDialog codia = new ColorDialog();
+            if (codia.ShowDialog() != DialogResult.Cancel)
+            {
+                Color c = codia.Color;
+                ExtractTheColors(c);
+            }
+        }
+
+        private void eyeDropperMain_EndScreenCapture(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMain.Text = "Ready";
+            statusStripMain.Refresh();
         }
 
       
