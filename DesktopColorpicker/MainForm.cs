@@ -117,13 +117,15 @@ namespace DesktopColorpicker
         {
             // Load the previous settings from last session
             LoadSettingsFromLastSession();
+            toolStripStatusLabelMain.Text = "Ready";
+            statusStripMain.Refresh();
         }
 
         private void eyeDropperMain_BeginScreenCapture(object sender, EventArgs e)
         {
             eyeDropperMain.PixelPreviewZoom = (float)numericUpDownZoomFactor.Value;
-            eyeDropperMain.PreviewLocation = new Point(-14,-14);
-            eyeDropperMain.PixelPreviewSize = new Size(this.ClientSize.Width, (this.ClientSize.Height / 2));
+            eyeDropperMain.PreviewLocation = new Point(-panelPreviewer.ClientSize.Width+11, -panelPreviewer.Location.Y);
+            eyeDropperMain.PixelPreviewSize = new Size(panelBaseLeft.ClientSize.Width, (panelBaseLeft.ClientSize.Height / 2));
             toolStripStatusLabelMain.Text = "Capturing colors...";
             statusStripMain.Refresh();
         }
@@ -362,6 +364,7 @@ namespace DesktopColorpicker
             {
                 // Copy to Clipboard
                 CopyToClipboard();
+                this.Text = "Desktop Colorpicker - "+ColorValueConverter.RGBToHex(colorName).ToUpper();
             }
         }
 

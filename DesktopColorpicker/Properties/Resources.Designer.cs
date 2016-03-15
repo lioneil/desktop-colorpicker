@@ -73,6 +73,26 @@ namespace DesktopColorpicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1458027624_Pin {
+            get {
+                object obj = ResourceManager.GetObject("1458027624_Pin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1458027644_Zoom {
+            get {
+                object obj = ResourceManager.GetObject("1458027644_Zoom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap glassedWindowView {
             get {
                 object obj = ResourceManager.GetObject("glassedWindowView", resourceCulture);

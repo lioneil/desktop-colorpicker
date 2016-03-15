@@ -108,6 +108,12 @@
   <ItemGroup>
     <None Include="Resources\Vendors\Aha-Soft-Icons\1458023981_Color_palette.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vendors\Aha-Soft-Icons\1458027624_Pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vendors\Aha-Soft-Icons\1458027644_Zoom.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

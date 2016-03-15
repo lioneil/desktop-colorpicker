@@ -40,26 +40,14 @@
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxHex = new System.Windows.Forms.TextBox();
-            this.panelBaseLeft = new System.Windows.Forms.Panel();
-            this.panelPreviewer = new System.Windows.Forms.Panel();
-            this.pictureBoxColorDialogButton = new System.Windows.Forms.PictureBox();
-            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
-            this.panelPalletteContainer = new System.Windows.Forms.Panel();
-            this.panelPalletteLightestColor = new System.Windows.Forms.Panel();
-            this.panelPalletteLighterColor = new System.Windows.Forms.Panel();
-            this.panelPalletteDarkerColor = new System.Windows.Forms.Panel();
-            this.panelPalletteDarkestColor = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.checkBoxTopMost = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.numericUpDownZoomFactor = new System.Windows.Forms.NumericUpDown();
             this.groupBoxColors = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxColorName = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxHue = new System.Windows.Forms.TextBox();
             this.textBoxSaturation = new System.Windows.Forms.TextBox();
@@ -87,22 +75,38 @@
             this.toolTipCenter = new System.Windows.Forms.ToolTip(this.components);
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelMain = new System.Windows.Forms.ToolStripStatusLabel();
+            this.panelPreviewer = new System.Windows.Forms.Panel();
+            this.panelPalletteContainer = new System.Windows.Forms.Panel();
+            this.panelPalletteDarkestColor = new System.Windows.Forms.Panel();
+            this.panelPalletteDarkerColor = new System.Windows.Forms.Panel();
+            this.panelPalletteLighterColor = new System.Windows.Forms.Panel();
+            this.panelPalletteLightestColor = new System.Windows.Forms.Panel();
+            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
+            this.panelBaseLeft = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.pictureBoxColorDialogButton = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainContextMenu.SuspendLayout();
-            this.panelBaseLeft.SuspendLayout();
-            this.panelPreviewer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColorDialogButton)).BeginInit();
-            this.panelPalletteContainer.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomFactor)).BeginInit();
             this.groupBoxColors.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusStripMain.SuspendLayout();
+            this.panelPreviewer.SuspendLayout();
+            this.panelPalletteContainer.SuspendLayout();
+            this.panelBaseLeft.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColorDialogButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainContextMenu
@@ -186,157 +190,36 @@
             this.textBoxHex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxHex.Location = new System.Drawing.Point(23, 34);
             this.textBoxHex.Name = "textBoxHex";
-            this.textBoxHex.Size = new System.Drawing.Size(157, 20);
+            this.textBoxHex.Size = new System.Drawing.Size(155, 20);
             this.textBoxHex.TabIndex = 1;
             this.textBoxHex.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxHex_MouseClick);
             this.textBoxHex.TextChanged += new System.EventHandler(this.textBoxHex_TextChanged);
             this.textBoxHex.Enter += new System.EventHandler(this.textBoxHex_Enter);
             // 
-            // panelBaseLeft
-            // 
-            this.panelBaseLeft.BackColor = System.Drawing.SystemColors.Control;
-            this.panelBaseLeft.Controls.Add(this.panelPreviewer);
-            this.panelBaseLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelBaseLeft.Name = "panelBaseLeft";
-            this.panelBaseLeft.Size = new System.Drawing.Size(429, 421);
-            this.panelBaseLeft.TabIndex = 2;
-            // 
-            // panelPreviewer
-            // 
-            this.panelPreviewer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelPreviewer.Controls.Add(this.pictureBoxColorDialogButton);
-            this.panelPreviewer.Controls.Add(this.eyeDropperMain);
-            this.panelPreviewer.Controls.Add(this.panelPalletteContainer);
-            this.panelPreviewer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPreviewer.Location = new System.Drawing.Point(0, 0);
-            this.panelPreviewer.Name = "panelPreviewer";
-            this.panelPreviewer.Size = new System.Drawing.Size(429, 363);
-            this.panelPreviewer.TabIndex = 2;
-            // 
-            // pictureBoxColorDialogButton
-            // 
-            this.pictureBoxColorDialogButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.pictureBoxColorDialogButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxColorDialogButton.Image = global::DesktopColorpicker.Properties.Resources._1458023981_Color_palette;
-            this.pictureBoxColorDialogButton.Location = new System.Drawing.Point(30, 4);
-            this.pictureBoxColorDialogButton.Name = "pictureBoxColorDialogButton";
-            this.pictureBoxColorDialogButton.Size = new System.Drawing.Size(22, 22);
-            this.pictureBoxColorDialogButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxColorDialogButton.TabIndex = 29;
-            this.pictureBoxColorDialogButton.TabStop = false;
-            this.toolTipCenter.SetToolTip(this.pictureBoxColorDialogButton, "Click to show Color Dialog Box");
-            this.pictureBoxColorDialogButton.Click += new System.EventHandler(this.pictureBoxColorDialogButton_Click);
-            // 
-            // eyeDropperMain
-            // 
-            this.eyeDropperMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.eyeDropperMain.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.eyeDropperMain.Location = new System.Drawing.Point(3, 3);
-            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.Name = "eyeDropperMain";
-            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
-            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
-            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
-            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
-            this.eyeDropperMain.ShowColorPreview = false;
-            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.TabIndex = 0;
-            this.eyeDropperMain.Text = "Eyedropper";
-            this.toolTipCenter.SetToolTip(this.eyeDropperMain, "Drag to pick colors");
-            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
-            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
-            this.eyeDropperMain.EndScreenCapture += new System.EventHandler(this.eyeDropperMain_EndScreenCapture);
-            // 
-            // panelPalletteContainer
-            // 
-            this.panelPalletteContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelPalletteContainer.BackColor = System.Drawing.Color.Transparent;
-            this.panelPalletteContainer.Controls.Add(this.panelPalletteLightestColor);
-            this.panelPalletteContainer.Controls.Add(this.panelPalletteLighterColor);
-            this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkerColor);
-            this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkestColor);
-            this.panelPalletteContainer.Location = new System.Drawing.Point(3, 247);
-            this.panelPalletteContainer.Name = "panelPalletteContainer";
-            this.panelPalletteContainer.Size = new System.Drawing.Size(254, 111);
-            this.panelPalletteContainer.TabIndex = 3;
-            // 
-            // panelPalletteLightestColor
-            // 
-            this.panelPalletteLightestColor.BackColor = System.Drawing.Color.White;
-            this.panelPalletteLightestColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPalletteLightestColor.Location = new System.Drawing.Point(3, 4);
-            this.panelPalletteLightestColor.Name = "panelPalletteLightestColor";
-            this.panelPalletteLightestColor.Size = new System.Drawing.Size(30, 30);
-            this.panelPalletteLightestColor.TabIndex = 2;
-            this.panelPalletteLightestColor.MouseHover += new System.EventHandler(this.panelPalletteLightestColor_MouseHover);
-            // 
-            // panelPalletteLighterColor
-            // 
-            this.panelPalletteLighterColor.BackColor = System.Drawing.Color.White;
-            this.panelPalletteLighterColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPalletteLighterColor.Location = new System.Drawing.Point(3, 40);
-            this.panelPalletteLighterColor.Name = "panelPalletteLighterColor";
-            this.panelPalletteLighterColor.Size = new System.Drawing.Size(30, 30);
-            this.panelPalletteLighterColor.TabIndex = 2;
-            this.panelPalletteLighterColor.MouseHover += new System.EventHandler(this.panelPalletteLighterColor_MouseHover);
-            // 
-            // panelPalletteDarkerColor
-            // 
-            this.panelPalletteDarkerColor.BackColor = System.Drawing.Color.White;
-            this.panelPalletteDarkerColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPalletteDarkerColor.Location = new System.Drawing.Point(39, 76);
-            this.panelPalletteDarkerColor.Name = "panelPalletteDarkerColor";
-            this.panelPalletteDarkerColor.Size = new System.Drawing.Size(30, 30);
-            this.panelPalletteDarkerColor.TabIndex = 2;
-            this.panelPalletteDarkerColor.MouseHover += new System.EventHandler(this.panelPalletteDarkerColor_MouseHover);
-            // 
-            // panelPalletteDarkestColor
-            // 
-            this.panelPalletteDarkestColor.BackColor = System.Drawing.Color.White;
-            this.panelPalletteDarkestColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPalletteDarkestColor.Location = new System.Drawing.Point(75, 76);
-            this.panelPalletteDarkestColor.Name = "panelPalletteDarkestColor";
-            this.panelPalletteDarkestColor.Size = new System.Drawing.Size(30, 30);
-            this.panelPalletteDarkestColor.TabIndex = 2;
-            this.panelPalletteDarkestColor.Click += new System.EventHandler(this.panelPalletteDarkestColor_Click);
-            this.panelPalletteDarkestColor.MouseHover += new System.EventHandler(this.panelPalletteDarkestColor_MouseHover);
-            // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelMenu.Controls.Add(this.groupBox6);
+            this.panelMenu.Controls.Add(this.groupBox5);
             this.panelMenu.Controls.Add(this.groupBox4);
             this.panelMenu.Controls.Add(this.groupBox1);
             this.panelMenu.Controls.Add(this.groupBoxColors);
-            this.panelMenu.Location = new System.Drawing.Point(483, 3);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelMenu.Location = new System.Drawing.Point(167, 0);
             this.panelMenu.MinimumSize = new System.Drawing.Size(120, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(198, 402);
+            this.panelMenu.Size = new System.Drawing.Size(208, 402);
             this.panelMenu.TabIndex = 3;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.pictureBox3);
             this.groupBox4.Controls.Add(this.checkBoxTopMost);
-            this.groupBox4.Location = new System.Drawing.Point(30, 1);
+            this.groupBox4.Location = new System.Drawing.Point(83, 1);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(49, 33);
+            this.groupBox4.Size = new System.Drawing.Size(47, 33);
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(19, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 19);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 29;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
             // 
             // checkBoxTopMost
             // 
@@ -356,22 +239,11 @@
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.numericUpDownZoomFactor);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(81, 1);
+            this.groupBox1.Location = new System.Drawing.Point(133, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(110, 33);
+            this.groupBox1.Size = new System.Drawing.Size(69, 33);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 18);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // numericUpDownZoomFactor
             // 
@@ -389,7 +261,7 @@
             0,
             0});
             this.numericUpDownZoomFactor.Name = "numericUpDownZoomFactor";
-            this.numericUpDownZoomFactor.Size = new System.Drawing.Size(80, 20);
+            this.numericUpDownZoomFactor.Size = new System.Drawing.Size(39, 20);
             this.numericUpDownZoomFactor.TabIndex = 8;
             this.numericUpDownZoomFactor.Value = new decimal(new int[] {
             4,
@@ -419,9 +291,9 @@
             this.groupBoxColors.Controls.Add(this.radioButtonHSL);
             this.groupBoxColors.Controls.Add(this.radioButtonHex);
             this.groupBoxColors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.groupBoxColors.Location = new System.Drawing.Point(7, 31);
+            this.groupBoxColors.Location = new System.Drawing.Point(20, 31);
             this.groupBoxColors.Name = "groupBoxColors";
-            this.groupBoxColors.Size = new System.Drawing.Size(184, 363);
+            this.groupBoxColors.Size = new System.Drawing.Size(182, 363);
             this.groupBoxColors.TabIndex = 25;
             this.groupBoxColors.TabStop = false;
             // 
@@ -452,19 +324,9 @@
             this.textBoxColorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxColorName.Location = new System.Drawing.Point(26, 332);
             this.textBoxColorName.Name = "textBoxColorName";
-            this.textBoxColorName.Size = new System.Drawing.Size(152, 20);
+            this.textBoxColorName.Size = new System.Drawing.Size(150, 20);
             this.textBoxColorName.TabIndex = 29;
             this.textBoxColorName.TextChanged += new System.EventHandler(this.textBoxColorName_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox3
             // 
@@ -478,7 +340,7 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Location = new System.Drawing.Point(26, 213);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(152, 100);
+            this.groupBox3.Size = new System.Drawing.Size(150, 100);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             // 
@@ -490,7 +352,7 @@
             this.textBoxHue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxHue.Location = new System.Drawing.Point(71, 18);
             this.textBoxHue.Name = "textBoxHue";
-            this.textBoxHue.Size = new System.Drawing.Size(75, 20);
+            this.textBoxHue.Size = new System.Drawing.Size(73, 20);
             this.textBoxHue.TabIndex = 11;
             // 
             // textBoxSaturation
@@ -501,7 +363,7 @@
             this.textBoxSaturation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxSaturation.Location = new System.Drawing.Point(71, 44);
             this.textBoxSaturation.Name = "textBoxSaturation";
-            this.textBoxSaturation.Size = new System.Drawing.Size(75, 20);
+            this.textBoxSaturation.Size = new System.Drawing.Size(73, 20);
             this.textBoxSaturation.TabIndex = 16;
             // 
             // label8
@@ -540,7 +402,7 @@
             this.textBoxLuminance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxLuminance.Location = new System.Drawing.Point(71, 70);
             this.textBoxLuminance.Name = "textBoxLuminance";
-            this.textBoxLuminance.Size = new System.Drawing.Size(75, 20);
+            this.textBoxLuminance.Size = new System.Drawing.Size(73, 20);
             this.textBoxLuminance.TabIndex = 19;
             // 
             // label9
@@ -611,7 +473,7 @@
             this.groupBox2.Controls.Add(this.textBoxRed);
             this.groupBox2.Location = new System.Drawing.Point(26, 93);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(152, 82);
+            this.groupBox2.Size = new System.Drawing.Size(150, 82);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             // 
@@ -637,7 +499,7 @@
             this.textBoxBlue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxBlue.Location = new System.Drawing.Point(71, 58);
             this.textBoxBlue.Name = "textBoxBlue";
-            this.textBoxBlue.Size = new System.Drawing.Size(75, 20);
+            this.textBoxBlue.Size = new System.Drawing.Size(73, 20);
             this.textBoxBlue.TabIndex = 19;
             // 
             // label4
@@ -676,7 +538,7 @@
             this.textBoxGreen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxGreen.Location = new System.Drawing.Point(71, 33);
             this.textBoxGreen.Name = "textBoxGreen";
-            this.textBoxGreen.Size = new System.Drawing.Size(75, 20);
+            this.textBoxGreen.Size = new System.Drawing.Size(73, 20);
             this.textBoxGreen.TabIndex = 16;
             // 
             // textBoxRed
@@ -687,7 +549,7 @@
             this.textBoxRed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxRed.Location = new System.Drawing.Point(71, 10);
             this.textBoxRed.Name = "textBoxRed";
-            this.textBoxRed.Size = new System.Drawing.Size(75, 20);
+            this.textBoxRed.Size = new System.Drawing.Size(73, 20);
             this.textBoxRed.TabIndex = 11;
             // 
             // textBoxHSL
@@ -697,7 +559,7 @@
             this.textBoxHSL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxHSL.Location = new System.Drawing.Point(25, 193);
             this.textBoxHSL.Name = "textBoxHSL";
-            this.textBoxHSL.Size = new System.Drawing.Size(153, 20);
+            this.textBoxHSL.Size = new System.Drawing.Size(151, 20);
             this.textBoxHSL.TabIndex = 4;
             this.textBoxHSL.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxHSL_MouseClick);
             this.textBoxHSL.Enter += new System.EventHandler(this.textBoxHSL_Enter);
@@ -710,7 +572,7 @@
             this.textBoxRGB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxRGB.Location = new System.Drawing.Point(25, 72);
             this.textBoxRGB.Name = "textBoxRGB";
-            this.textBoxRGB.Size = new System.Drawing.Size(153, 20);
+            this.textBoxRGB.Size = new System.Drawing.Size(151, 20);
             this.textBoxRGB.TabIndex = 3;
             this.textBoxRGB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRGB_MouseClick);
             this.textBoxRGB.TextChanged += new System.EventHandler(this.textBoxRGB_TextChanged);
@@ -774,20 +636,181 @@
             this.statusStripMain.BackColor = System.Drawing.SystemColors.Control;
             this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelMain});
-            this.statusStripMain.Location = new System.Drawing.Point(0, 438);
+            this.statusStripMain.Location = new System.Drawing.Point(0, 402);
             this.statusStripMain.Name = "statusStripMain";
             this.statusStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStripMain.Size = new System.Drawing.Size(683, 22);
+            this.statusStripMain.Size = new System.Drawing.Size(375, 22);
             this.statusStripMain.TabIndex = 4;
-            this.statusStripMain.Text = "statusStrip1";
             // 
             // toolStripStatusLabelMain
             // 
             this.toolStripStatusLabelMain.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabelMain.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.toolStripStatusLabelMain.Name = "toolStripStatusLabelMain";
-            this.toolStripStatusLabelMain.Size = new System.Drawing.Size(28, 17);
-            this.toolStripStatusLabelMain.Text = "Ready";
+            this.toolStripStatusLabelMain.Size = new System.Drawing.Size(50, 17);
+            this.toolStripStatusLabelMain.Text = "Initializing...";
+            // 
+            // panelPreviewer
+            // 
+            this.panelPreviewer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelPreviewer.Controls.Add(this.panelPalletteContainer);
+            this.panelPreviewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPreviewer.Location = new System.Drawing.Point(0, 0);
+            this.panelPreviewer.Name = "panelPreviewer";
+            this.panelPreviewer.Size = new System.Drawing.Size(167, 402);
+            this.panelPreviewer.TabIndex = 2;
+            // 
+            // panelPalletteContainer
+            // 
+            this.panelPalletteContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelPalletteContainer.BackColor = System.Drawing.Color.Transparent;
+            this.panelPalletteContainer.Controls.Add(this.panelPalletteLightestColor);
+            this.panelPalletteContainer.Controls.Add(this.panelPalletteLighterColor);
+            this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkerColor);
+            this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkestColor);
+            this.panelPalletteContainer.Location = new System.Drawing.Point(3, 288);
+            this.panelPalletteContainer.Name = "panelPalletteContainer";
+            this.panelPalletteContainer.Size = new System.Drawing.Size(112, 111);
+            this.panelPalletteContainer.TabIndex = 3;
+            // 
+            // panelPalletteDarkestColor
+            // 
+            this.panelPalletteDarkestColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteDarkestColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteDarkestColor.Location = new System.Drawing.Point(75, 76);
+            this.panelPalletteDarkestColor.Name = "panelPalletteDarkestColor";
+            this.panelPalletteDarkestColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteDarkestColor.TabIndex = 2;
+            this.panelPalletteDarkestColor.Click += new System.EventHandler(this.panelPalletteDarkestColor_Click);
+            this.panelPalletteDarkestColor.MouseHover += new System.EventHandler(this.panelPalletteDarkestColor_MouseHover);
+            // 
+            // panelPalletteDarkerColor
+            // 
+            this.panelPalletteDarkerColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteDarkerColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteDarkerColor.Location = new System.Drawing.Point(39, 76);
+            this.panelPalletteDarkerColor.Name = "panelPalletteDarkerColor";
+            this.panelPalletteDarkerColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteDarkerColor.TabIndex = 2;
+            this.panelPalletteDarkerColor.MouseHover += new System.EventHandler(this.panelPalletteDarkerColor_MouseHover);
+            // 
+            // panelPalletteLighterColor
+            // 
+            this.panelPalletteLighterColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteLighterColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteLighterColor.Location = new System.Drawing.Point(3, 40);
+            this.panelPalletteLighterColor.Name = "panelPalletteLighterColor";
+            this.panelPalletteLighterColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteLighterColor.TabIndex = 2;
+            this.panelPalletteLighterColor.MouseHover += new System.EventHandler(this.panelPalletteLighterColor_MouseHover);
+            // 
+            // panelPalletteLightestColor
+            // 
+            this.panelPalletteLightestColor.BackColor = System.Drawing.Color.White;
+            this.panelPalletteLightestColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPalletteLightestColor.Location = new System.Drawing.Point(3, 4);
+            this.panelPalletteLightestColor.Name = "panelPalletteLightestColor";
+            this.panelPalletteLightestColor.Size = new System.Drawing.Size(30, 30);
+            this.panelPalletteLightestColor.TabIndex = 2;
+            this.panelPalletteLightestColor.MouseHover += new System.EventHandler(this.panelPalletteLightestColor_MouseHover);
+            // 
+            // eyeDropperMain
+            // 
+            this.eyeDropperMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.eyeDropperMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eyeDropperMain.Location = new System.Drawing.Point(2, 8);
+            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.Name = "eyeDropperMain";
+            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
+            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
+            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
+            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
+            this.eyeDropperMain.ShowColorPreview = false;
+            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.TabIndex = 0;
+            this.eyeDropperMain.Text = "Eyedropper";
+            this.toolTipCenter.SetToolTip(this.eyeDropperMain, "Drag to pick colors");
+            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
+            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
+            this.eyeDropperMain.EndScreenCapture += new System.EventHandler(this.eyeDropperMain_EndScreenCapture);
+            // 
+            // panelBaseLeft
+            // 
+            this.panelBaseLeft.BackColor = System.Drawing.SystemColors.Control;
+            this.panelBaseLeft.Controls.Add(this.panelPreviewer);
+            this.panelBaseLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBaseLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelBaseLeft.Name = "panelBaseLeft";
+            this.panelBaseLeft.Size = new System.Drawing.Size(167, 402);
+            this.panelBaseLeft.TabIndex = 2;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.pictureBoxColorDialogButton);
+            this.groupBox5.Location = new System.Drawing.Point(50, 1);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(30, 33);
+            this.groupBox5.TabIndex = 28;
+            this.groupBox5.TabStop = false;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.eyeDropperMain);
+            this.groupBox6.Location = new System.Drawing.Point(20, 1);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(27, 33);
+            this.groupBox6.TabIndex = 29;
+            this.groupBox6.TabStop = false;
+            // 
+            // pictureBoxColorDialogButton
+            // 
+            this.pictureBoxColorDialogButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.pictureBoxColorDialogButton.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxColorDialogButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxColorDialogButton.Image = global::DesktopColorpicker.Properties.Resources._1458023981_Color_palette;
+            this.pictureBoxColorDialogButton.Location = new System.Drawing.Point(4, 8);
+            this.pictureBoxColorDialogButton.Name = "pictureBoxColorDialogButton";
+            this.pictureBoxColorDialogButton.Size = new System.Drawing.Size(22, 22);
+            this.pictureBoxColorDialogButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxColorDialogButton.TabIndex = 29;
+            this.pictureBoxColorDialogButton.TabStop = false;
+            this.toolTipCenter.SetToolTip(this.pictureBoxColorDialogButton, "Click to show Color Dialog Box");
+            this.pictureBoxColorDialogButton.Click += new System.EventHandler(this.pictureBoxColorDialogButton_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DesktopColorpicker.Properties.Resources._1458027624_Pin;
+            this.pictureBox3.Location = new System.Drawing.Point(19, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(26, 19);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 29;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DesktopColorpicker.Properties.Resources._1458027644_Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(2, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 18);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -795,14 +818,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(683, 460);
+            this.ClientSize = new System.Drawing.Size(375, 424);
             this.ContextMenuStrip = this.mainContextMenu;
-            this.Controls.Add(this.statusStripMain);
-            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelBaseLeft);
+            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.statusStripMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(300, 437);
+            this.MinimumSize = new System.Drawing.Size(300, 462);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Desktop Colorpicker";
@@ -816,26 +839,28 @@
             this.Move += new System.EventHandler(this.MainForm_Move);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.mainContextMenu.ResumeLayout(false);
-            this.panelBaseLeft.ResumeLayout(false);
-            this.panelPreviewer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColorDialogButton)).EndInit();
-            this.panelPalletteContainer.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomFactor)).EndInit();
             this.groupBoxColors.ResumeLayout(false);
             this.groupBoxColors.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.statusStripMain.ResumeLayout(false);
             this.statusStripMain.PerformLayout();
+            this.panelPreviewer.ResumeLayout(false);
+            this.panelPalletteContainer.ResumeLayout(false);
+            this.panelBaseLeft.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColorDialogButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -843,10 +868,7 @@
 
         #endregion
 
-        private Unity3.Eyedropper.EyeDropper eyeDropperMain;
-        private System.Windows.Forms.Panel panelBaseLeft;
         private System.Windows.Forms.TextBox textBoxHex;
-        private System.Windows.Forms.Panel panelPreviewer;
         private System.Windows.Forms.ContextMenuStrip mainContextMenu;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.TextBox textBoxRGB;
@@ -892,14 +914,19 @@
         private System.Windows.Forms.ToolStripMenuItem hexToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rGBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hSLToolStripMenuItem;
-        private System.Windows.Forms.Panel panelPalletteLightestColor;
-        private System.Windows.Forms.Panel panelPalletteLighterColor;
-        private System.Windows.Forms.Panel panelPalletteDarkestColor;
-        private System.Windows.Forms.Panel panelPalletteDarkerColor;
-        private System.Windows.Forms.Panel panelPalletteContainer;
-        private System.Windows.Forms.PictureBox pictureBoxColorDialogButton;
         private System.Windows.Forms.StatusStrip statusStripMain;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMain;
+        private System.Windows.Forms.Panel panelPreviewer;
+        private System.Windows.Forms.PictureBox pictureBoxColorDialogButton;
+        private Unity3.Eyedropper.EyeDropper eyeDropperMain;
+        private System.Windows.Forms.Panel panelPalletteContainer;
+        private System.Windows.Forms.Panel panelPalletteLightestColor;
+        private System.Windows.Forms.Panel panelPalletteLighterColor;
+        private System.Windows.Forms.Panel panelPalletteDarkerColor;
+        private System.Windows.Forms.Panel panelPalletteDarkestColor;
+        private System.Windows.Forms.Panel panelBaseLeft;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }
 
