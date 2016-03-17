@@ -14,5 +14,5 @@ You know the most freeing License out there? That's the one. Not really.
 [See MIT License](https://raw.githubusercontent.com/john-lioneil/desktop-colorpicker/master/LICENSE)
 
 ## Technologies
-* Adobe Eyedropper Control by Richard Blythe
-* ColorPicker by Elkay
+* [Adobe Eyedropper Control](http://www.codeproject.com/Articles/36540/Adobe-Eyedropper-Control) by Richard Blythe
+* [ColorPicker](http://www.codeproject.com/Articles/19382/Not-just-another-color-picker) by Elkay
