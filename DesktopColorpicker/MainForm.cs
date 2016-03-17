@@ -588,11 +588,16 @@ namespace DesktopColorpicker
                     break;
                 case Keys.Left:
                     Cursor.Position = new Point(Cursor.Position.X - 1, Cursor.Position.Y);
-                    break;
+                    break; 
                 default:
                     break;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            CopyToClipboard();
         }
 
     }

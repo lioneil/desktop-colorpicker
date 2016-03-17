@@ -213,13 +213,13 @@
             this.panelMenu.Location = new System.Drawing.Point(178, 0);
             this.panelMenu.MinimumSize = new System.Drawing.Size(120, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(190, 420);
+            this.panelMenu.Size = new System.Drawing.Size(190, 399);
             this.panelMenu.TabIndex = 3;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.eyeDropperMain);
-            this.groupBox6.Location = new System.Drawing.Point(7, 1);
+            this.groupBox6.Location = new System.Drawing.Point(6, 1);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(27, 33);
             this.groupBox6.TabIndex = 29;
@@ -374,7 +374,7 @@
             this.groupBoxColors.Controls.Add(this.radioButtonHSL);
             this.groupBoxColors.Controls.Add(this.radioButtonHex);
             this.groupBoxColors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.groupBoxColors.Location = new System.Drawing.Point(6, 31);
+            this.groupBoxColors.Location = new System.Drawing.Point(6, 32);
             this.groupBoxColors.Name = "groupBoxColors";
             this.groupBoxColors.Size = new System.Drawing.Size(177, 360);
             this.groupBoxColors.TabIndex = 25;
@@ -422,6 +422,7 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.toolTipCenter.SetToolTip(this.pictureBox1, "Copy current selected color");
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox3
             // 
@@ -735,7 +736,7 @@
             this.statusStripMain.BackColor = System.Drawing.SystemColors.Control;
             this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelMain});
-            this.statusStripMain.Location = new System.Drawing.Point(0, 420);
+            this.statusStripMain.Location = new System.Drawing.Point(0, 399);
             this.statusStripMain.Name = "statusStripMain";
             this.statusStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.statusStripMain.Size = new System.Drawing.Size(368, 22);
@@ -756,7 +757,7 @@
             this.panelPreviewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPreviewer.Location = new System.Drawing.Point(0, 0);
             this.panelPreviewer.Name = "panelPreviewer";
-            this.panelPreviewer.Size = new System.Drawing.Size(178, 420);
+            this.panelPreviewer.Size = new System.Drawing.Size(178, 399);
             this.panelPreviewer.TabIndex = 2;
             // 
             // panelPalletteContainer
@@ -768,7 +769,7 @@
             this.panelPalletteContainer.Controls.Add(this.panelPalletteLighterColor);
             this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkerColor);
             this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkestColor);
-            this.panelPalletteContainer.Location = new System.Drawing.Point(3, 306);
+            this.panelPalletteContainer.Location = new System.Drawing.Point(3, 285);
             this.panelPalletteContainer.Name = "panelPalletteContainer";
             this.panelPalletteContainer.Size = new System.Drawing.Size(112, 111);
             this.panelPalletteContainer.TabIndex = 3;
@@ -835,7 +836,7 @@
             this.panelBaseLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBaseLeft.Location = new System.Drawing.Point(0, 0);
             this.panelBaseLeft.Name = "panelBaseLeft";
-            this.panelBaseLeft.Size = new System.Drawing.Size(178, 420);
+            this.panelBaseLeft.Size = new System.Drawing.Size(178, 399);
             this.panelBaseLeft.TabIndex = 2;
             // 
             // mainMenuMainForm
@@ -868,7 +869,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(368, 442);
+            this.ClientSize = new System.Drawing.Size(368, 421);
             this.ContextMenuStrip = this.mainContextMenu;
             this.Controls.Add(this.panelBaseLeft);
             this.Controls.Add(this.panelMenu);
