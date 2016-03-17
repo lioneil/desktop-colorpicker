@@ -88,9 +88,9 @@ namespace DesktopColorpicker
             {
                 numericUpDownZoomFactor.Value = Properties.Settings.Default.ZoomSize;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //throw;
+                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             // Top Most
