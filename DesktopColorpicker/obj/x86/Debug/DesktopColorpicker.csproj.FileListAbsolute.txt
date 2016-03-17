@@ -20,7 +20,6 @@ C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\Co
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\ColorPicker.xml
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\bin\Debug\Unity3.Eyedropper.pdb
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.csprojResolveAssemblyReference.cache
-C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.ColorBoxForm.resources
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.MainForm.resources
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.Properties.Resources.resources
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\DesktopColorpicker\obj\x86\Debug\DesktopColorpicker.csproj.GenerateResource.Cache

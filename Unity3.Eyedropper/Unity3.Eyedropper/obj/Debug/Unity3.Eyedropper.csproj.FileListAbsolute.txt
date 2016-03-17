@@ -6,9 +6,6 @@ C:\Users\hp\Documents\Visual Studio 2010\Libraries\EyeDropperDemo\Unity3.Eyedrop
 C:\Users\hp\Documents\Visual Studio 2010\Libraries\EyeDropperDemo\Unity3.Eyedropper\Unity3.Eyedropper\obj\Debug\Unity3.Eyedropper.pdb
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\bin\Debug\Unity3.Eyedropper.dll
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\bin\Debug\Unity3.Eyedropper.pdb
-C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\bin\Debug\Unity3.Eyedropper.dll.CodeAnalysisLog.xml
-C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\bin\Debug\Unity3.Eyedropper.dll.lastcodeanalysissucceeded
-C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\obj\Debug\Unity3.Eyedropper.csprojResolveAssemblyReference.cache
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\obj\Debug\Unity3.Eyedropper.Properties.Resources.resources
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\obj\Debug\Unity3.Eyedropper.csproj.GenerateResource.Cache
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\obj\Debug\Unity3.Eyedropper.dll

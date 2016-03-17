@@ -16,6 +16,7 @@ namespace DesktopColorpicker
 {
     public partial class MainForm : Form
     {
+        #region MainForm Init
         public MainForm()
         {
             InitializeComponent();
@@ -26,12 +27,41 @@ namespace DesktopColorpicker
             Automaton c = new Automaton();
             this.textBoxColorName.AutoCompleteCustomSource = c.GetAllKnownColors();
         }
+        #endregion
 
+        #region eyeDropper Functions
         private void eyeDropperMain_ScreenCaptured(Bitmap capturedPixels, Color capturedColor)
         {
             capturedPixels.SetResolution(3000, 3000);
             ExtractTheColors(capturedColor);
         }
+
+        private void eyeDropperMain_BeginScreenCapture(object sender, EventArgs e)
+        {
+            // Disable TopMost because the PixelPreviewer goes behind the form when TopMost is set to true
+            this.TopMost = false;
+            int eH = eyeDropperMain.Height / 2;
+            int eW = eyeDropperMain.Width / 2;
+            Point locationOnForm = eyeDropperMain.FindForm().PointToClient(eyeDropperMain.Parent.PointToScreen(eyeDropperMain.Location));
+            eyeDropperMain.PixelPreviewZoom = (float)numericUpDownZoomFactor.Value;
+            eyeDropperMain.PreviewLocation = new Point(-locationOnForm.X - eW, -locationOnForm.Y - eH);
+            eyeDropperMain.PixelPreviewSize = new Size(panelPreviewer.ClientSize.Width, (panelPreviewer.ClientSize.Height / 2));
+            toolStripStatusLabelMain.Text = "Capturing colors...";
+            statusStripMain.Refresh();
+        }
+
+        private void eyeDropperMain_EndScreenCapture(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMain.Text = "Ready";
+            statusStripMain.Refresh();
+            // Top Most
+            if (Properties.Settings.Default.IsTopMost == true)
+            {
+                checkBoxTopMost.CheckState = CheckState.Checked;
+                this.TopMost = true;
+            }
+        }
+        #endregion
 
         private void CopyToClipboard()
         {
@@ -97,6 +127,7 @@ namespace DesktopColorpicker
             if (Properties.Settings.Default.IsTopMost == true) 
             {
                 checkBoxTopMost.CheckState = CheckState.Checked;
+                this.TopMost = true;
             }
             
             // Is Menu Hidden
@@ -123,20 +154,6 @@ namespace DesktopColorpicker
             statusStripMain.Refresh();
             
         }
-
-        private void eyeDropperMain_BeginScreenCapture(object sender, EventArgs e)
-        {
-            // height
-            int eH = eyeDropperMain.Height/2;
-            int eW = eyeDropperMain.Width/2;
-            Point locationOnForm = eyeDropperMain.FindForm().PointToClient(eyeDropperMain.Parent.PointToScreen(eyeDropperMain.Location));
-            eyeDropperMain.PixelPreviewZoom = (float)numericUpDownZoomFactor.Value;
-            eyeDropperMain.PreviewLocation = new Point(-locationOnForm.X - eW, -locationOnForm.Y - eH);
-            eyeDropperMain.PixelPreviewSize = new Size(panelPreviewer.ClientSize.Width, (panelPreviewer.ClientSize.Height / 2));
-            toolStripStatusLabelMain.Text = "Capturing colors...";
-            statusStripMain.Refresh();
-        }
-
         
         private void MainForm_Activated(object sender, EventArgs e)
         {
@@ -348,7 +365,7 @@ namespace DesktopColorpicker
             {
                 // Copy to Clipboard
                 CopyToClipboard();
-                this.Text = Properties.Settings.Default.AppTitle + " - " + ColorValueConverter.RGBToHex(colorName).ToUpper();
+                this.Text = Properties.Settings.Default.AppTitle + " - " + GetTheColorViaRadioButton(colorName).ToUpper();
             }
         }
 
@@ -507,17 +524,12 @@ namespace DesktopColorpicker
             cp.HeaderText = "Color Dialog Box";
             cp.DialogLabel = "Select Color:";
             cp.RGB = panelPreviewer.BackColor;
-            cp.ShowDialog();
+            cp.ShowInTaskbar = false;
+            cp.ShowDialog(this);
             if (cp.DialogResult == DialogResult.OK)
             {
                 ExtractTheColors(Color.FromArgb(cp.RGB.ToArgb()));
             }
-        }
-
-        private void eyeDropperMain_EndScreenCapture(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMain.Text = "Ready";
-            statusStripMain.Refresh();
         }
 
         private void panelPalletteDarkerColor_Click(object sender, EventArgs e)
@@ -610,7 +622,7 @@ namespace DesktopColorpicker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
     }
