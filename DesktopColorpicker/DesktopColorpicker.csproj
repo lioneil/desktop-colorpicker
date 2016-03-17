@@ -92,11 +92,11 @@
   <ItemGroup>
     <Compile Include="Classes\Automaton.cs" />
     <Compile Include="Classes\ColorValueConverter.cs" />
-    <Compile Include="HoverForm.cs">
+    <Compile Include="ColorBoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HoverForm.Designer.cs">
-      <DependentUpon>HoverForm.cs</DependentUpon>
+    <Compile Include="ColorBoxForm.Designer.cs">
+      <DependentUpon>ColorBoxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -106,8 +106,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="HoverForm.resx">
-      <DependentUpon>HoverForm.cs</DependentUpon>
+    <EmbeddedResource Include="ColorBoxForm.resx">
+      <DependentUpon>ColorBoxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -141,6 +141,10 @@
     <None Include="Assets\copy-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\ColorPicker.vbproj">
+      <Project>{fc700552-3961-4089-be52-ab6c019d3891}</Project>
+      <Name>ColorPicker</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Unity3.Eyedropper\Unity3.Eyedropper\Unity3.Eyedropper.csproj">
       <Project>{66e06288-628c-4c14-ba4f-21a777a12f4d}</Project>
       <Name>Unity3.Eyedropper</Name>
@@ -200,6 +204,9 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

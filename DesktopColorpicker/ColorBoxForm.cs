@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace DesktopColorpicker
 {
-    public partial class HoverForm : Form
+    public partial class ColorBoxForm : Form
     {
-        public HoverForm()
+        public ColorBoxForm()
         {
             InitializeComponent();
         }

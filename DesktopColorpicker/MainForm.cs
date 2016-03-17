@@ -503,12 +503,14 @@ namespace DesktopColorpicker
 
         private void pictureBoxColorDialogButton_Click(object sender, EventArgs e)
         {
-            ColorDialog codia = new ColorDialog();
-            codia.Color = panelPreviewer.BackColor;
-            if (codia.ShowDialog(this) != DialogResult.Cancel)
+            ColorPicker.cp cp = new ColorPicker.cp();
+            cp.HeaderText = "Color Dialog Box";
+            cp.DialogLabel = "Select Color:";
+            cp.RGB = panelPreviewer.BackColor;
+            cp.ShowDialog();
+            if (cp.DialogResult == DialogResult.OK)
             {
-                Color c = codia.Color;
-                ExtractTheColors(c);
+                ExtractTheColors(Color.FromArgb(cp.RGB.ToArgb()));
             }
         }
 
@@ -599,6 +601,16 @@ namespace DesktopColorpicker
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             CopyToClipboard();
+        }
+
+        private void MainForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
 
     }

@@ -44,14 +44,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopColorpicker.exe" size="357376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ColorPicker.dll" size="69632">
+      <assemblyIdentity name="ColorPicker" version="1.0.5920.29907" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>QCjjTqdsI2I08xaOM+kdipxlpeI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopColorpicker.exe" size="418816">
       <assemblyIdentity name="DesktopColorpicker" version="2.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>OgQkzWDiijk33FzCAWWwPOE/DRY=</dsig:DigestValue>
+        <dsig:DigestValue>YbCxDKqd0lppMbbE0Dejw/7Q8e0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -68,14 +80,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Unity3.Eyedropper.dll" size="20992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Unity3.Eyedropper.dll" size="21504">
       <assemblyIdentity name="Unity3.Eyedropper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7U2dYSiQtLO40bTHDzGv00/Q6yw=</dsig:DigestValue>
+        <dsig:DigestValue>VJ3s42MTjDsMTjQyMNwO0qbxmK0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
