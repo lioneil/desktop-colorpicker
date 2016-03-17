@@ -12,3 +12,7 @@ An installer will be available soon. For now copy contents from DesktopColorpick
 
 You know the most freeing License out there? That's the one. Not really.
 [See MIT License](https://raw.githubusercontent.com/john-lioneil/desktop-colorpicker/master/LICENSE)
+
+## Technologies
+* Adobe Eyedropper Control by Richard Blythe
+* ColorPicker by Elkay
