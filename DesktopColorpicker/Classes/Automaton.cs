@@ -17,7 +17,7 @@ namespace DesktopColorpicker.Classes
         /// <param name="str"></param>
         public static void CopyToClipBoard(String str)
         {
-            Clipboard.SetText(str);
+            if(null != str) Clipboard.SetText(str);
         }
 
         public static void SelectAll(TextBox tb)

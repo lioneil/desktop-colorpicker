@@ -90,6 +90,10 @@
             this.panelPalletteDarkerColor = new System.Windows.Forms.Panel();
             this.panelPalletteDarkestColor = new System.Windows.Forms.Panel();
             this.panelBaseLeft = new System.Windows.Forms.Panel();
+            this.mainMenuMainForm = new System.Windows.Forms.MainMenu(this.components);
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuItem3 = new System.Windows.Forms.MenuItem();
+            this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.mainContextMenu.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -209,7 +213,7 @@
             this.panelMenu.Location = new System.Drawing.Point(178, 0);
             this.panelMenu.MinimumSize = new System.Drawing.Size(120, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(190, 402);
+            this.panelMenu.Size = new System.Drawing.Size(190, 420);
             this.panelMenu.TabIndex = 3;
             // 
             // groupBox6
@@ -372,7 +376,7 @@
             this.groupBoxColors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.groupBoxColors.Location = new System.Drawing.Point(6, 31);
             this.groupBoxColors.Name = "groupBoxColors";
-            this.groupBoxColors.Size = new System.Drawing.Size(177, 363);
+            this.groupBoxColors.Size = new System.Drawing.Size(177, 360);
             this.groupBoxColors.TabIndex = 25;
             this.groupBoxColors.TabStop = false;
             // 
@@ -409,6 +413,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::DesktopColorpicker.Properties.Resources._1458029640_Copy;
             this.pictureBox1.Location = new System.Drawing.Point(153, 10);
             this.pictureBox1.Name = "pictureBox1";
@@ -416,6 +421,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.toolTipCenter.SetToolTip(this.pictureBox1, "Copy current selected color");
             // 
             // groupBox3
             // 
@@ -729,7 +735,7 @@
             this.statusStripMain.BackColor = System.Drawing.SystemColors.Control;
             this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelMain});
-            this.statusStripMain.Location = new System.Drawing.Point(0, 402);
+            this.statusStripMain.Location = new System.Drawing.Point(0, 420);
             this.statusStripMain.Name = "statusStripMain";
             this.statusStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.statusStripMain.Size = new System.Drawing.Size(368, 22);
@@ -750,7 +756,7 @@
             this.panelPreviewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPreviewer.Location = new System.Drawing.Point(0, 0);
             this.panelPreviewer.Name = "panelPreviewer";
-            this.panelPreviewer.Size = new System.Drawing.Size(178, 402);
+            this.panelPreviewer.Size = new System.Drawing.Size(178, 420);
             this.panelPreviewer.TabIndex = 2;
             // 
             // panelPalletteContainer
@@ -762,7 +768,7 @@
             this.panelPalletteContainer.Controls.Add(this.panelPalletteLighterColor);
             this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkerColor);
             this.panelPalletteContainer.Controls.Add(this.panelPalletteDarkestColor);
-            this.panelPalletteContainer.Location = new System.Drawing.Point(3, 288);
+            this.panelPalletteContainer.Location = new System.Drawing.Point(3, 306);
             this.panelPalletteContainer.Name = "panelPalletteContainer";
             this.panelPalletteContainer.Size = new System.Drawing.Size(112, 111);
             this.panelPalletteContainer.TabIndex = 3;
@@ -829,8 +835,32 @@
             this.panelBaseLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBaseLeft.Location = new System.Drawing.Point(0, 0);
             this.panelBaseLeft.Name = "panelBaseLeft";
-            this.panelBaseLeft.Size = new System.Drawing.Size(178, 402);
+            this.panelBaseLeft.Size = new System.Drawing.Size(178, 420);
             this.panelBaseLeft.TabIndex = 2;
+            // 
+            // mainMenuMainForm
+            // 
+            this.mainMenuMainForm.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem1,
+            this.menuItem2});
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Index = 0;
+            this.menuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem3});
+            this.menuItem1.Text = "File";
+            // 
+            // menuItem3
+            // 
+            this.menuItem3.Index = 0;
+            this.menuItem3.Shortcut = System.Windows.Forms.Shortcut.AltF4;
+            this.menuItem3.Text = "E&xit";
+            // 
+            // menuItem2
+            // 
+            this.menuItem2.Index = 1;
+            this.menuItem2.Text = "View";
             // 
             // MainForm
             // 
@@ -838,14 +868,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(368, 424);
+            this.ClientSize = new System.Drawing.Size(368, 442);
             this.ContextMenuStrip = this.mainContextMenu;
             this.Controls.Add(this.panelBaseLeft);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.statusStripMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(325, 462);
+            this.Menu = this.mainMenuMainForm;
+            this.MinimumSize = new System.Drawing.Size(325, 480);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Desktop Colorpicker";
@@ -948,6 +979,10 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Panel panelPalletteNormalColor;
+        private System.Windows.Forms.MenuItem menuItem1;
+        private System.Windows.Forms.MenuItem menuItem2;
+        public System.Windows.Forms.MainMenu mainMenuMainForm;
+        private System.Windows.Forms.MenuItem menuItem3;
     }
 }
 

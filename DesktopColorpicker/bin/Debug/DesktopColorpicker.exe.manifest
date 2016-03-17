@@ -44,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopColorpicker.exe" size="356864">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopColorpicker.exe" size="357888">
       <assemblyIdentity name="DesktopColorpicker" version="2.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xkS9iUhTlnU8Peg8bwKYAA9j/hE=</dsig:DigestValue>
+        <dsig:DigestValue>pgngju7zeq1sux4AcVUCVqFU3q4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -88,13 +88,13 @@
       <dsig:DigestValue>77Vru6VvUTpH8yDGgFD3XBvItT0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DesktopColorpicker.exe.config" size="2135">
+  <file name="DesktopColorpicker.exe.config" size="2148">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>w7G9316VGBVM3CgWsHXibjTw/q4=</dsig:DigestValue>
+      <dsig:DigestValue>47FzHSqlwUDKHXX3ieaXAlKsXW0=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

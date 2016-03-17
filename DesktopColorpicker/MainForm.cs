@@ -42,20 +42,20 @@ namespace DesktopColorpicker
                 var controlString = checkedButton.Tag.ToString();
                 var selectedTextBox = this.Controls.Find(controlString, true);
 
-                // save to Settings the active radio
+                // save the active radioButton.Name to Settings
                 Properties.Settings.Default.CopyToClipboardMode = checkedButton.Name.ToString();
 
-                // Automaton.CopyToClipBoard(textBoxHex.Text);
-                if (null != selectedTextBox[0].Text)
+                if (null != selectedTextBox)
                 {
+                    selectedTextBox[0].Focus();
                     Automaton.CopyToClipBoard(selectedTextBox[0].Text);
+                    toolStripStatusLabelMain.Text = "Copied to clipboard: " + selectedTextBox[0].Text;
+                    statusStripMain.Refresh();
                 }
-                toolStripStatusLabelMain.Text = "Copied to clipboard: " + selectedTextBox[0].Text;
-                statusStripMain.Refresh();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
         }
@@ -80,7 +80,7 @@ namespace DesktopColorpicker
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             // Load Zoom Level
@@ -121,6 +121,7 @@ namespace DesktopColorpicker
             LoadSettingsFromLastSession();
             toolStripStatusLabelMain.Text = "Ready";
             statusStripMain.Refresh();
+            
         }
 
         private void eyeDropperMain_BeginScreenCapture(object sender, EventArgs e)
@@ -398,7 +399,7 @@ namespace DesktopColorpicker
 
         private void radioButtonHex_CheckedChanged(object sender, EventArgs e)
         {
-
+            CopyToClipboard();
         }
 
         private void copyToClipboardToolStripMenuItem_SelectedIndexChanged(object sender, EventArgs e)
@@ -570,7 +571,29 @@ namespace DesktopColorpicker
         private void toolTipCenter_Draw(object sender, DrawToolTipEventArgs e)
         {
             
-        }    
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.Up:
+                    Cursor.Position = new Point(Cursor.Position.X, Cursor.Position.Y - 1);
+                    break;
+                case Keys.Right:
+                    Cursor.Position = new Point(Cursor.Position.X + 1, Cursor.Position.Y);
+                    break;
+                case Keys.Down:
+                    Cursor.Position = new Point(Cursor.Position.X, Cursor.Position.Y + 1);
+                    break;
+                case Keys.Left:
+                    Cursor.Position = new Point(Cursor.Position.X - 1, Cursor.Position.Y);
+                    break;
+                default:
+                    break;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
     }
 }
