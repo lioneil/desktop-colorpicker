@@ -333,11 +333,11 @@ namespace DesktopColorpicker
                 Properties.Settings.Default.LastColor = colorName;
 
                 // Populate Pallette
-                panelPalletteLighterColor.BackColor = ControlPaint.Light(colorName, (Single)1.01);//ColorValueConverter.ColorAdjust(colorName, 1.4);
-                panelPalletteLightestColor.BackColor = ControlPaint.Light(colorName, (Single)1.05);
-                panelPalletteDarkerColor.BackColor = ControlPaint.Dark(colorName, 0.01F);
-                panelPalletteDarkestColor.BackColor = ControlPaint.Dark(colorName, 0.05F);
-                panelPalletteNormalColor.BackColor = colorName;
+                panelPalletteLightestColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)0.60); //ControlPaint.Light(colorName, (Single)1.5);
+                panelPalletteLighterColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)0.30);//ControlPaint.Light(colorName, (Single)1.01);
+                panelPalletteNormalColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)0); ; // 0F
+                panelPalletteDarkerColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)-0.30); //ControlPaint.Dark(colorName, 0.01F);
+                panelPalletteDarkestColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)-0.60); //ControlPaint.Dark(colorName, 0.05F);
                 
             }
             catch (Exception ex)
@@ -504,7 +504,8 @@ namespace DesktopColorpicker
         private void pictureBoxColorDialogButton_Click(object sender, EventArgs e)
         {
             ColorDialog codia = new ColorDialog();
-            if (codia.ShowDialog() != DialogResult.Cancel)
+            codia.Color = panelPreviewer.BackColor;
+            if (codia.ShowDialog(this) != DialogResult.Cancel)
             {
                 Color c = codia.Color;
                 ExtractTheColors(c);
@@ -588,7 +589,7 @@ namespace DesktopColorpicker
                     break;
                 case Keys.Left:
                     Cursor.Position = new Point(Cursor.Position.X - 1, Cursor.Position.Y);
-                    break; 
+                    break;
                 default:
                     break;
             }

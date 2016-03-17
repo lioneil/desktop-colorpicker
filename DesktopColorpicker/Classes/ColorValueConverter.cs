@@ -127,9 +127,28 @@ namespace DesktopColorpicker.Classes
             return String.Empty;
         }
 
-        public static Color ColorAdjust(Color c, double factor = 1.5)
+        public static Color ColorAdjust(Color c, float factor = 1F)
         {
-            return Color.FromArgb(c.A, (int)(c.R * factor < 255 ? c.R * factor : 255), (int)(c.G * factor < 255 ? c.G * factor : 255), (int)(c.B * factor < 255 ? c.B * factor : 255));
+            float red = (float)c.R;
+            float green = (float)c.G;
+            float blue = (float)c.B;
+
+            if (factor < 0)
+            {
+                factor = 1 + factor;
+                red *= factor;
+                green *= factor;
+                blue *= factor;
+            }
+            else
+            {
+                red = (255 - red) * factor + red;
+                green = (255 - green) * factor + green;
+                blue = (255 - blue) * factor + blue;
+            }
+
+            return Color.FromArgb(c.A, (int)red, (int)green, (int)blue);
+            //return Color.FromArgb(c.A, (int)(c.R * factor < 255 ? c.R * factor : 255), (int)(c.G * factor < 255 ? c.G * factor : 255), (int)(c.B * factor < 255 ? c.B * factor : 255));
         }
 
 
