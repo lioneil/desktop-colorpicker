@@ -11,7 +11,6 @@ using DesktopColorpicker.Classes;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Reflection;
-using WindowsInput;
 
 namespace DesktopColorpicker
 {
@@ -44,17 +43,19 @@ namespace DesktopColorpicker
                 var selectedTextBox = this.Controls.Find(controlString, true);
 
                 // save to Settings the active radio
-                Properties.Settings.Default.CopyToClipboardMode = checkedButton.ToString();
+                Properties.Settings.Default.CopyToClipboardMode = checkedButton.Name.ToString();
 
                 // Automaton.CopyToClipBoard(textBoxHex.Text);
-                Automaton.CopyToClipBoard(selectedTextBox[0].Text);
+                if (null != selectedTextBox[0].Text)
+                {
+                    Automaton.CopyToClipBoard(selectedTextBox[0].Text);
+                }
                 toolStripStatusLabelMain.Text = "Copied to clipboard: " + selectedTextBox[0].Text;
                 statusStripMain.Refresh();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                // throw;
+                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
         }
@@ -74,13 +75,12 @@ namespace DesktopColorpicker
             // which checkbox to check
             try
             {
-                string checkedButton = Properties.Settings.Default.CopyToClipboardMode;
-                (this.Controls.Find(checkedButton, true)[0] as RadioButton).Checked = true;
-
+                string checkedRadioButtonName = Properties.Settings.Default.CopyToClipboardMode;
+                (this.Controls.Find(checkedRadioButtonName, true)[0] as RadioButton).Checked = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //throw;
+                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             // Load Zoom Level
@@ -152,29 +152,6 @@ namespace DesktopColorpicker
             Close();
             Application.Exit();
         }
-
-        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        //{
-            
-        //    switch (keyData)
-        //    {
-        //        case Keys.Up:
-        //            Cursor.Position = new Point(Cursor.Position.X, Cursor.Position.Y - 1);
-        //            break;
-        //        case Keys.Right:
-        //            Cursor.Position = new Point(Cursor.Position.X + 1, Cursor.Position.Y);
-        //            break;
-        //        case Keys.Down:
-        //            Cursor.Position = new Point(Cursor.Position.X, Cursor.Position.Y + 1);
-        //            break;
-        //        case Keys.Left:
-        //            Cursor.Position = new Point(Cursor.Position.X - 1, Cursor.Position.Y);
-        //            break;
-        //        default:
-        //            break;
-        //    }
-        //    return base.ProcessCmdKey(ref msg, keyData);
-        //}
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -317,10 +294,9 @@ namespace DesktopColorpicker
                     ExtractTheColors(colorName);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                // throw;
+                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
             }
         }
 
@@ -365,7 +341,7 @@ namespace DesktopColorpicker
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
             {
@@ -390,7 +366,7 @@ namespace DesktopColorpicker
             }
             catch (Exception ex)
             {
-                // throw ex;
+                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -492,7 +468,7 @@ namespace DesktopColorpicker
 
         private void panelPalletteLightestColor_MouseHover(object sender, EventArgs e)
         {
-            toolTipCenter.Show(ColorValueConverter.RGBToHex(panelPalletteLightestColor.BackColor).ToString(), panelPalletteLightestColor);
+            toolTipCenter.Show("Copy " + GetTheColorViaRadioButton(panelPalletteLightestColor.BackColor), panelPalletteLightestColor);
         }
 
         private void panelPalletteDarkestColor_Click(object sender, EventArgs e)

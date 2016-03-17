@@ -51,19 +51,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HSYLGmzJ5EM1KcZRlthQLHocGT0=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InputSimulator.dll" size="13824">
-      <assemblyIdentity name="InputSimulator" version="0.1.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>yrSsmb2HuzxoTy898oeZOyp88Fg=</dsig:DigestValue>
+        <dsig:DigestValue>xkS9iUhTlnU8Peg8bwKYAA9j/hE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -100,13 +88,13 @@
       <dsig:DigestValue>77Vru6VvUTpH8yDGgFD3XBvItT0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DesktopColorpicker.exe.config" size="2128">
+  <file name="DesktopColorpicker.exe.config" size="2135">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>W55xE7hYhL+XryaSO67g17zZS0s=</dsig:DigestValue>
+      <dsig:DigestValue>w7G9316VGBVM3CgWsHXibjTw/q4=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
