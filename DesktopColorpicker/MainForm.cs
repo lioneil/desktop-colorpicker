@@ -18,7 +18,10 @@ namespace DesktopColorpicker
     {
         #region Public Variables
         Color[] ColorsPallette; // The persistent Color Pallette taken from last 10 screen-captured colors
-        int MAX_COUNT_ColorsPallette = 12;
+        int MAX_COUNT_ColorsPallette = 20;
+        int PatchWidth = 15, PatchHeight = 15;
+        int PatchMargin = 1;
+        int NumCols = 1, NumRows = 20;
         #endregion
 
         #region MainForm Init
@@ -78,19 +81,8 @@ namespace DesktopColorpicker
                 this.TopMost = true;
             }
 
-            // Save this color in the ColorsPallette
-            string ARGBs = "";
-            foreach (Color color in ColorsPallette)
-            {
-                ARGBs += color.ToArgb().ToString() + ",";
-            }
-            ARGBs += panelPreviewer.BackColor.ToArgb().ToString() + ",";
-            Properties.Settings.Default.ColorsPallette = ARGBs;
-            Properties.Settings.Default.Save();
-            pictureBoxPalletteContainer.Paint += new PaintEventHandler(pictureBoxPalletteContainer_Paint);
-            this.Invalidate();
-            this.Update();
-            this.Refresh();
+            // Save to ColorsPallette
+            pictureBoxPalette_SaveToLibrary();
         }
         #endregion
 
@@ -445,7 +437,7 @@ namespace DesktopColorpicker
             Properties.Settings.Default.ZoomSize = numericUpDownZoomFactor.Value;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxTopMost_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxTopMost.CheckState == CheckState.Checked)
             {
@@ -645,7 +637,10 @@ namespace DesktopColorpicker
             cp.ShowDialog(this);
             if (cp.DialogResult == DialogResult.OK)
             {
+                // Extract
                 ExtractTheColors(Color.FromArgb(cp.RGB.ToArgb()));
+                // Save to ColorsPallette
+                pictureBoxPalette_SaveToLibrary();
             }
         }
 
@@ -721,6 +716,9 @@ namespace DesktopColorpicker
                 case Keys.Left:
                     Cursor.Position = new Point(Cursor.Position.X - 1, Cursor.Position.Y);
                     break;
+                case Keys.P:
+                    pictureBoxColorDialogButton_Click(null, null);
+                    break;
                 default:
                     break;
             }
@@ -737,34 +735,26 @@ namespace DesktopColorpicker
             
         }
 
-        //void colorPalletteRepaint(object sender, PaintEventArgs e)
-        //{
-        //    int PatchWidth = 16, PatchHeight = 16;
-        //    int PatchMargin = 2;
-        //    int NumCols = MAX_COUNT_ColorsPallette / 3;
-        //    int max_x = PatchWidth * NumCols;
-        //    int x = 0, y = 0;
-        //    foreach (Color color in ColorsPallette)
-        //    {
-        //        using (SolidBrush br = new SolidBrush(color))
-        //        {
-        //            e.Graphics.FillRectangle(br, x, y, PatchWidth, PatchHeight);
-        //        }
-        //        x += PatchWidth + PatchMargin;
-        //        if (x > max_x)
-        //        {
-        //            x = 0;
-        //            y += PatchHeight + PatchMargin;
-        //        }
-        //    }
-        //}
+        void pictureBoxPalette_SaveToLibrary()
+        {
+            // Save this color in the ColorsPallette
+            string ARGBs = "";
+            foreach (Color color in ColorsPallette)
+            {
+                ARGBs += color.ToArgb().ToString() + ",";
+            }
+            ARGBs += panelPreviewer.BackColor.ToArgb().ToString() + ",";
+            Properties.Settings.Default.ColorsPallette = ARGBs;
+            Properties.Settings.Default.Save();
+            pictureBoxPalletteContainer.Paint += new PaintEventHandler(pictureBoxPalletteContainer_Paint);
+            this.Invalidate();
+            this.Update();
+            this.Refresh();
+        }
 
         private void pictureBoxPalletteContainer_Paint(object sender, PaintEventArgs e)
         {
             LoadColorsPallette();
-            int PatchWidth = 15, PatchHeight = 15;
-            int PatchMargin = 1;
-            int NumCols = 4, NumRows = 3;
             int max_x = PatchWidth * NumCols;
             int x = 0, y = 0;
             foreach (Color color in ColorsPallette)
@@ -780,8 +770,29 @@ namespace DesktopColorpicker
                     y += PatchHeight + PatchMargin;
                 }
             }
-            pictureBoxPalletteContainer.Width = (PatchWidth + PatchMargin) * NumCols - PatchMargin;
-            pictureBoxPalletteContainer.Height = (PatchHeight + PatchMargin) * NumRows - PatchMargin;
+            pictureBoxPalletteContainer.Width = (PatchWidth + PatchMargin) * NumCols;
+            pictureBoxPalletteContainer.Height = (PatchHeight + PatchMargin) * NumRows;
+        }
+
+        private void pictureBoxPalletteContainer_MouseClick(object sender, MouseEventArgs e)
+        {
+            // See which color was clicked.
+            int row = (int)(e.Y / (PatchHeight + PatchMargin));
+            int col = (int)(e.X / (PatchWidth + PatchMargin));
+            int index = row * NumCols + col;
+            try
+            {
+                // Extract the clicked color.
+                ExtractTheColors(ColorsPallette[index]);
+            }
+            catch (IndexOutOfRangeException)
+            {
+                //MessageBox.Show("The selected area contains no saved color", "Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
     }

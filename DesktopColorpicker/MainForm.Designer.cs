@@ -302,7 +302,7 @@
             this.checkBoxTopMost.Size = new System.Drawing.Size(15, 14);
             this.checkBoxTopMost.TabIndex = 1;
             this.checkBoxTopMost.UseVisualStyleBackColor = true;
-            this.checkBoxTopMost.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBoxTopMost.CheckedChanged += new System.EventHandler(this.checkBoxTopMost_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -837,14 +837,16 @@
             // 
             // pictureBoxPalletteContainer
             // 
-            this.pictureBoxPalletteContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxPalletteContainer.BackColor = System.Drawing.Color.White;
-            this.pictureBoxPalletteContainer.Location = new System.Drawing.Point(119, 353);
+            this.pictureBoxPalletteContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxPalletteContainer.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxPalletteContainer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxPalletteContainer.Location = new System.Drawing.Point(173, 0);
             this.pictureBoxPalletteContainer.Name = "pictureBoxPalletteContainer";
-            this.pictureBoxPalletteContainer.Size = new System.Drawing.Size(64, 64);
+            this.pictureBoxPalletteContainer.Size = new System.Drawing.Size(14, 64);
             this.pictureBoxPalletteContainer.TabIndex = 4;
             this.pictureBoxPalletteContainer.TabStop = false;
             this.pictureBoxPalletteContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxPalletteContainer_Paint);
+            this.pictureBoxPalletteContainer.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxPalletteContainer_MouseClick);
             // 
             // MainForm
             // 
