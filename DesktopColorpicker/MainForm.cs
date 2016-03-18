@@ -16,6 +16,11 @@ namespace DesktopColorpicker
 {
     public partial class MainForm : Form
     {
+        #region Public Variables
+        Color[] ColorsPallette; // The persistent Color Pallette taken from last 10 screen-captured colors
+        int MAX_COUNT_ColorsPallette = 12;
+        #endregion
+
         #region MainForm Init
         public MainForm()
         {
@@ -32,7 +37,7 @@ namespace DesktopColorpicker
         #region eyeDropper Functions
         private void eyeDropperMain_ScreenCaptured(Bitmap capturedPixels, Color capturedColor)
         {
-            capturedPixels.SetResolution(1000, 1000);
+            capturedPixels.SetResolution(6000, 6000);
             ExtractTheColors(capturedColor);
         }
 
@@ -71,6 +76,73 @@ namespace DesktopColorpicker
             {
                 checkBoxTopMost.CheckState = CheckState.Checked;
                 this.TopMost = true;
+            }
+
+            // Save this color in the ColorsPallette
+            string ARGBs = "";
+            foreach (Color color in ColorsPallette)
+            {
+                ARGBs += color.ToArgb().ToString() + ",";
+            }
+            ARGBs += panelPreviewer.BackColor.ToArgb().ToString() + ",";
+            Properties.Settings.Default.ColorsPallette = ARGBs;
+            Properties.Settings.Default.Save();
+            pictureBoxPalletteContainer.Paint += new PaintEventHandler(pictureBoxPalletteContainer_Paint);
+            this.Invalidate();
+            this.Update();
+            this.Refresh();
+        }
+        #endregion
+
+        #region ExtractTheColors
+        void ExtractTheColors(Color colorName)
+        {
+            try
+            {
+                // Store color in PictureBox
+                panelPreviewer.BackColor = colorName;
+
+                // Store to textboxes
+                textBoxRed.Text = colorName.R.ToString();
+                textBoxGreen.Text = colorName.G.ToString();
+                textBoxBlue.Text = colorName.B.ToString();
+
+                // Convert to HEX
+                textBoxHex.Text = ColorValueConverter.RGBToHex(colorName);
+                textBoxRGB.Text = ColorValueConverter.toRGBA(colorName);
+
+                // HSL
+                textBoxHSL.Text = ColorValueConverter.RGBToHSL(colorName);
+
+                string HSLAsArray = ColorValueConverter.RGBToHSL(colorName, false, true);
+                string[] hslarray = HSLAsArray.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+                textBoxHue.Text = hslarray[0];
+                textBoxSaturation.Text = hslarray[1];
+                textBoxLuminance.Text = hslarray[2];
+
+                // KnownColor
+                textBoxColorName.Text = ColorValueConverter.ColorToKnownColor(colorName);
+
+                // Save the Color to Settings
+                Properties.Settings.Default.LastColor = colorName;
+
+                // Populate Pallette
+                panelPalletteLightestColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)0.60); //ControlPaint.Light(colorName, (Single)1.5);
+                panelPalletteLighterColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)0.30);//ControlPaint.Light(colorName, (Single)1.01);
+                panelPalletteNormalColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)0); ; // 0F
+                panelPalletteDarkerColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)-0.30); //ControlPaint.Dark(colorName, 0.01F);
+                panelPalletteDarkestColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)-0.60); //ControlPaint.Dark(colorName, 0.05F);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            finally
+            {
+                // Copy to Clipboard
+                CopyToClipboard();
+                this.Text = Properties.Settings.Default.AppTitle + " - " + GetTheColorViaRadioButton(colorName).ToUpper();
             }
         }
         #endregion
@@ -112,8 +184,92 @@ namespace DesktopColorpicker
             
         }
 
+        private Color[] DefaultColors()
+        {
+            return new Color[]
+            {
+                Color.White,
+                Color.FromArgb(255, 255, 192, 192),
+                Color.FromArgb(255, 255, 224, 192),
+                Color.FromArgb(255, 255, 255, 192),
+                Color.FromArgb(255, 192, 255, 192),
+                Color.FromArgb(255, 192, 255, 255),
+                Color.FromArgb(255, 192, 192, 255),
+                Color.FromArgb(255, 255, 192, 255),
+
+                Color.FromArgb(255, 224, 224, 224),
+                Color.FromArgb(255, 255, 128, 128),
+                Color.FromArgb(255, 255, 192, 128),
+                Color.FromArgb(255, 255, 255, 128),
+                Color.FromArgb(255, 128, 255, 128),
+                Color.FromArgb(255, 128, 255, 255),
+                Color.FromArgb(255, 128, 128, 255),
+                Color.FromArgb(255, 255, 128, 255),
+
+                Color.FromArgb(255, 192, 192, 192),
+                Color.Red,
+                Color.FromArgb(255, 255, 128, 0),
+                Color.Yellow,
+                Color.FromArgb(255, 0, 192, 0),
+                Color.Cyan,
+                Color.Blue,
+                Color.FromArgb(255, 255, 0, 255),
+
+                Color.Gray,
+                Color.FromArgb(255, 192, 0, 0),
+                Color.FromArgb(255, 192, 64, 0),
+                Color.FromArgb(255, 192, 192, 0),
+                Color.Green,
+                Color.FromArgb(255, 0, 192, 192),
+                Color.FromArgb(255, 0, 0, 192),
+                Color.FromArgb(255, 192, 0, 192),
+
+                Color.FromArgb(255, 64, 64, 64),
+                Color.FromArgb(255, 128, 0, 0),
+                Color.FromArgb(255, 128, 64, 0),
+                Color.FromArgb(255, 128, 128, 0),
+                Color.FromArgb(255, 0, 128, 0),
+                Color.FromArgb(255, 0, 128, 128),
+                Color.FromArgb(255, 0, 0, 128),
+                Color.FromArgb(255, 128, 0, 128),
+
+                Color.Black,
+                Color.FromArgb(255, 64, 0, 0),
+                Color.FromArgb(255, 96, 32, 0),
+                Color.FromArgb(255, 64, 64, 0),
+                Color.FromArgb(255, 0, 64, 0),
+                Color.FromArgb(255, 0, 64, 64),
+                Color.FromArgb(255, 0, 0, 64),
+                Color.FromArgb(255, 64, 0, 64),
+            };
+        }
+
+        private void LoadColorsPallette()
+        {
+            if (Properties.Settings.Default.ColorsPallette.Length == 0)
+            {
+                ColorsPallette = DefaultColors();
+            }
+            else
+            {
+                string[] ARGBs = Properties.Settings.Default.ColorsPallette.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                List<Color> colorsList = new List<Color>();
+                foreach (string ARGB in ARGBs)
+                {
+                    colorsList.Add(Color.FromArgb(int.Parse(ARGB)));
+                    if (colorsList.Count > MAX_COUNT_ColorsPallette)
+                    {
+                        colorsList.RemoveAt(0);
+                    }
+                }
+                ColorsPallette = colorsList.ToArray();
+            }
+        }
+
         private void LoadSettingsFromLastSession()
         { 
+            // Load Colors Pallette
+            LoadColorsPallette();
             // which checkbox to check
             try
             {
@@ -327,57 +483,6 @@ namespace DesktopColorpicker
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
-            }
-        }
-
-        void ExtractTheColors(Color colorName)
-        {
-            try
-            {
-                // Store color in PictureBox
-                panelPreviewer.BackColor = colorName;
-
-                // Store to textboxes
-                textBoxRed.Text = colorName.R.ToString();
-                textBoxGreen.Text = colorName.G.ToString();
-                textBoxBlue.Text = colorName.B.ToString();
-
-                // Convert to HEX
-                textBoxHex.Text = ColorValueConverter.RGBToHex(colorName);
-                textBoxRGB.Text = ColorValueConverter.toRGBA(colorName);
-
-                // HSL
-                textBoxHSL.Text = ColorValueConverter.RGBToHSL(colorName);
-
-                string HSLAsArray = ColorValueConverter.RGBToHSL(colorName, false, true);
-                string[] hslarray = HSLAsArray.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
-                textBoxHue.Text = hslarray[0];
-                textBoxSaturation.Text = hslarray[1];
-                textBoxLuminance.Text = hslarray[2];
-
-                // KnownColor
-                textBoxColorName.Text = ColorValueConverter.ColorToKnownColor(colorName);
-
-                // Save the Color to Settings
-                Properties.Settings.Default.LastColor = colorName;
-
-                // Populate Pallette
-                panelPalletteLightestColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)0.60); //ControlPaint.Light(colorName, (Single)1.5);
-                panelPalletteLighterColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)0.30);//ControlPaint.Light(colorName, (Single)1.01);
-                panelPalletteNormalColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)0); ; // 0F
-                panelPalletteDarkerColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)-0.30); //ControlPaint.Dark(colorName, 0.01F);
-                panelPalletteDarkestColor.BackColor = ColorValueConverter.ColorAdjust(colorName, (float)-0.60); //ControlPaint.Dark(colorName, 0.05F);
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString(), "Exception Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            finally
-            {
-                // Copy to Clipboard
-                CopyToClipboard();
-                this.Text = Properties.Settings.Default.AppTitle + " - " + GetTheColorViaRadioButton(colorName).ToUpper();
             }
         }
 
@@ -630,6 +735,53 @@ namespace DesktopColorpicker
         private void MainForm_KeyUp(object sender, KeyEventArgs e)
         {
             
+        }
+
+        //void colorPalletteRepaint(object sender, PaintEventArgs e)
+        //{
+        //    int PatchWidth = 16, PatchHeight = 16;
+        //    int PatchMargin = 2;
+        //    int NumCols = MAX_COUNT_ColorsPallette / 3;
+        //    int max_x = PatchWidth * NumCols;
+        //    int x = 0, y = 0;
+        //    foreach (Color color in ColorsPallette)
+        //    {
+        //        using (SolidBrush br = new SolidBrush(color))
+        //        {
+        //            e.Graphics.FillRectangle(br, x, y, PatchWidth, PatchHeight);
+        //        }
+        //        x += PatchWidth + PatchMargin;
+        //        if (x > max_x)
+        //        {
+        //            x = 0;
+        //            y += PatchHeight + PatchMargin;
+        //        }
+        //    }
+        //}
+
+        private void pictureBoxPalletteContainer_Paint(object sender, PaintEventArgs e)
+        {
+            LoadColorsPallette();
+            int PatchWidth = 15, PatchHeight = 15;
+            int PatchMargin = 1;
+            int NumCols = 4, NumRows = 3;
+            int max_x = PatchWidth * NumCols;
+            int x = 0, y = 0;
+            foreach (Color color in ColorsPallette)
+            {
+                using (SolidBrush br = new SolidBrush(color))
+                {
+                    e.Graphics.FillRectangle(br, x, y, PatchWidth, PatchHeight);
+                }
+                x += PatchWidth + PatchMargin;
+                if (x > max_x)
+                {
+                    x = 0;
+                    y += PatchHeight + PatchMargin;
+                }
+            }
+            pictureBoxPalletteContainer.Width = (PatchWidth + PatchMargin) * NumCols - PatchMargin;
+            pictureBoxPalletteContainer.Height = (PatchHeight + PatchMargin) * NumRows - PatchMargin;
         }
 
     }

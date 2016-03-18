@@ -154,5 +154,17 @@ namespace DesktopColorpicker.Properties {
                 this["AppTitle"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ColorsPallette {
+            get {
+                return ((string)(this["ColorsPallette"]));
+            }
+            set {
+                this["ColorsPallette"] = value;
+            }
+        }
     }
 }

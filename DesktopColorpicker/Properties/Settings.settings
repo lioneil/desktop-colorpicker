@@ -35,5 +35,8 @@
     <Setting Name="AppTitle" Type="System.String" Scope="User">
       <Value Profile="(Default)">Desktop Colorpicker</Value>
     </Setting>
+    <Setting Name="ColorsPallette" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

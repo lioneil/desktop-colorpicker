@@ -44,26 +44,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ColorPicker.dll" size="69632">
-      <assemblyIdentity name="ColorPicker" version="1.0.5921.16546" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ColorPicker.dll" size="70144">
+      <assemblyIdentity name="ColorPicker" version="1.0.5921.20370" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8xN3KlIEXnNUblbonVrwEBHo024=</dsig:DigestValue>
+        <dsig:DigestValue>6/5Uyw8R2qOAY2PPIbHimSGcoeM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopColorpicker.exe" size="357376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopColorpicker.exe" size="360448">
       <assemblyIdentity name="DesktopColorpicker" version="2.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3q5P3wMIPAqOHVkoCYvIERyX5Ao=</dsig:DigestValue>
+        <dsig:DigestValue>M2TtqzK+3zM9xqRC+18beiwz540=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -100,13 +100,13 @@
       <dsig:DigestValue>77Vru6VvUTpH8yDGgFD3XBvItT0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DesktopColorpicker.exe.config" size="2148">
+  <file name="DesktopColorpicker.exe.config" size="2265">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>CxwWZZzCHzwKa+EbmA8xphCK/dw=</dsig:DigestValue>
+      <dsig:DigestValue>XOst/SD56FxQA6EzMVnm6drupZE=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
