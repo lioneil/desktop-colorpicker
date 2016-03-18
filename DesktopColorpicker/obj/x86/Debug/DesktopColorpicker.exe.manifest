@@ -45,13 +45,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ColorPicker.dll" size="69632">
-      <assemblyIdentity name="ColorPicker" version="1.0.5920.31145" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="ColorPicker" version="1.0.5921.16546" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>uIUZCwIh6Yx0jceyXCZbZN7HbrY=</dsig:DigestValue>
+        <dsig:DigestValue>8xN3KlIEXnNUblbonVrwEBHo024=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,7 +63,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ILrcv957ZFPZujyELlxk+vf0cF0=</dsig:DigestValue>
+        <dsig:DigestValue>3q5P3wMIPAqOHVkoCYvIERyX5Ao=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,7 +87,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>d5jdoLlkI9KpsUbWxOz4CXP6UrU=</dsig:DigestValue>
+        <dsig:DigestValue>ImkqL7QzFklHlw/gnslKI1ifClo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

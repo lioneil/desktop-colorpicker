@@ -10,3 +10,4 @@ C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedro
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\obj\Debug\Unity3.Eyedropper.csproj.GenerateResource.Cache
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\obj\Debug\Unity3.Eyedropper.dll
 C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\obj\Debug\Unity3.Eyedropper.pdb
+C:\Users\hp\Documents\GitHub\desktop-colorpicker\Unity3.Eyedropper\Unity3.Eyedropper\obj\Debug\Unity3.Eyedropper.csprojResolveAssemblyReference.cache

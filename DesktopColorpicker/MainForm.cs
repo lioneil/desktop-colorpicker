@@ -32,7 +32,7 @@ namespace DesktopColorpicker
         #region eyeDropper Functions
         private void eyeDropperMain_ScreenCaptured(Bitmap capturedPixels, Color capturedColor)
         {
-            capturedPixels.SetResolution(3000, 3000);
+            capturedPixels.SetResolution(1000, 1000);
             ExtractTheColors(capturedColor);
         }
 
@@ -43,9 +43,21 @@ namespace DesktopColorpicker
             int eH = eyeDropperMain.Height / 2;
             int eW = eyeDropperMain.Width / 2;
             Point locationOnForm = eyeDropperMain.FindForm().PointToClient(eyeDropperMain.Parent.PointToScreen(eyeDropperMain.Location));
-            eyeDropperMain.PixelPreviewZoom = (float)numericUpDownZoomFactor.Value;
-            eyeDropperMain.PreviewLocation = new Point(-locationOnForm.X - eW, -locationOnForm.Y - eH);
-            eyeDropperMain.PixelPreviewSize = new Size(panelPreviewer.ClientSize.Width, (panelPreviewer.ClientSize.Height / 2));
+            if (0 == numericUpDownZoomFactor.Value)
+            {
+                eyeDropperMain.ShowPixelPreview = false;
+            }
+            else
+            {
+                eyeDropperMain.ShowPixelPreview = true;
+                eyeDropperMain.PixelPreviewZoom = (float)numericUpDownZoomFactor.Value;
+                eyeDropperMain.PreviewLocation = new Point(-locationOnForm.X - eW, -locationOnForm.Y - eH);
+                eyeDropperMain.PixelPreviewSize = new Size(panelPreviewer.ClientSize.Width, (panelPreviewer.ClientSize.Height / 2));
+            }
+        }
+
+        private void eyeDropperMain_MouseMove(object sender, MouseEventArgs e)
+        {
             toolStripStatusLabelMain.Text = "Capturing colors...";
             statusStripMain.Refresh();
         }
@@ -618,11 +630,6 @@ namespace DesktopColorpicker
         private void MainForm_KeyUp(object sender, KeyEventArgs e)
         {
             
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
     }

@@ -42,6 +42,7 @@
             this.textBoxHex = new System.Windows.Forms.TextBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBoxColorDialogButton = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -89,7 +90,6 @@
             this.panelPalletteDarkerColor = new System.Windows.Forms.Panel();
             this.panelPalletteDarkestColor = new System.Windows.Forms.Panel();
             this.panelBaseLeft = new System.Windows.Forms.Panel();
-            this.eyeDropperMain = new Unity3.Eyedropper.EyeDropper();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.mainContextMenu.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -222,6 +222,30 @@
             this.groupBox6.TabIndex = 29;
             this.groupBox6.TabStop = false;
             // 
+            // eyeDropperMain
+            // 
+            this.eyeDropperMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.eyeDropperMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eyeDropperMain.Location = new System.Drawing.Point(2, 8);
+            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.Name = "eyeDropperMain";
+            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
+            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
+            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
+            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
+            this.eyeDropperMain.ShowColorPreview = false;
+            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
+            this.eyeDropperMain.TabIndex = 0;
+            this.eyeDropperMain.Text = "Eyedropper";
+            this.toolTipCenter.SetToolTip(this.eyeDropperMain, "Drag to pick colors");
+            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
+            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
+            this.eyeDropperMain.EndScreenCapture += new System.EventHandler(this.eyeDropperMain_EndScreenCapture);
+            this.eyeDropperMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.eyeDropperMain_MouseMove);
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.pictureBoxColorDialogButton);
@@ -309,11 +333,6 @@
             this.numericUpDownZoomFactor.Location = new System.Drawing.Point(27, 9);
             this.numericUpDownZoomFactor.Maximum = new decimal(new int[] {
             20,
-            0,
-            0,
-            0});
-            this.numericUpDownZoomFactor.Minimum = new decimal(new int[] {
-            1,
             0,
             0,
             0});
@@ -812,29 +831,6 @@
             this.panelBaseLeft.Name = "panelBaseLeft";
             this.panelBaseLeft.Size = new System.Drawing.Size(134, 420);
             this.panelBaseLeft.TabIndex = 2;
-            // 
-            // eyeDropperMain
-            // 
-            this.eyeDropperMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.eyeDropperMain.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.eyeDropperMain.Location = new System.Drawing.Point(2, 8);
-            this.eyeDropperMain.MaximumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.MinimumSize = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.Name = "eyeDropperMain";
-            this.eyeDropperMain.PixelPreviewSize = new System.Drawing.Size(250, 250);
-            this.eyeDropperMain.PreviewLocation = new System.Drawing.Point(0, 0);
-            this.eyeDropperMain.PreviewPositionStyle = Unity3.Eyedropper.EyeDropper.ePreviewPositionStyle.Manual;
-            this.eyeDropperMain.SelectedColor = System.Drawing.Color.Empty;
-            this.eyeDropperMain.ShowColorPreview = false;
-            this.eyeDropperMain.Size = new System.Drawing.Size(22, 22);
-            this.eyeDropperMain.TabIndex = 0;
-            this.eyeDropperMain.Text = "Eyedropper";
-            this.toolTipCenter.SetToolTip(this.eyeDropperMain, "Drag to pick colors");
-            this.eyeDropperMain.BeginScreenCapture += new System.EventHandler(this.eyeDropperMain_BeginScreenCapture);
-            this.eyeDropperMain.ScreenCaptured += new Unity3.Eyedropper.EyeDropper.ScreenCapturedArgs(this.eyeDropperMain_ScreenCaptured);
-            this.eyeDropperMain.EndScreenCapture += new System.EventHandler(this.eyeDropperMain_EndScreenCapture);
             // 
             // MainForm
             // 
