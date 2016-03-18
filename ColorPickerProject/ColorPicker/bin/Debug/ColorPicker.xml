@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ColorPicker
+</name>
+</assembly>
+<members>
+<member name="P:ColorPicker.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ColorPicker.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ColorPicker.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:ColorPicker.cp.cp_Load(System.Object,System.EventArgs)">
+	<summary>
+ We'll create the two additional custom controls and add them to our main control here.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="T:ColorPicker.cp">
+	<summary>
+ Very special thanks goes out to Danny Blanchard who wrote the original C# control some two years ago.
+ Without his original control to model off of - writing my own vb.net version would have been considerably 
+ more difficult.  
+ 
+ Where the original code worked well, I did nothing more than convert from C# to vb.net.
+ Where I found problems with the original code, I made the necessary corrections.
+ 
+ Thanks again Danny!
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

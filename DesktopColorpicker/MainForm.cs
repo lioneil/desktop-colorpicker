@@ -18,10 +18,10 @@ namespace DesktopColorpicker
     {
         #region Public Variables
         Color[] ColorsPallette; // The persistent Color Pallette taken from last 10 screen-captured colors
-        int MAX_COUNT_ColorsPallette = 20;
+        int MAX_COUNT_ColorsPallette = 12;
         int PatchWidth = 15, PatchHeight = 15;
         int PatchMargin = 1;
-        int NumCols = 1, NumRows = 20;
+        int NumCols = 1, NumRows = 12;
         #endregion
 
         #region MainForm Init

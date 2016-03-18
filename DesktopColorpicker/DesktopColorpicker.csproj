@@ -132,7 +132,7 @@
     <None Include="Assets\copy-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\ColorPicker.vbproj">
+    <ProjectReference Include="..\ColorPickerProject\ColorPicker\ColorPicker.vbproj">
       <Project>{fc700552-3961-4089-be52-ab6c019d3891}</Project>
       <Name>ColorPicker</Name>
     </ProjectReference>

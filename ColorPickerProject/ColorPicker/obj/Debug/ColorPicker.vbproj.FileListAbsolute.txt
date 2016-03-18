@@ -1,0 +1,11 @@
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\bin\Debug\ColorPicker.dll
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\bin\Debug\ColorPicker.pdb
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\bin\Debug\ColorPicker.xml
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\obj\Debug\ColorPicker.cp.resources
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\obj\Debug\ColorPicker.Resources.resources
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\obj\Debug\ColorPicker.ColorBox.resources
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\obj\Debug\ColorPicker.VerticalColorSlider.resources
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\obj\Debug\ColorPicker.vbproj.GenerateResource.Cache
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\obj\Debug\ColorPicker.dll
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\obj\Debug\ColorPicker.xml
+C:\xampp\htdocs\libraries\Visual Studio\ColorPickerProject\ColorPickerProject\ColorPicker\obj\Debug\ColorPicker.pdb
