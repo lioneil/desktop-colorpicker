@@ -1,18 +1,44 @@
+![alt-text](assets/banner.vertical.png "Desktop Colorpicker")
+
 # Desktop Colorpicker
+__Pick. Paste. Repeat.__
 
-A Windows software for picking colors off of the desktop screen.
-
+With Desktop Colorpicker, you can pick any color anywhere on your screen, automatically copy the HEX, RBGA, or HSL value, store colors in a pallette library, and more.
 
 ## Installation
+The Software is only available for Windows OS (for now. I think. Maybe.)
 
-An installer will be available soon. For now copy contents from DesktopColorpicker\bin\Debug\\*
+Download the latest stable version:
 
+* [v2.0.0.0 Installer](publish/beta/desktop-colorpicker_installer_v2.0.0.0.exe)
 
-## License
-
-You know the most freeing License out there? That's the one. Not really.
-[See MIT License](https://raw.githubusercontent.com/john-lioneil/desktop-colorpicker/master/LICENSE)
 
 ## Technologies
+Desktop Colorpicker is being developed in C# and runs on the .NET Framework. The software also utilizes the following custom controls:
 * [Adobe Eyedropper Control](http://www.codeproject.com/Articles/36540/Adobe-Eyedropper-Control) by Richard Blythe
-* [ColorPicker](http://www.codeproject.com/Articles/19382/Not-just-another-color-picker) by Elkay
+* [ColorPicker Control](http://www.codeproject.com/Articles/19382/Not-just-another-color-picker) by Elkay
+
+## License
+<pre>
+The MIT License (MIT)
+
+Copyright (c) 2016 Desktop Colorpicker
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</pre>

@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("John Lioneil Dionisio")]
 [assembly: AssemblyProduct("Desktop Colorpicker")]
-[assembly: AssemblyCopyright("Copyright © John Lioneil Dionisio 2015")]
+[assembly: AssemblyCopyright("© Copyright 2016 Desktop Colorpicker")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
