@@ -10,7 +10,7 @@ The Software is only available for Windows OS (for now. I think. Maybe.)
 
 Download the latest beta version:
 
-* [v2.0.0.2 Installer](https://github.com/john-lioneil/desktop-colorpicker/blob/master/publish/beta/desktop-colorpicker_installer_v2.0.0.0.exe)
+* [v2.0.0.2 Installer](https://github.com/john-lioneil/desktop-colorpicker/raw/master/publish/beta/desktop-colorpicker_installer_v2.0.0.0.exe)
 
 
 ## Technologies
