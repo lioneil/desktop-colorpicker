@@ -8,7 +8,7 @@ With Desktop Colorpicker, you can pick any color anywhere on your screen, automa
 ## Installation
 The Software is only available for Windows OS (for now. I think. Maybe.)
 
-Download the latest stable version:
+Download the latest beta version:
 
 * [v2.0.0.0 Installer](publish/beta/desktop-colorpicker_installer_v2.0.0.0.exe)
 
