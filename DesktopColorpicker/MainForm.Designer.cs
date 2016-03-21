@@ -719,7 +719,6 @@
             this.mainNotifyIcon.ContextMenuStrip = this.mainContextMenu;
             this.mainNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("mainNotifyIcon.Icon")));
             this.mainNotifyIcon.Text = "Desktop Colorpicker";
-            this.mainNotifyIcon.Visible = true;
             this.mainNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.mainNotifyIcon_MouseDoubleClick);
             // 
             // toolTipCenter
@@ -754,7 +753,8 @@
             this.panelPreviewer.Location = new System.Drawing.Point(0, 0);
             this.panelPreviewer.Name = "panelPreviewer";
             this.panelPreviewer.Size = new System.Drawing.Size(186, 420);
-            this.panelPreviewer.TabIndex = 2;
+            this.panelPreviewer.TabIndex = 0;
+            this.panelPreviewer.TabStop = true;
             // 
             // panelPalletteContainer
             // 

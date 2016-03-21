@@ -188,51 +188,10 @@ namespace DesktopColorpicker
                 Color.FromArgb(255, 192, 255, 255),
                 Color.FromArgb(255, 192, 192, 255),
                 Color.FromArgb(255, 255, 192, 255),
-
                 Color.FromArgb(255, 224, 224, 224),
                 Color.FromArgb(255, 255, 128, 128),
                 Color.FromArgb(255, 255, 192, 128),
-                Color.FromArgb(255, 255, 255, 128),
-                Color.FromArgb(255, 128, 255, 128),
-                Color.FromArgb(255, 128, 255, 255),
-                Color.FromArgb(255, 128, 128, 255),
-                Color.FromArgb(255, 255, 128, 255),
-
-                Color.FromArgb(255, 192, 192, 192),
-                Color.Red,
-                Color.FromArgb(255, 255, 128, 0),
-                Color.Yellow,
-                Color.FromArgb(255, 0, 192, 0),
-                Color.Cyan,
-                Color.Blue,
-                Color.FromArgb(255, 255, 0, 255),
-
-                Color.Gray,
-                Color.FromArgb(255, 192, 0, 0),
-                Color.FromArgb(255, 192, 64, 0),
-                Color.FromArgb(255, 192, 192, 0),
-                Color.Green,
-                Color.FromArgb(255, 0, 192, 192),
-                Color.FromArgb(255, 0, 0, 192),
-                Color.FromArgb(255, 192, 0, 192),
-
-                Color.FromArgb(255, 64, 64, 64),
-                Color.FromArgb(255, 128, 0, 0),
-                Color.FromArgb(255, 128, 64, 0),
-                Color.FromArgb(255, 128, 128, 0),
-                Color.FromArgb(255, 0, 128, 0),
-                Color.FromArgb(255, 0, 128, 128),
-                Color.FromArgb(255, 0, 0, 128),
-                Color.FromArgb(255, 128, 0, 128),
-
-                Color.Black,
-                Color.FromArgb(255, 64, 0, 0),
-                Color.FromArgb(255, 96, 32, 0),
-                Color.FromArgb(255, 64, 64, 0),
-                Color.FromArgb(255, 0, 64, 0),
-                Color.FromArgb(255, 0, 64, 64),
-                Color.FromArgb(255, 0, 0, 64),
-                Color.FromArgb(255, 64, 0, 64),
+                Color.FromArgb(255, 255, 255, 128)
             };
         }
 

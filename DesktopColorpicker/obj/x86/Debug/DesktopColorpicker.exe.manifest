@@ -4,7 +4,7 @@
   <description asmv2:iconFile="colorpicker.ico" asmv2:publisher="John Lioneil Dionisio" co.v1:suiteName="Designer Suite" asmv2:product="Desktop Colorpicker" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="DesktopColorpicker" version="2.0.0.0" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="DesktopColorpicker" version="2.0.0.2" language="neutral" processorArchitecture="x86" />
     <commandLine file="DesktopColorpicker.exe" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
@@ -56,14 +56,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopColorpicker.exe" size="360960">
-      <assemblyIdentity name="DesktopColorpicker" version="2.0.0.0" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopColorpicker.exe" size="359936">
+      <assemblyIdentity name="DesktopColorpicker" version="2.0.0.2" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>oLM+BpbyGF2l25B+Wruc4n4jlV0=</dsig:DigestValue>
+        <dsig:DigestValue>jpBx+USoYlby7l7V7+ogeffw8sE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

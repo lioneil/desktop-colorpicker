@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="DesktopColorpicker.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="en" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="Desktop Colorpicker.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="en" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="colorpicker.ico" asmv2:publisher="John Lioneil Dionisio" co.v1:suiteName="Designer Suite" asmv2:product="Desktop Colorpicker" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="DesktopColorpicker" version="2.0.0.2" language="neutral" processorArchitecture="x86" />
-    <commandLine file="DesktopColorpicker.exe" parameters="" />
+    <assemblyIdentity name="Desktop Colorpicker" version="2.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="Desktop Colorpicker.exe" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
   <trustInfo>
@@ -56,14 +56,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DesktopColorpicker.exe" size="359936">
-      <assemblyIdentity name="DesktopColorpicker" version="2.0.0.2" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Desktop Colorpicker.exe" size="360960">
+      <assemblyIdentity name="Desktop Colorpicker" version="2.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>jpBx+USoYlby7l7V7+ogeffw8sE=</dsig:DigestValue>
+        <dsig:DigestValue>R7ilm2fm8y7oL5YLpYJBMFxXehQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -100,7 +100,7 @@
       <dsig:DigestValue>77Vru6VvUTpH8yDGgFD3XBvItT0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DesktopColorpicker.exe.config" size="2265">
+  <file name="Desktop Colorpicker.exe.config" size="2265">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
