@@ -1,6 +1,6 @@
 ![alt-text](assets/banner.vertical.png "Desktop Colorpicker")
 
-# Desktop Colorpicker
+# [Desktop Colorpicker](http://john-lioneil.github.io/desktop-colorpicker "Visit site")
 __Pick. Paste. Repeat.__
 
 With Desktop Colorpicker, you can pick any color anywhere on your screen, automatically copy the HEX, RBGA, or HSL value, store colors in a pallette library, and more.
