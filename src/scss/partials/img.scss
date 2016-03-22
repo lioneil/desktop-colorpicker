@@ -1,0 +1,142 @@
+img {
+    &.img-inline {
+        display: inline;
+    }
+    &.img-responsive-xs {
+        @media only screen and (max-width: $breakpoint-xs) {
+            display: block;
+            margin: $img-margin auto;
+        }
+    }
+    &.img-responsive-sm {
+        @media only screen and (max-width: $breakpoint-sm) {
+            display: block;
+            margin: $img-margin auto;
+        }
+    }
+    &.img-responsive-md {
+        @media only screen and (max-width: $breakpoint-md) {
+            display: block;
+            margin: $img-margin auto;
+        }
+    }
+    &.img-responsive-lg {
+        @media only screen and (max-width: $breakpoint-lg) {
+            display: block;
+            margin: $img-margin auto;
+        }
+    }
+    &[class*="img-responsive-"] {
+        width: 100%;
+        height: auto;
+    }
+
+    &.img-left {
+        display: block;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    &.img-center {
+        display: block;
+        margin: $img-margin auto;
+    }
+    &.img-right {
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+
+    &.img-left-xs {
+        @media only screen and (max-width: $breakpoint-xs) {
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+
+    &.img-left-sm {
+        @media only screen and (max-width: $breakpoint-sm) {
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+
+    &.img-left-md {
+        @media only screen and (max-width: $breakpoint-md) {
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+
+    &.img-left-lg {
+        @media only screen and (max-width: $breakpoint-lg) {
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+
+    &.img-center-xs {
+        @media only screen and (max-width: $breakpoint-xs) {
+            display: block;
+            margin: $img-margin auto;
+        }
+    }
+
+    &.img-center-sm {
+        @media only screen and (max-width: $breakpoint-sm) {
+            display: block;
+            margin: $img-margin auto;
+        }
+    }
+
+    &.img-center-md {
+        @media only screen and (max-width: $breakpoint-md) {
+            display: block;
+            margin: $img-margin auto;
+        }
+    }
+
+    &.img-center-lg {
+        @media only screen and (max-width: $breakpoint-lg) {
+            display: block;
+            margin: $img-margin auto;
+        }
+    }
+
+
+    &.img-right-xs {
+        @media only screen and (max-width: $breakpoint-xs) {
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+    &.img-right-sm {
+        @media only screen and (max-width: $breakpoint-sm) {
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+    &.img-right-md {
+        @media only screen and (max-width: $breakpoint-md) {
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+    &.img-right-lg {
+        @media only screen and (max-width: $breakpoint-lg) {
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}

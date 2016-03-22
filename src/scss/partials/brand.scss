@@ -1,0 +1,38 @@
+.navbar-brand {
+    > img {
+        display: block;
+        height: 100%;
+    }
+}
+.footer-brand {
+    display: inline-block;
+    @media only screen and (min-width: $breakpoint-md) {
+        padding: $padding-md;
+        + .copyright {
+            display: inline-block;
+            padding: $padding-md;
+            margin-left: $padding-md;
+            border-left: 1px solid rgba(0,0,0,0.2);
+        }
+    }
+    @media only screen and (max-width: $breakpoint-xl) {
+        padding: $padding-xs;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media only screen and (max-width: $breakpoint-lg) {
+        padding: $padding-sm;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media only screen and (max-width: $breakpoint-sm) {
+        padding: $padding-lg;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media only screen and (max-width: $breakpoint-xs) {
+        padding: $padding-lg;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

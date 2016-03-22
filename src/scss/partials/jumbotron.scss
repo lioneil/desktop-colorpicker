@@ -1,0 +1,74 @@
+.jumbotron {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.pocket {
+        overflow-y: hidden;
+        padding-bottom: $base-padding;
+        .pocketed {
+            @media only screen and (min-width: $breakpoint-md) {
+                margin-bottom: -100px;
+            }
+        }
+    }
+    @media only screen and (min-width: $breakpoint-md) {
+        &.jumbotron-fixed {
+            height: 600px;
+            overflow: hidden;
+        }
+    }
+    @media only screen and (max-width: $breakpoint-xl) {
+        background-position: 30% bottom;
+        &.bg-display-xl {
+            background-image : none !important;
+            background-position: center bottom !important;
+        }
+    }
+    @media only screen and (max-width: $breakpoint-lg) {
+        background-position: 0 bottom !important;
+        &.bg-display-lg {
+            background-image : none !important;
+            background-position: center bottom !important;
+        }
+    }
+    @media only screen and (max-width: $breakpoint-md) {
+        background-position: 0 bottom;
+        &.bg-display-md {
+            background-image : none !important;
+            background-position: center bottom !important;
+        }
+    }
+    @media only screen and (max-width: $breakpoint-sm) {
+        background-position: center bottom;
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        &.bg-display-sm {
+            background-image : none !important;
+            background-position: center bottom !important;
+        }
+    }
+    @media only screen and (max-width: $breakpoint-xs) {
+        &.bg-display-xs {
+            background-image : none !important;
+            background-position: center bottom !important;
+        }
+    }
+    @media only screen and (max-width: $breakpoint-xxs) {
+        margin: 0 -$margin-md;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    p, small, label, abbr, blockquote {
+        color: #ffffff;
+    }
+
+    .heading {
+        margin-top: 2em;
+    }
+}

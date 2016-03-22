@@ -1,0 +1,44 @@
+.navbar-paper {
+    overflow-y: visible;
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px -1px rgba(0,0,0,0.1),
+                0 10px 0 -5px rgba(255,255,255,1),
+                0 11px 1px -5px rgba(0,0,0,0.1),
+                0 20px 0 -10px rgba(255,255,255,1),
+                0 21px 1px -10px rgba(0,0,0,0.1),
+                0 30px 1px -15px rgba(0,0,0,0.1);
+    .tile {
+        color: $base-textcolor;
+        display: inline-block;
+        line-height: 2;
+        padding: $base-padding 2px;
+    }
+    span[data-bg] {
+        &:hover {
+            color: rgba(0,0,0,0.4) !important;
+        }
+    }
+    .navbar-header {
+        margin-right: 1em;
+    }
+    @media only screen and (max-width: $breakpoint-sm) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    li>a {
+        box-shadow: 0 0 1px rgba(0,0,0,0.015);
+        @include prefix('transition', 'all 0.5s ease-in-out');
+    }
+    li.active>a {
+        background-color: #f0f0f0 !important;
+        color: #484848 !important;
+    }
+    li.active>a, li>a:hover, li>a:focus {
+        box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    }
+}
+
+.navbar-toggle {
+    margin-right: 0;
+}

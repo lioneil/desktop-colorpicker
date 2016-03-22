@@ -1,0 +1,24 @@
+.jumbotron {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-image: url(assets/img/leaves.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include prefix('filter', 'blur(50px)');
+        @include prefix('transition', 'all 3s ease-in-out');
+    }
+    &.hoverable:hover {
+        &:before {
+            @include prefix('filter', 'blur(0px)');
+        }
+    }
+    @media only screen and (max-width: $breakpoint-sm) {
+        padding-top: 0;
+    }
+}

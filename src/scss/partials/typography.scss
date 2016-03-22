@@ -1,0 +1,84 @@
+/*
+| ------------
+| # Typography
+| ------------
+*/
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+    font-weight: normal;
+    font-size: 85%;
+    text-transform: uppercase;
+}
+[class*="-title"], [class*="-title"], [class*="-title"], [class*="-title"], [class*="-title"], [class*="-title"] {
+    font-weight: 400;
+}
+.text-left-xs {
+    @media only screen and (max-width: $breakpoint-xs) {
+        text-align: left;
+    }
+}
+
+.text-left-sm {
+    @media only screen and (max-width: $breakpoint-sm) {
+        text-align: left;
+    }
+}
+
+.text-left-md {
+    @media only screen and (max-width: $breakpoint-md) {
+        text-align: left;
+    }
+}
+
+.text-left-lg {
+    @media only screen and (max-width: $breakpoint-lg) {
+        text-align: left;
+    }
+}
+
+.text-center-xs {
+    @media only screen and (max-width: $breakpoint-xs) {
+        text-align: center;
+    }
+}
+
+.text-center-sm {
+    @media only screen and (max-width: $breakpoint-sm) {
+        text-align: center;
+    }
+}
+
+.text-center-md {
+    @media only screen and (max-width: $breakpoint-md) {
+        text-align: center;
+    }
+}
+
+.text-center-lg {
+    @media only screen and (max-width: $breakpoint-lg) {
+        text-align: center;
+    }
+}
+
+.text-right-xs {
+    @media only screen and (max-width: $breakpoint-xs) {
+        text-align: right;
+    }
+}
+
+.text-right-sm {
+    @media only screen and (max-width: $breakpoint-sm) {
+        text-align: right;
+    }
+}
+
+.text-right-md {
+    @media only screen and (max-width: $breakpoint-md) {
+        text-align: right;
+    }
+}
+
+.text-right-lg {
+    @media only screen and (max-width: $breakpoint-lg) {
+        text-align: right;
+    }
+}

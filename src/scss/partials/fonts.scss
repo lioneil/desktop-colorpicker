@@ -1,0 +1,8 @@
+@import "vendors/lato/css/lato.min.css";
+html, h1, h2, h3, h4, h5, h6, p, a, span, legend, abbr, blockquote {
+    font-family: "Lato", "Open Sans", sans-serif;
+    font-weight: 400;
+}
+.jumbotron h1, .jumbotron h2, .jumbotron h3, .jumbotron h4, .jumbotron h5, .jumbotron h6 {
+    font-weight: normal;
+}

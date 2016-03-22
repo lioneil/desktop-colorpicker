@@ -1,0 +1,35 @@
+.arrow-wrapper {
+    display: block;
+    position: relative;
+}
+.arrow-right, .arrow-left {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+}
+.arrow-right {
+    border-left: 19px solid #005e50;
+    margin-left: 10px;
+    &.pull-right {
+        @include prefix('transform', 'translateY(-50%)');
+        position: absolute;
+        top: 50%;
+        float: none;
+    }
+}
+.arrow-left {
+    border-right: 19px solid #005e50;
+    margin-right: 10px;
+    &.pull-left {
+        @include prefix('transform', 'translateY(-50%)');
+        position: absolute;
+        top: 50%;
+        float: none;
+    }
+}
+
+.nav>li>a.icon-menu {
+    padding: 14px;
+}

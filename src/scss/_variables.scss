@@ -1,0 +1,45 @@
+// # Colors
+$base-textcolor: #484848;
+$lightgray: #e9e9e9;
+$section-inverse-bgcolor: $base-textcolor;
+$section-inverse-textcolor: #ffffff;
+$card-inverse-bgcolor: $base-textcolor;
+$card-inverse-textcolor: #ffffff;
+$nav-inverse-bgcolor: #e3304e;
+$nav-textcolor: $base-textcolor;
+
+// # Amount / Percentage
+$base-amount: 5;
+$section-inverse-amount: $base-amount;
+$main-footer-padding: 1rem 0;
+$nav-color-amount: $base-amount * 3;
+
+// # Margins / Paddings
+$base-padding: 0.9375rem;
+$padding-xs: $base-padding / 4;
+$padding-sm: $base-padding / 2;
+$padding-md: $base-padding;
+$padding-lg: $base-padding * 2;
+$padding-xl: $base-padding * 4;
+$base-margin: 0.9375rem;
+$margin-xs: $base-margin / 4;
+$margin-sm: $base-margin / 2;
+$margin-md: $base-margin;
+$margin-lg: $base-margin * 2;
+$margin-xl: $base-margin * 4;
+$li-margins-xs: 2px;
+
+// # Alignments
+$text-align-xs: center;
+
+// # Media Queries Breakpoint
+$breakpoint-xxs: 320px;
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1900px;
+
+// # Img
+$img-margin: 3px;
+$img-padding: 0;

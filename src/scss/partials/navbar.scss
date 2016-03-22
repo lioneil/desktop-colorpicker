@@ -1,0 +1,102 @@
+.navbar {
+    z-index: 999999;
+}
+.navbar-inverse {
+    .navbar-nav {
+        li {
+            @media only screen and (min-width: $breakpoint-md) {
+                &:first-child {
+                    border-left: 1px solid rgba(255,255,255,0.1);
+                }
+                border-right: 1px solid rgba(255,255,255,0.1);
+            }
+            a {
+                font-weight: bold;
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
+
+.nav {
+    &.nav-row {
+        float: none;
+        li {
+            display: inline-block;
+            margin: $li-margins-xs;
+        }
+    }
+    &.navbar-justified {
+        display: table;
+        margin: 1rem auto;
+        @media only screen and (min-width: $breakpoint-md) {
+            &.nav-align-md {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+    &.social-nav {
+        &.nav-row {
+            &.nav-separator-top {
+                border-top: 1px solid $lightgray;
+            }
+            &.nav-separator-bottom {
+                border-bottom: 1px solid $lightgray;
+            }
+            @media only screen and (max-width: $breakpoint-sm) {
+                &.nav-separator-top-sm {
+                    border-top: 1px solid $lightgray;
+                }
+                &.nav-separator-bottom-sm {
+                    border-bottom: 1px solid $lightgray;
+                }
+            }
+            @media only screen and (max-width: $breakpoint-xs) {
+                &.nav-separator-top-xs {
+                    border-top: 1px solid $lightgray;
+                }
+                &.nav-separator-bottom-xs {
+                    border-bottom: 1px solid $lightgray;
+                }
+            }
+            li {
+                a {
+                    padding: 0 $padding-md;
+                    color: $nav-textcolor;
+                    &:hover {
+                        color: $nav-inverse-bgcolor;
+                    }
+                }
+            }
+        }
+    }
+    li.btn {
+        font-weight: 700;
+    }
+}
+
+.navbar-toggle {
+    &.toggle-spinx {
+        @include prefix('perspective', '50px');
+        .icon-bar:nth-child(2n) {
+            @include prefix('transition', 'all 0.2s ease-out');
+        }
+        .icon-bar:nth-child(3n) {
+            opacity: 1;
+            @include prefix('transition', 'all 0.5s ease-out');
+        }
+    }
+    &.toggle-spinx.open {
+        .icon-bar:nth-child(2) {
+            @include prefix('transform', 'rotateX(180deg) rotateZ(45deg) translateY(-4px) translateX(-4px)');
+        }
+        .icon-bar:nth-child(3) {
+            opacity: 0;
+            @include prefix('transform', 'rotateY(-90deg)');
+        }
+        .icon-bar:nth-child(4) {
+            @include prefix('transform', 'rotateX(360deg) rotateZ(45deg) translateY(-5px) translateX(-4px)');
+        }
+    }
+}
